@@ -98,6 +98,16 @@ const config: Config = {
         'marquee': { from: { transform: 'translateX(0)' }, to: { transform: 'translateX(-50%)' } },
         'shimmer': { from: { backgroundPosition: '200% 0' }, to: { backgroundPosition: '-200% 0' } },
         'rise': { from: { opacity: '0', transform: 'translateY(16px)' }, to: { opacity: '1', transform: 'none' } },
+        /* Ýalňyş kod — gysga, sönýän sarsgyn. Amplituda 6px-den geçmeýär:
+           ondan ulusy «döwlen interfeýs» duýgusyny berýär, kiçisi bolsa
+           bildirmeýär. Ýazgy okalmanka-da signal berýän ýeke-täk hereket. */
+        'shake': {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '18%': { transform: 'translateX(-6px)' },
+          '38%': { transform: 'translateX(5px)' },
+          '58%': { transform: 'translateX(-3px)' },
+          '78%': { transform: 'translateX(2px)' },
+        },
       },
       animation: {
         aurora: 'aurora 18s ease-in-out infinite',
@@ -106,6 +116,7 @@ const config: Config = {
         shimmer: 'shimmer 2.2s linear infinite',
         rise: 'rise 0.7s cubic-bezier(0.16,1,0.3,1) both',
         'glow-pulse': 'glow-pulse 4.5s ease-in-out infinite',
+        shake: 'shake 0.44s cubic-bezier(0.36, 0.07, 0.19, 0.97)',
       },
     },
   },

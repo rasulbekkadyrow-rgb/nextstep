@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { findAdminByEmail, listAdmins, isSetupMode, normalizeEmail } from '@/lib/auth/admins';
 import { issueCode, isIpRateLimited, RESEND_COOLDOWN_MS } from '@/lib/auth/otp';
 import { sendLoginCode } from '@/lib/auth/mailer';
+import { storageDriver } from '@/lib/auth/store';
 
 /**
  * POST /api/admin/auth/kod — GIRIŞ KODYNY IBERMEK
@@ -33,6 +34,17 @@ const schema = z.object({
 });
 
 export async function POST(request: NextRequest) {
+  /* VERCEL-DE FAÝL ULGAMY DIŇE OKALÝAR.
+     Redis sazlanmadyk bolsa kod hiç ýere ýazylyp bilinmeýär — şonda
+     düşnüksiz 500 bermän, anyk sebäbi aýtmak dogry. */
+  if (process.env.VERCEL && storageDriver() === 'file') {
+    console.error(
+      '[auth] Gor sazlanmadyk: Vercel-de faýl ulgamy ýazgy kabul etmeýär. ' +
+        'Taslama Vercel KV (Upstash Redis) birikdiriň — KV_REST_API_URL we KV_REST_API_TOKEN.',
+    );
+    return NextResponse.json({ error: 'storage' }, { status: 503 });
+  }
+
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
 
   if (isIpRateLimited(ip)) {

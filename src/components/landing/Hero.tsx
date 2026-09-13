@@ -33,8 +33,11 @@ export function Hero() {
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] });
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', reduceMotion ? '0%' : '16%']);
 
+  /* Telefonda ýokarky jaý gysgaldyldy (pt-24). Marka paneli indi
+     birinji gelýändigi üçin her piksel möhüm: maksat — «Mugt
+     maslahat al» düwmesiniň ilkinji ekranda galmagy. */
   return (
-    <section ref={sectionRef} className="relative isolate grain overflow-hidden pt-32 pb-20 md:pt-36 md:pb-28">
+    <section ref={sectionRef} className="relative isolate grain overflow-hidden pt-24 pb-20 sm:pt-32 md:pt-36 md:pb-28">
       {/* ---- Fon: ýyly kagyz şöhlesi ---- */}
       <AuroraField intensity="strong" className="absolute inset-x-[-10%] -top-[28%] -z-10 h-[58rem]" />
 
@@ -55,24 +58,28 @@ export function Hero() {
         {/* `items-start` — `items-center` däl: çep sütün sagdakydan
             uzyn, merkezleşdirilende panel ekranyň aşagyna süýşýärdi.
             Indi ikisi hem ýokardan başlaýar. */}
-        <div className="grid-12 items-start gap-y-14">
+        <div className="grid-12 items-start gap-y-10 sm:gap-y-14">
           {/* ================= ÇEP: MARKANYŇ PANELI =================
-               ⚠️ Telefonda sütünler üstün-üstüne düzülýär. Şonda panel
-               birinji gelse, sözbaşy we «Mugt maslahat al» düwmesi
-               ~500 piksel aşak gaçýardy. Şonuň üçin kiçi ekranda
-               tertip tersine: ilki söz, soň marka. Kompýuterde bolsa
-               panel çepde durýar. */}
-          <div className="order-2 col-span-4 md:col-span-8 lg:order-1 lg:col-span-6">
+               Telefonda hem BIRINJI gelýär: sahypa açylanda ilki
+               marka görünmeli.
+
+               ⚠️ Öň ol ikinji durýardy — sebäbi doly ölçegli panel
+               sözbaşyny we «Mugt maslahat al» düwmesini ~500 piksel
+               aşak gaçyrýardy. Mesele tertipde däl-de PANELIŇ
+               BEÝIKLIGINDEDI. Şonuň üçin ol kiçi ekranda gysgaldyldy
+               (nyşan kiçi, jaýlar dar, şygar bir setire ýakyn) —
+               indi ol ~260 piksel tutýar we düwme ekranda galýar. */}
+          <div className="order-1 col-span-4 md:col-span-8 lg:col-span-6">
             <BrandPanel />
           </div>
 
           {/* ================= SAG: ÝAZGY ================= */}
-          <div className="order-1 col-span-4 md:col-span-8 lg:order-2 lg:col-span-6">
+          <div className="order-2 col-span-4 md:col-span-8 lg:col-span-6">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="lg mb-6 inline-flex items-center gap-2.5 rounded-full px-3.5 py-1.5"
+              className="lg mb-5 inline-flex items-center gap-2.5 rounded-full px-3.5 py-1.5 sm:mb-6"
             >
               <span className="relative flex h-1.5 w-1.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ok opacity-75" />
@@ -189,11 +196,12 @@ function BrandPanel() {
     ref.current.style.setProperty('--ry', '0deg');
   };
 
+  /* Daşky gap diňe perspektiwa üçin — ol animasiýa EDILMEÝÄR.
+     Öň ol hem süýşüp-ulalyp gelýärdi; aýnanyň açylyşy goşulanda
+     iki hereket üst-üste düşüp, girişi bulaşyk edýärdi. Indi
+     ýeke-täk giriş — aýnanyň açylmagy. */
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30, scale: 0.96 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 1, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
+    <div
       style={{ perspective: '1300px' }}
       className="relative mx-auto w-full max-w-lg lg:ml-0 lg:mr-auto"
     >
@@ -207,37 +215,79 @@ function BrandPanel() {
         }}
       />
 
-      <div
+      {/* ---- AÝNANYŇ AÇYLYŞY ----
+           Panel ýapyk kapsula bolup başlaýar we dikligine açylýar —
+           göz gabagynyň açylyşy ýaly. Logo bolsa açylyş tamamlanyp
+           barýarka içinden çykýar.
+
+           `clip-path` saýlandy (`height` däl): ol mazmuny kesýär,
+           ýöne ýerleşişi gaýtadan hasaplatmaýar. `height` animasiýa
+           edilse, brauzer her kadrda tutuş sahypany täzeden ölçeýär
+           we aşakdaky bölümler bökýär. */}
+      <motion.div
         ref={ref}
         onMouseMove={handleMove}
         onMouseLeave={reset}
-        className="lg lg-refract relative flex flex-col items-center rounded-4xl px-8 py-14 text-center transition-transform duration-500 ease-out-expo sm:px-12 sm:py-16"
+        initial={
+          reduceMotion
+            ? false
+            : { clipPath: 'inset(44% 10% 44% 10% round 2.5rem)' }
+        }
+        animate={{ clipPath: 'inset(0% 0% 0% 0% round 2.5rem)' }}
+        transition={{ duration: 1.05, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="lg lg-refract relative flex flex-col items-center overflow-hidden rounded-4xl px-6 py-7 text-center transition-transform duration-500 ease-out-expo sm:px-12 sm:py-16"
         style={{
           transform: 'rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))',
           transformStyle: 'preserve-3d',
         }}
       >
+        {/* Açylyş pursatynda aýnanyň ýüzünden geçýän ýagtylyk.
+            Ol açylyşy «material hereketi» edýär — ýogsam kesilme
+            diňe tehniki effekt bolup görünýär. */}
+        {!reduceMotion && (
+          <motion.span
+            aria-hidden
+            initial={{ x: '-130%' }}
+            animate={{ x: '130%' }}
+            transition={{ duration: 1.3, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="pointer-events-none absolute inset-y-0 left-0 w-1/2 -skew-x-12"
+            style={{
+              background:
+                'linear-gradient(90deg, transparent, rgb(var(--glass-spec) / 0.55), transparent)',
+            }}
+          />
+        )}
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.82 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.42, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, scale: 0.55, filter: 'blur(10px)' }}
+          animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+          transition={{ duration: 0.85, delay: 0.62, ease: [0.16, 1, 0.3, 1] }}
         >
-          <LogoMark className="w-28 sm:w-36" />
+          {/* Telefonda nyşan kiçeldildi: panel birinji gelýändigi üçin
+              ol sözbaşyny ekrandan itermeli däl. */}
+          <LogoMark className="w-16 sm:w-32 lg:w-36" />
         </motion.div>
 
-        <p className="mt-9 font-display font-extrabold leading-none tracking-tight">
-          <span className="block text-h2">Next Step</span>
-          <span className="mt-3.5 block text-body-sm font-semibold uppercase tracking-[0.34em] text-faint">
-            Consulting
-          </span>
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.86, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center"
+        >
+          <p className="mt-5 font-display font-extrabold leading-none tracking-tight sm:mt-9">
+            <span className="block text-h3 sm:text-h2">Next Step</span>
+            <span className="mt-2.5 block text-micro font-semibold uppercase tracking-[0.3em] text-faint sm:mt-3.5 sm:text-body-sm sm:tracking-[0.34em]">
+              Consulting
+            </span>
+          </p>
 
-        <div aria-hidden className="my-9 h-px w-16 bg-line/[0.18]" />
+          <div aria-hidden className="my-5 h-px w-16 bg-line/[0.18] sm:my-9" />
 
-        <p className="text-balance font-display text-h4 font-bold leading-snug tracking-tight sm:text-h3">
-          {t('slogan')}
-        </p>
-      </div>
-    </motion.div>
+          <p className="text-balance font-display text-body-lg font-bold leading-snug tracking-tight sm:text-h3">
+            {t('slogan')}
+          </p>
+        </motion.div>
+      </motion.div>
+    </div>
   );
 }

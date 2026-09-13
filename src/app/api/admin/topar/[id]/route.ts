@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { findAdminById, listAdmins, removeAdmin, updateAdmin } from '@/lib/auth/admins';
-import { getCurrentAdmin } from '@/lib/auth/current';
+import { getCurrentAdmin, type CurrentAdmin } from '@/lib/auth/current';
 import { isSameOrigin } from '@/lib/auth/request';
 
 /**
@@ -27,13 +27,12 @@ const patchSchema = z.object({
   active: z.boolean().optional(),
 });
 
-async function requireOwner() {
+/** Netije `NextResponse` bolsa — rugsat ýok, ol göni gaýtarylýar */
+async function requireOwner(): Promise<CurrentAdmin | NextResponse> {
   const current = await getCurrentAdmin();
-  if (!current) return { error: NextResponse.json({ error: 'unauthorized' }, { status: 401 }) };
-  if (current.user.role !== 'owner') {
-    return { error: NextResponse.json({ error: 'forbidden' }, { status: 403 }) };
-  }
-  return { current };
+  if (!current) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
+  if (current.user.role !== 'owner') return NextResponse.json({ error: 'forbidden' }, { status: 403 });
+  return current;
 }
 
 /** Bu üýtgetmeden soň işjeň eýe galýarmy? */
@@ -41,14 +40,18 @@ async function wouldRemoveLastOwner(targetId: string, next: { role?: string; act
   const admins = await listAdmins();
   const owners = admins.filter((admin) => admin.role === 'owner' && admin.active);
   if (owners.length > 1) return false;
-  return owners.some((admin) => admin.id === targetId) && (next.role !== 'owner' || next.active === false);
+
+  /* Diňe rol eýelikden aýrylanda ýa-da hasap ýapylanda howp bar.
+     Diňe at üýtgedilende bu barlag päsgel bermeli däl. */
+  const losesOwner = (next.role !== undefined && next.role !== 'owner') || next.active === false;
+  return losesOwner && owners.some((admin) => admin.id === targetId);
 }
 
 export async function PATCH(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   if (!isSameOrigin(request)) return NextResponse.json({ error: 'bad_origin' }, { status: 403 });
 
   const guard = await requireOwner();
-  if (guard.error) return guard.error;
+  if (guard instanceof NextResponse) return guard;
 
   const { id } = await context.params;
   const target = await findAdminById(id);
@@ -64,7 +67,7 @@ export async function PATCH(request: NextRequest, context: { params: Promise<{ i
   const parsed = patchSchema.safeParse(body);
   if (!parsed.success) return NextResponse.json({ error: 'validation_failed' }, { status: 422 });
 
-  if (guard.current.user.id === id && (parsed.data.role !== undefined || parsed.data.active === false)) {
+  if (guard.user.id === id && (parsed.data.role !== undefined || parsed.data.active === false)) {
     return NextResponse.json({ error: 'self_change' }, { status: 409 });
   }
 
@@ -80,10 +83,10 @@ export async function DELETE(request: NextRequest, context: { params: Promise<{ 
   if (!isSameOrigin(request)) return NextResponse.json({ error: 'bad_origin' }, { status: 403 });
 
   const guard = await requireOwner();
-  if (guard.error) return guard.error;
+  if (guard instanceof NextResponse) return guard;
 
   const { id } = await context.params;
-  if (guard.current.user.id === id) return NextResponse.json({ error: 'self_change' }, { status: 409 });
+  if (guard.user.id === id) return NextResponse.json({ error: 'self_change' }, { status: 409 });
 
   const target = await findAdminById(id);
   if (!target) return NextResponse.json({ error: 'not_found' }, { status: 404 });

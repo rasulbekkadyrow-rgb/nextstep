@@ -461,14 +461,39 @@
   "admin": {
     "login": {
       "title": "Yönetim paneline giriş",
-      "subtitle": "Hangi panele gireceğinizi seçin.",
-      "sales": "Öğrenci başvuruları",
-      "salesNote": "Kanban panosu, başvurular, Telegram",
-      "analytics": "Analitik ve içerik",
-      "analyticsNote": "Göstergeler, ziyaretçiler, site içeriği",
-      "demoTitle": "Demo giriş",
-      "demoText": "Burada gerçek bir doğrulama yok — rol seçilip çereze yazılıyor. Canlıda gerçek bir giriş sistemiyle değiştirilmelidir.",
-      "back": "Siteye dön"
+      "subtitle": "İş e-postanızı yazın — tek kullanımlık bir kod gönderelim.",
+      "emailLabel": "E-posta adresiniz",
+      "emailPlaceholder": "mekan@gmail.com",
+      "continue": "Kod gönder",
+      "passwordless": "Şifre yok: her girişte e-postanıza yeni bir kod gelir ve 10 dakika sonra kendiliğinden geçersiz olur.",
+      "codeTitle": "Kodu girin",
+      "codeSubtitle": "Altı haneli kodu şu adrese gönderdik:",
+      "codeLabel": "Giriş kodu",
+      "verify": "Giriş yap",
+      "resend": "Kodu yeniden gönder",
+      "resendIn": "Yeniden gönder — {seconds} sn.",
+      "changeEmail": "Adresi değiştir",
+      "noMailTitle": "E-posta gelmedi mi?",
+      "noMailText": "Spam ve «Promosyonlar» klasörlerine bakın. Adres yanlış yazıldıysa veya yönetici listesinde yoksa e-posta gönderilmez — bu durumda panel sahibiyle iletişime geçin.",
+      "back": "Siteye dön",
+      "errors": {
+        "invalidEmail": "Adres hatalı görünüyor. Kontrol edip tekrar deneyin.",
+        "invalidCode": "Kod hatalı. Gelen son e-postayı kontrol edin.",
+        "expired": "Kodun süresi doldu. Yeni kod isteyin.",
+        "locked": "Deneme hakkı doldu. Yeni kod isteyin.",
+        "notAllowed": "Bu adres yönetici listesinde yok.",
+        "tooMany": "Çok fazla deneme yapıldı. Biraz bekleyip tekrar deneyin.",
+        "cooldown": "Yeni kod henüz gönderilemez — sayaç bitene kadar bekleyin.",
+        "mailFailed": "E-posta gönderilemedi. Sunucunun posta ayarları kontrol edilmeli.",
+        "network": "Bağlantı yok. İnterneti kontrol edip tekrar deneyin.",
+        "storage": "Sunucu deposu yapılandırılmamış — kod kaydedilemedi. Proje yöneticisine başvurun."
+      },
+      "notices": {
+        "consoleTitle": "Posta henüz ayarlanmadı",
+        "consoleText": "Kod e-posta yerine sunucu terminaline yazıldı. Gerçek e-posta göndermek için .env.local dosyasında SMTP ayarlarını girin.",
+        "setupTitle": "İlk kurulum modu",
+        "setupText": "Yönetici listesi şu an boş. Bu kodu girerseniz ilk giren kişi olarak sahip olursunuz."
+      }
     },
     "common": {
       "search": "Arama",
@@ -491,7 +516,48 @@
       "empty": "Burada henüz veri yok",
       "confirmDelete": "Gerçekten silmek istiyor musunuz? Bu işlem geri alınamaz.",
       "roleSales": "Öğrenci başvuruları yöneticisi",
-      "roleAnalytics": "Analitik ve içerik yöneticisi"
+      "roleAnalytics": "Analitik ve içerik yöneticisi",
+      "roleOwner": "Sahip — tam yetki"
+    },
+    "team": {
+      "title": "Ekip ve yetkiler",
+      "subtitle": "Panele kim girebilir ve hangi bölüme",
+      "listTitle": "Yöneticiler",
+      "listSubtitle": "Listedeki her adrese giriş kodu gönderilebilir",
+      "addTitle": "Yeni yönetici",
+      "addSubtitle": "Sadece adres yeterli — şifre oluşturmaya gerek yok",
+      "emailLabel": "E-posta",
+      "nameLabel": "Ad (isteğe bağlı)",
+      "namePlaceholder": "Meret Atayev",
+      "roleLabel": "Rol",
+      "addButton": "Ekibe ekle",
+      "addedHint": "{email} eklendi. Artık giriş sayfasında adresini yazması yeterli — kod kendisine gelir.",
+      "you": "siz",
+      "protectedHint": "Sunucu ayarlarından gelir — panelden silinmez",
+      "pause": "Erişimi geçici olarak kapat",
+      "resume": "Yeniden aç",
+      "remove": "Listeden çıkar",
+      "confirmRemove": "Bu kişi listeden çıkarılsın mı? Bundan sonra panele giremez.",
+      "lastLogin": "Son giriş: {date}",
+      "neverLoggedIn": "Henüz giriş yapmadı",
+      "roles": {
+        "sales": "Başvuru yöneticisi",
+        "analytics": "Analiz ve içerik",
+        "owner": "Sahip — tam yetki"
+      },
+      "roleNotes": {
+        "sales": "Kanban panosu, öğrencilerin telefonları ve belgeleri.",
+        "analytics": "Göstergeler, trafik ve sitenin üç dildeki içeriği. Öğrencilerin kişisel verilerini görmez.",
+        "owner": "Her iki panel ve ekip yönetimi."
+      },
+      "errors": {
+        "exists": "Bu adres listede zaten var.",
+        "invalid": "İşlem tamamlanmadı. Bilgileri kontrol edin.",
+        "network": "Bağlantı yok. Tekrar deneyin.",
+        "lastOwner": "Son sahibin erişimi kapatılamaz veya rolü değiştirilemez — aksi hâlde sistemi yönetecek kimse kalmaz.",
+        "self": "Kendi rolünüzü veya erişiminizi kendiniz değiştiremezsiniz.",
+        "protected": "Bu kayıt sunucu ayarlarından gelir — .env dosyasından kaldırılmalı."
+      }
     },
     "sales": {
       "title": "Başvuru paneli",

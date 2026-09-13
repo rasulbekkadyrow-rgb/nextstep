@@ -155,21 +155,29 @@ Next_step/
 │   │   │   ├── layout.tsx       # Şriftler, metadata, tema skripti
 │   │   │   ├── page.tsx         # Landing — bölümleriň tertibi
 │   │   │   └── admin/
+│   │   │       ├── giris/       # Giriş: e-poçta + bir gezeklik kod
 │   │   │       ├── satuw/       # ADMIN 1 — ýüztutmalar
-│   │   │       └── analitika/   # ADMIN 2 — seljerme we mazmun
+│   │   │       ├── analitika/   # ADMIN 2 — seljerme we mazmun
+│   │   │       └── topar/       # Topar we rugsatlar (diňe owner)
 │   │   └── api/
-│   │       └── leads/route.ts   # Ýüztutmany kabul etmek + Telegram
+│   │       ├── leads/route.ts   # Ýüztutmany kabul etmek + Telegram
+│   │       └── admin/
+│   │           ├── auth/        # kod · barla · cykys
+│   │           └── topar/       # Dolandyryjylary goşmak / aýyrmak
 │   │
 │   ├── components/
 │   │   ├── landing/             # Hero, QuickActions, ProblemSolution,
 │   │   │                        # HowItWorks, Universities, SocialProof,
 │   │   │                        # FinalCta, Faq, LeadForm
 │   │   ├── admin/               # AdminShell, KanbanBoard, TelegramWidget,
-│   │   │                        # AnalyticsCharts, ContentManager, LiveVisitors
+│   │   │                        # AnalyticsCharts, ContentManager, LiveVisitors,
+│   │   │                        # auth/LoginFlow + CodeInput, team/TeamManager
 │   │   ├── ui/                  # MagneticButton, Reveal, PaperGlow, ScrollProgress
 │   │   └── shared/              # Logo, Header, Footer
 │   │
 │   └── lib/
+│       ├── auth/                # Giriş ulgamy: session, otp, mailer,
+│       │                        # admins, store, current
 │       ├── i18n.ts              # Dilleriň merkezi sazlamasy
 │       ├── types.ts             # Maglumat nusgalary + resminama barlagy
 │       ├── telegram.ts          # Bot API (diňe serwerde)
@@ -187,12 +195,29 @@ Next_step/
 npm install
 ```
 
-`.env.local` faýlyny dörediň:
+`.env.local` faýlyny dörediň (nusga — [`.env.example`](.env.example)):
 
 ```bash
+# Giriş ulgamy
+AUTH_SECRET=...                       # openssl rand -base64 32
+ADMIN_EMAILS="ali@gmail.com:owner:Aly M., vepa@icloud.com:owner:Wepa G."
+
+# Giriş kody şu ýerden iberilýär (islendik SMTP: Gmail, Yandex, öz domeniň)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=...
+SMTP_PASS=...                         # Gmail-de «App password»
+MAIL_FROM="Next Step Consulting <giris@nextstep.com.tm>"
+
+# Telegram bildirişleri
 TELEGRAM_BOT_TOKEN=123456:AAE...      # @BotFather-den alynýar
 TELEGRAM_CHAT_ID=-1002xxxxxxxxx       # Kanalyň ýa-da toparyň ID belgisi
 ```
+
+> Poçta sazlanmadyk wagty (işläp düzüşde) giriş kody hat ýerine
+> **terminalda** çykýar — şonuň üçin ulgamy hiç zat sazlaman synap
+> görmek bolýar. Sanaw boş bolsa, ilkinji giren adam eýe (owner) bolýar.
+> Önümçilikde bu tertip işlemeýär.
 
 ```bash
 npm run dev
@@ -203,8 +228,30 @@ npm run dev
 | `localhost:3000/tm` | Türkmen dilindäki saýt |
 | `localhost:3000/ru` | Rus dilindäki saýt |
 | `localhost:3000/tr` | Türk dilindäki saýt |
+| `localhost:3000/tm/admin/giris` | Admin panele giriş (e-poçta + kod) |
 | `localhost:3000/tm/admin/satuw` | Admin 1 — ýüztutmalar |
 | `localhost:3000/tm/admin/analitika` | Admin 2 — seljerme |
+| `localhost:3000/tm/admin/topar` | Topar we rugsatlar (diňe `owner`) |
+
+---
+
+## 6.1. Vercel-e goýmak
+
+1. Vercel-de **Add New → Project** → GitHub repozitoriýasy saýlanýar.
+   Next.js awtomatik tanalýar, gurluşyk buýrugy üýtgedilmeýär.
+2. **Storage → Upstash Redis → Connect Project.** Bu ädim
+   **hökmany**: Vercel-de faýl ulgamy diňe okalýar, ýagny giriş kody
+   hiç ýere ýazylyp bilinmeýär. Birikdirilenden soň `KV_REST_API_URL`
+   we `KV_REST_API_TOKEN` awtomatik goşulýar.
+3. **Settings → Environment Variables** — şular goýulýar:
+   `AUTH_SECRET`, `ADMIN_EMAILS`, `MAIL_FROM` we poçta açarlary
+   (`RESEND_API_KEY` ýa-da `SMTP_*`), soňra `TELEGRAM_BOT_TOKEN`,
+   `TELEGRAM_CHAT_ID`.
+4. **Settings → Functions → Region:** `fra1` (Frankfurt) — Türkmenistan
+   we Türkiýä iň ýakyn nokat; sahypanyň açylyş wagty ep-esli gowulaşýar.
+
+Gor birikdirilmese, giriş sahypasy düşnüksiz näsazlyk bermeýär:
+`503 { error: 'storage' }` gaýtarýar we sebäbini ýazgylarda görkezýär.
 
 ---
 
@@ -216,6 +263,7 @@ npm run dev
 | [`docs/02-landing-arkitektura.md`](docs/02-landing-arkitektura.md) | Her bölümiň maksady we konwersiýa mantygy |
 | [`docs/03-admin-panelleri.md`](docs/03-admin-panelleri.md) | Iki paneliň binagärligi, kabul tapgyrlary, maglumat akymy |
 | [`docs/04-kopdillilik.md`](docs/04-kopdillilik.md) | i18n gurluşy, terjime tertibi, SEO |
+| [`docs/05-giris-ulgamy.md`](docs/05-giris-ulgamy.md) | Parolsyz giriş, kodyň howpsuzlygy, rollar |
 
 ---
 
@@ -251,8 +299,11 @@ npm run dev
 5. **Maglumat gory** — häzir [`mock-data.ts`](src/lib/mock-data.ts);
    hakyky gor (Supabase / PostgreSQL) birikdirilmelidir.
 
-6. **Giriş ulgamy** — [`middleware.ts`](src/middleware.ts)-däki rol barlagy
-   kuki esasly görkezmedir; NextAuth ýa-da Supabase Auth goşulmaly.
+6. **Giriş ulgamy** — ✅ taýýar: parolsyz, e-poçta kody bilen
+   ([`docs/05-giris-ulgamy.md`](docs/05-giris-ulgamy.md)). Işe girizmezden
+   öň `AUTH_SECRET`, `ADMIN_EMAILS` we poçta sazlamalary goýulmaly.
+   Serwer birnäçe nusgada işledilse, [`lib/auth/store.ts`](src/lib/auth/store.ts)
+   Redis ýa-da Postgres bilen çalşyrylmaly.
 
 7. **Sanly tassyklamalar.** Häzirki sanlar barlanýan zatlar: 5 uniwersitet,
    4 ädim, 3 dil. «98% kabul» ýaly barlanmaýan görkeziji **bilkastlaýyn

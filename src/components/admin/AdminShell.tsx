@@ -1,12 +1,56 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import { Bell, LogOut, Search, Settings } from 'lucide-react';
+import {
+  BarChart3, Bell, Briefcase, CalendarDays, FileText, Filter, Image as ImageIcon,
+  KanbanSquare, LayoutDashboard, Loader2, LogOut, Search, Send, Settings, Settings2,
+  TrendingUp, Users, Users2,
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { TeamMember } from '@/lib/types';
 import { Logo } from '@/components/shared/Logo';
+
+/**
+ * MENÝUNYŇ NYŞANLARY
+ * ------------------------------------------------------------------
+ * Sahypalar nyşanyň ÖZÜNI däl-de, onuň ADYNY berýär.
+ *
+ * Näme üçin? Sahypalar serwerde işleýär, bu gabyk bolsa brauzerde
+ * (`use client`). Serwerden brauzere diňe ADATY maglumat geçip bilýär —
+ * funksiýa we komponent geçmeýär. Nyşan komponentini göni bermek
+ * synanyşygy şu ýalňyşlygy berýärdi:
+ *   «Only plain objects can be passed to Client Components».
+ *
+ * Şol bir usul taslamada eýýäm ulanylýar (`QuickActions`,
+ * `ProblemSolution`) — bir düşünje, bir çözgüt.
+ */
+const NAV_ICONS = {
+  board: KanbanSquare,       // Kanban tagtasy
+  leads: Users,              // Ähli ýüztutmalar
+  calendar: CalendarDays,    // Möhletler
+  telegram: Send,            // Telegram bildirişleri
+  settings: Settings2,       // Sazlamalar
+  overview: LayoutDashboard, // Umumy görnüş
+  traffic: TrendingUp,       // Gatnaw
+  funnel: Filter,            // Öwrülme tapgyrlary
+  content: FileText,         // Mazmun
+  cases: Briefcase,          // Kabul hatlary
+  media: ImageIcon,          // Suratlar we wideo
+  analytics: BarChart3,      // Seljerme paneli
+  team: Users2,              // Topar we rugsatlar
+} as const;
+
+export type NavIcon = keyof typeof NAV_ICONS;
+
+export interface NavItem {
+  href: string;
+  label: string;
+  icon: NavIcon;
+  badge?: number;
+}
 
 /**
  * ADMIN GABYGY (Shell)
@@ -27,7 +71,7 @@ export function AdminShell({
   accent = 'brand',
 }: {
   children: React.ReactNode;
-  nav: Array<{ href: string; label: string; icon: React.ElementType; badge?: number }>;
+  nav: NavItem[];
   title: string;
   subtitle: string;
   user: TeamMember;
@@ -36,6 +80,27 @@ export function AdminShell({
   const t = useTranslations('admin.common');
   const pathname = usePathname();
   const locale = useLocale();
+  const router = useRouter();
+  const [leaving, setLeaving] = useState(false);
+
+  /**
+   * ÇYKMAK
+   * Kuki diňe serwerde pozulýar (ol `httpOnly` — JavaScript oňa
+   * ýetip bilmeýär, bu XSS goragynyň bir bölegi). Şonuň üçin çykmak
+   * hem serwere edilýän sorag arkaly amala aşyrylýar.
+   *
+   * `refresh()` hökman: serwer komponentleri kukisiz gaýtadan
+   * hasaplanmaly, ýogsam brauzeriň keşinde panel görnüp galýar.
+   */
+  const signOut = async () => {
+    setLeaving(true);
+    try {
+      await fetch('/api/admin/auth/cykys', { method: 'POST' });
+    } finally {
+      router.replace(`/${locale}/admin/giris`);
+      router.refresh();
+    }
+  };
 
   return (
     <div className="flex min-h-screen bg-base">
@@ -57,7 +122,11 @@ export function AdminShell({
             <div className="min-w-0">
               <p className="truncate text-body-sm font-semibold">{user.name}</p>
               <p className="truncate text-micro text-faint">
-                {user.role === 'analytics' ? t('roleAnalytics') : t('roleSales')}
+                {user.role === 'owner'
+                  ? t('roleOwner')
+                  : user.role === 'analytics'
+                    ? t('roleAnalytics')
+                    : t('roleSales')}
               </p>
             </div>
           </div>
@@ -65,7 +134,8 @@ export function AdminShell({
 
         <nav className="mt-6 flex-1">
           <ul className="space-y-1">
-            {nav.map(({ href, label, icon: Icon, badge }) => {
+            {nav.map(({ href, label, icon, badge }) => {
+              const Icon = NAV_ICONS[icon];
               const active = pathname.includes(href);
               return (
                 <li key={href}>
@@ -94,8 +164,17 @@ export function AdminShell({
           </ul>
         </nav>
 
-        <button className="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-body-sm text-muted transition-colors hover:bg-line/[0.05] hover:text-brand">
-          <LogOut className="h-4 w-4" aria-hidden />
+        <button
+          type="button"
+          onClick={() => void signOut()}
+          disabled={leaving}
+          className="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-body-sm text-muted transition-colors hover:bg-line/[0.05] hover:text-brand disabled:opacity-55"
+        >
+          {leaving ? (
+            <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+          ) : (
+            <LogOut className="h-4 w-4" aria-hidden />
+          )}
           {t('logout')}
         </button>
       </aside>

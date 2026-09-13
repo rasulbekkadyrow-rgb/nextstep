@@ -1,14 +1,14 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { LayoutDashboard, TrendingUp, Filter, FileText, Briefcase, Image as ImageIcon } from 'lucide-react';
+import { notFound, redirect } from 'next/navigation';
 import { isLocale } from '@/lib/i18n';
-import { AdminShell, KpiCard } from '@/components/admin/AdminShell';
+import { AdminShell, KpiCard, type NavItem } from '@/components/admin/AdminShell';
 import {
   TrafficChart, ConversionFunnel, SourcesChart, DevicesChart,
 } from '@/components/admin/analytics/AnalyticsCharts';
 import { ContentManager } from '@/components/admin/analytics/ContentManager';
 import { LiveVisitors } from '@/components/admin/analytics/LiveVisitors';
-import { TEAM, TRAFFIC_30D } from '@/lib/mock-data';
+import { TRAFFIC_30D } from '@/lib/mock-data';
+import { getCurrentAdmin, toTeamMember } from '@/lib/auth/current';
 
 /**
  * ADMIN 2 — SELJERME WE MAZMUN DOLANDYRYJYSY
@@ -34,20 +34,28 @@ export default async function AnalyticsPage({
   if (!isLocale(locale)) notFound();
   setRequestLocale(locale);
 
+  /* Golyň barlagy aradaky gatlakda; bu ýerde adamyň häzirki ýagdaýy */
+  const current = await getCurrentAdmin();
+  if (!current) redirect(`/${locale}/admin/giris?yzyna=/${locale}/admin/analitika`);
+
   const t = await getTranslations('admin.analytics');
+  const tTeam = await getTranslations('admin.team');
 
   /* Soňky 30 günüň jemi — önümçilikde analitika API-sinden gelýär */
   const visitors = TRAFFIC_30D.reduce((sum, d) => sum + d.visitors, 0);
   const leads = TRAFFIC_30D.reduce((sum, d) => sum + d.leads, 0);
   const conversion = ((leads / visitors) * 100).toFixed(1).replace('.', ',');
 
-  const nav = [
-    { href: `/${locale}/admin/analitika`, label: t('nav.overview'), icon: LayoutDashboard },
-    { href: `/${locale}/admin/analitika/gatnaw`, label: t('nav.traffic'), icon: TrendingUp },
-    { href: `/${locale}/admin/analitika/tapgyrlar`, label: t('nav.funnel'), icon: Filter },
-    { href: `/${locale}/admin/analitika/mazmun`, label: t('nav.content'), icon: FileText },
-    { href: `/${locale}/admin/analitika/keysler`, label: t('nav.cases'), icon: Briefcase },
-    { href: `/${locale}/admin/analitika/media`, label: t('nav.media'), icon: ImageIcon },
+  const nav: NavItem[] = [
+    { href: `/${locale}/admin/analitika`, label: t('nav.overview'), icon: 'overview' },
+    { href: `/${locale}/admin/analitika/gatnaw`, label: t('nav.traffic'), icon: 'traffic' },
+    { href: `/${locale}/admin/analitika/tapgyrlar`, label: t('nav.funnel'), icon: 'funnel' },
+    { href: `/${locale}/admin/analitika/mazmun`, label: t('nav.content'), icon: 'content' },
+    { href: `/${locale}/admin/analitika/keysler`, label: t('nav.cases'), icon: 'cases' },
+    { href: `/${locale}/admin/analitika/media`, label: t('nav.media'), icon: 'media' },
+    ...(current.user.role === 'owner'
+      ? ([{ href: `/${locale}/admin/topar`, label: tTeam('title'), icon: 'team' }] as NavItem[])
+      : []),
   ];
 
   return (
@@ -55,7 +63,7 @@ export default async function AnalyticsPage({
       nav={nav}
       title={t('title')}
       subtitle={t('subtitle')}
-      user={TEAM[1]}
+      user={toTeamMember(current.user)}
       accent="ok"
     >
       {/* ---------- Esasy görkezijiler ---------- */}

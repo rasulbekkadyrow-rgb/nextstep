@@ -52,16 +52,19 @@ iki panel bir ulgam ýaly duýulýar.
 |---|---|
 | `sales` | `/[dil]/admin/satuw` |
 | `analytics` | `/[dil]/admin/analitika` |
-| `owner` | Ikisi-de |
+| `owner` | Ikisi-de + `/[dil]/admin/topar` (topary dolandyrmak) |
 
 Barlagyň mantygy:
 
 1. Giriş edilmedik bolsa → giriş sahypasyna ugrukdyrylýar.
 2. Rol gabat gelmese → öz paneline gaýtarylýar.
 
-> **Bellik:** häzirki barlag kuki esasly **görkezmedir**. Önümçilikde
-> NextAuth ýa-da Supabase Auth bilen çalşyrylmalydyr. Şertiň mantygy
-> üýtgemeýär — diňe maglumatyň çeşmesi üýtgeýär.
+Giriş **parolsyz**: e-poçta iberilýän bir gezeklik 6 sanly kod bilen.
+Seans kukisine HMAC-SHA256 bilen gol çekilýär — ony brauzerde ýasap
+bolmaýar. Doly beýany: [`05-giris-ulgamy.md`](05-giris-ulgamy.md).
+
+> **Öňki ýagdaý:** kuki esasly **görkezme** barlag (`ns_session=demo`).
+> Ol doly çalşyryldy — brauzeriň gurallary arkaly girmek indi mümkin däl.
 
 ---
 

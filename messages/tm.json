@@ -461,14 +461,39 @@
   "admin": {
     "login": {
       "title": "Admin panele giriş",
-      "subtitle": "Haýsy panele girjegiňizi saýlaň.",
-      "sales": "Talyp arzalary",
-      "salesNote": "Kanban tagtasy, ýüztutmalar, Telegram",
-      "analytics": "Seljerme we mazmun",
-      "analyticsNote": "Görkezijiler, myhmanlar, sahypanyň mazmuny",
-      "demoTitle": "Görkezme giriş",
-      "demoText": "Bu ýerde hakyky barlag ýok — rol saýlanýar we gutapjyga (cookie) ýazylýar. Önümçilikde ol hakyky giriş ulgamyna çalşyrylmalydyr.",
-      "back": "Saýta gaýtmak"
+      "subtitle": "Iş e-poçtaňyzy ýazyň — girmek üçin bir gezeklik kod ibereris.",
+      "emailLabel": "E-poçta salgyňyz",
+      "emailPlaceholder": "mekan@gmail.com",
+      "continue": "Kod ibermek",
+      "passwordless": "Parol ýok: her girişde poçtaňyza täze kod gelýär we ol 10 minutdan soň özi öçýär.",
+      "codeTitle": "Kody giriziň",
+      "codeSubtitle": "Alty sanly kody şu salga iberdik:",
+      "codeLabel": "Giriş kody",
+      "verify": "Girmek",
+      "resend": "Kody täzeden ibermek",
+      "resendIn": "Täzeden ibermek — {seconds} sek.",
+      "changeEmail": "Salgyny üýtgetmek",
+      "noMailTitle": "Hat gelmedimi?",
+      "noMailText": "Spam we «Promotions» bukjalaryna serediň. Salgy nädogry ýazylan ýa-da dolandyryjylaryň sanawynda ýok bolsa, hat iberilmeýär — şeýle ýagdaýda paneliň eýesi bilen habarlaşyň.",
+      "back": "Saýta gaýtmak",
+      "errors": {
+        "invalidEmail": "Salgy nädogry ýazyldy öýdülýär. Barlap, ýene synanyşyň.",
+        "invalidCode": "Kod nädogry. Poçtadaky iň soňky haty barlaň.",
+        "expired": "Kodyň möhleti geçdi. Täze kod soraň.",
+        "locked": "Synanyşyklaryň sany doldy. Täze kod soraň.",
+        "notAllowed": "Bu salgy dolandyryjylaryň sanawynda ýok.",
+        "tooMany": "Örän köp synanyşyk boldy. Biraz garaşyp, ýene synanyşyň.",
+        "cooldown": "Täze kod entek iberilenok — sanaýjy gutarýança garaşyň.",
+        "mailFailed": "Hat iberilmedi. Serweriň poçta sazlamalary barlanmaly.",
+        "network": "Birikme ýok. Internedi barlap, ýene synanyşyň.",
+        "storage": "Serweriň maglumat gory sazlanmadyk — kod saklanyp bilmedi. Taslamany dolandyryjy bilen habarlaşyň."
+      },
+      "notices": {
+        "consoleTitle": "Poçta entek sazlanmadyk",
+        "consoleText": "Kod hat ýerine serweriň terminalynda çykdy. Hakyky hat ibermek üçin .env.local faýlynda SMTP sazlamalaryny beriň.",
+        "setupTitle": "Sazlama tertibi",
+        "setupText": "Dolandyryjylaryň sanawy entek boş. Bu kody girizseňiz, ilkinji giren adam hökmünde eýe bolarsyňyz."
+      }
     },
     "common": {
       "search": "Gözleg",
@@ -491,7 +516,48 @@
       "empty": "Bu ýerde häzirlikçe maglumat ýok",
       "confirmDelete": "Hakykatdan hem pozmak isleýärsiňizmi? Bu hereketi yzyna gaýtaryp bolmaýar.",
       "roleSales": "Talyp arzalarynyň dolandyryjysy",
-      "roleAnalytics": "Seljerme we mazmun dolandyryjysy"
+      "roleAnalytics": "Seljerme we mazmun dolandyryjysy",
+      "roleOwner": "Eýe — doly rugsat"
+    },
+    "team": {
+      "title": "Topar we rugsatlar",
+      "subtitle": "Kim panele girip bilýär we haýsy bölüme",
+      "listTitle": "Dolandyryjylar",
+      "listSubtitle": "Sanawdaky her salga giriş kody iberilip bilinýär",
+      "addTitle": "Täze dolandyryjy",
+      "addSubtitle": "Diňe salgyny ýazyň — parol döretmek gerek däl",
+      "emailLabel": "E-poçta",
+      "nameLabel": "Ady (islege görä)",
+      "namePlaceholder": "Meret Ataýew",
+      "roleLabel": "Rol",
+      "addButton": "Topara goşmak",
+      "addedHint": "{email} goşuldy. Indi oňa giriş sahypasynda salgysyny ýazmak ýeterlik — kod özüne gelýär.",
+      "you": "siz",
+      "protectedHint": "Serweriň sazlamasyndan gelýär — panelden pozulmaýar",
+      "pause": "Wagtlaýyn ýapmak",
+      "resume": "Ýene açmak",
+      "remove": "Sanawdan aýyrmak",
+      "confirmRemove": "Bu adam sanawdan aýrylsynmy? Ol şondan soň panele girip bilmez.",
+      "lastLogin": "Soňky giriş: {date}",
+      "neverLoggedIn": "Entek girmedi",
+      "roles": {
+        "sales": "Arzalar dolandyryjysy",
+        "analytics": "Seljerme we mazmun",
+        "owner": "Eýe — doly rugsat"
+      },
+      "roleNotes": {
+        "sales": "Kanban tagtasy, talyplaryň telefon belgileri we resminamalary.",
+        "analytics": "Görkezijiler, gatnaw we saýtyň üç dildäki mazmuny. Talyplaryň şahsy maglumatlaryny görmeýär.",
+        "owner": "Iki panel hem, şeýle hem topary dolandyrmak."
+      },
+      "errors": {
+        "exists": "Bu salgy eýýäm sanawda bar.",
+        "invalid": "Amal ýerine ýetirilmedi. Maglumatlary barlaň.",
+        "network": "Birikme ýok. Ýene synanyşyň.",
+        "lastOwner": "Iň soňky eýäni ýapyp ýa-da rolyny üýtgedip bolmaýar — ýogsam ulgamy dolandyrjak adam galmaýar.",
+        "self": "Öz rolyňyzy ýa-da hasabyňyzy özüňiz üýtgedip bilmeýärsiňiz.",
+        "protected": "Bu ýazgy serweriň sazlamasyndan gelýär — ony .env faýlyndan aýyrmaly."
+      }
     },
     "sales": {
       "title": "Arzalar paneli",
