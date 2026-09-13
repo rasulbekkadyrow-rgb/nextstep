@@ -8,6 +8,7 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 import { AuroraField } from '@/components/ui/AuroraField';
 import { LogoMark } from '@/components/shared/Logo';
 import { ContactLinks } from '@/components/shared/ContactLinks';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 /**
  * HERO BÖLÜMI
@@ -30,8 +31,32 @@ export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
 
+  /* Paralaks diňe uly ekranda: telefonda sütünler üstün-üstüne
+     düzülýär we iň aşakdaky element — habarlaşyk nyşanlary — bolýar. */
+  const wideScreen = useMediaQuery('(min-width: 1024px)');
+
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] });
-  const contentY = useTransform(scrollYProgress, [0, 1], ['0%', reduceMotion ? '0%' : '16%']);
+
+  /**
+   * PARALAKS SÜÝŞMESI — PIKSELDE, GÖTERIMDE DÄL.
+   *
+   * ⚠️ BU ÝERDE NÄSAZLYK BARDY. Öň süýşme `16%` idi, ýagny mazmunyň
+   * ÖZ BEÝIKLIGINIŇ göterimi. Bölümde bolsa `overflow-hidden` bar
+   * (ol fondaky şöhläniň gyradan çykmagyny kesýär). Telefonda mazmun
+   * ~1100px beýiklikde bolýar → 16% ≈ 176px, aşaky jaý bolsa 80px.
+   * Netijede skroll edeniňde iň aşaky element bölümiň gyrasyndan
+   * çykyp, KESILÝÄRDI — habarlaşyk nyşanlary ýitýärdi.
+   *
+   * Indi iki gorag bar:
+   *  1. Süýşme anyk pikselde — mazmunyň uzynlygyna bagly däl.
+   *  2. Ol aşaky jaýdan (md:pb-28 = 112px) KIÇI saýlanyldy, ýagny
+   *     mazmun kesilýän gyra matematiki taýdan hiç haçan ýetmeýär.
+   */
+  const contentY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['0px', reduceMotion || !wideScreen ? '0px' : '64px'],
+  );
 
   /* Telefonda ýokarky jaý gysgaldyldy (pt-24). Marka paneli indi
      birinji gelýändigi üçin her piksel möhüm: maksat — «Mugt
