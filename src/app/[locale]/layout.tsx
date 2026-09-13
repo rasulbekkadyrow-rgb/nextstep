@@ -5,6 +5,8 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { notFound } from 'next/navigation';
 import { locales, localeMeta, isLocale, type Locale } from '@/lib/i18n';
 import { LiquidRefractionFilter } from '@/components/ui/AuroraField';
+import { ThemeSync } from '@/components/ui/ThemeSync';
+import { THEME_BOOT_SCRIPT } from '@/lib/theme';
 import '../globals.css';
 
 /**
@@ -82,22 +84,6 @@ export async function generateMetadata({
   };
 }
 
-/**
- * Tema skripti — sahypa çyzylmazdan öň işleýär.
- * Şeýlelikde garaňky temada sahypanyň ak «ýalpyldamagy» (flash) bolmaýar.
- */
-const themeScript = `
-(function(){
-  try {
-    /* Saýtyň esasy görnüşi ÝAGTY. Ulanyjy garaňkyny saýlan bolsa
-       ýa-da ulgamy garaňky bolsa — şoňa geçirilýär. */
-    var stored = localStorage.getItem('ns-theme');
-    var system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', stored || system);
-  } catch (e) {}
-})();
-`;
-
 export default async function LocaleLayout({
   children,
   params,
@@ -119,12 +105,21 @@ export default async function LocaleLayout({
       className={`${displayFont.variable} ${golos.variable} ${monoFont.variable}`}
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {/* Tema skripti — sahypa çyzylmazdan öň işleýär, şeýlelikde
+            garaňky temada ak «ýalpyldama» (flash) bolmaýar.
+            Mantygy `lib/theme.ts`-de — ähli ýerde şol bir düzgün. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
       </head>
       <body className="min-h-screen antialiased">
         {/* Döwülme süzgüji sahypada bir gezek — ähli aýna elementleri
             şondan peýdalanýar (`.lg-refract`). */}
         <LiquidRefractionFilter />
+
+        {/* Dil çalşanda React `<html>`-i gaýtadan çyzýar we özüniň
+            goýmadyk `data-theme` atributyny aýyrýar — şonda saýlanan
+            tema ýitýärdi. Bu komponent ony her geçişde dikeldýär. */}
+        <ThemeSync />
+
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>

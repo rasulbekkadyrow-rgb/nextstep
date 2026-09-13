@@ -16,6 +16,7 @@ import {
 } from 'framer-motion';
 import { Menu, X, Moon, Sun, Globe, Check, ChevronDown } from 'lucide-react';
 import { locales, localeMeta, type Locale } from '@/lib/i18n';
+import { applyTheme, resolveTheme, type Theme } from '@/lib/theme';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { LogoMark } from '@/components/shared/Logo';
 import { cn } from '@/lib/utils';
@@ -75,7 +76,7 @@ export function Header() {
   const [tapped, setTapped] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<Theme>('light');
 
   /* Skrolldan gelýän «şu wagtky ýagdaý» — diňe okamak üçin. */
   const [shut, setShut] = useState(false);       /* ýygnanana ýakyn */
@@ -180,17 +181,20 @@ export function Header() {
   const contentLeft = PAD_X.open + LOGO.open + GAP + stackW + LEAD;
   const contentW = Math.max(0, openW - contentLeft - PAD_X.open);
 
-  /* --- TEMA ----------------------------------------------------- */
+  /* --- TEMA -----------------------------------------------------
+     Düwmedäki nyşan hakyky temany görkezmeli. Ol `<html>`-däki
+     atributdan däl-de `resolveTheme()`-den okalýar: dil çalşanda
+     atribut bir pursat ýitip biler, saklanan saýlaw bolsa ýitmeýär.
+     Salgy üýtgände hem täzeden okalýar — `ThemeSync` bilen bir
+     çeşmeden iýmitlenýändikleri üçin ikisi hiç haçan tapawutlanmaýar. */
   useEffect(() => {
-    const stored = document.documentElement.getAttribute('data-theme');
-    if (stored === 'light' || stored === 'dark') setTheme(stored);
-  }, []);
+    setTheme(resolveTheme());
+  }, [pathname]);
 
   const toggleTheme = () => {
-    const next = theme === 'dark' ? 'light' : 'dark';
+    const next: Theme = theme === 'dark' ? 'light' : 'dark';
     setTheme(next);
-    document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem('ns-theme', next); } catch { /* gizli rejimde elýeterli däl */ }
+    applyTheme(next);
   };
 
   /* Gerşiň daşyna basylanda ol ýapylýar (telefon üçin). */
