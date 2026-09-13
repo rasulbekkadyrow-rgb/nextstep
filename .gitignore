@@ -1,0 +1,44 @@
+# Baglanyşyklar
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+
+# Next.js gurluşygy
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# Synag we ölçegler
+/coverage
+
+# Daşky üýtgeýjiler — GIZLIN, hiç haçan goýulmaýar
+.env
+.env*.local
+.env.production
+
+# Işleýän wagtyň maglumatlary — dolandyryjylaryň e-poçtalary we
+# bir gezeklik kodlar. Bular hiç haçan repozitoriýa düşmeli däl.
+/.data
+
+# Ulgam faýllary
+.DS_Store
+*.pem
+Thumbs.db
+desktop.ini
+
+# Ýazgylar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Ýerleşdiriş
+.vercel
+*.tsbuildinfo
+
+# Gurallaryň ýerli sazlamalary
+/.claude
+.idea
+.vscode

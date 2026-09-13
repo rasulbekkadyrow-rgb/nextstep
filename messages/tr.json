@@ -1,0 +1,648 @@
+{
+  "meta": {
+    "locale": "tr",
+    "name": "Türkçe",
+    "shortName": "TR",
+    "dir": "ltr",
+    "title": "Next Step Consulting — Türkiye'deki üniversitelere öğrenci kabul danışmanlığı",
+    "description": "Bölüm ve üniversite seçiminden belge hazırlığına ve kabul mektubunun alınmasına kadar tüm aşamaları biz yürütüyoruz. Türkmence, Rusça ve Türkçe hizmet.",
+    "ogAlt": "Next Step Consulting — Türkiye'de eğitim danışmanlığı"
+  },
+  "nav": {
+    "brand": "Next Step",
+    "brandSuffix": "Consulting",
+    "links": {
+      "problem": "Sorun ve çözüm",
+      "process": "Nasıl çalışıyoruz",
+      "universities": "Üniversiteler",
+      "proof": "Sonuçlar",
+      "faq": "Sorular"
+    },
+    "cta": "Ücretsiz danışmanlık",
+    "menuOpen": "Menüyü aç",
+    "menuClose": "Menüyü kapat",
+    "themeLight": "Açık tema",
+    "themeDark": "Koyu tema",
+    "languageLabel": "Dil"
+  },
+  "hero": {
+    "badge": "2026/2027 eğitim yılı için başvurular alınıyor",
+    "slogan": "Geleceğe doğru ilk ve en doğru adımı bizimle atın!",
+    "titleLead": "Türkiye'deki üniversiteden",
+    "titleAccent": "kabul mektubu",
+    "titleTail": "almanın doğru yolu",
+    "subtitle": "Bölüm ve üniversite seçiminden belge hazırlığına ve başvurunun yapılmasına kadar tüm aşamaları biz yürütüyoruz. Size yalnızca eğitime hazırlanmak kalıyor.",
+    "ctaPrimary": "Ücretsiz danışmanlık al",
+    "ctaSecondary": "Üniversiteleri gör",
+    "ctaHint": "WhatsApp üzerinden kısa sürede yanıt veriyoruz",
+    "scrollHint": "Aşağı kaydırın"
+  },
+  "quickActions": {
+    "eyebrow": "Nereden başlamalı?",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Beklemeyin — başlayalım",
+        "text": "Üniversitenizi seçin, başvuruyu biz hazırlayıp yapalım.",
+        "cta": "Başla",
+        "href": "#arza"
+      },
+      {
+        "icon": "search",
+        "title": "Üniversitenizi bulun",
+        "text": "Notlarınıza uygun üniversitelerin listesi.",
+        "cta": "İncele",
+        "href": "#uniwersitetler"
+      },
+      {
+        "icon": "percent",
+        "title": "Burs ve indirim olanakları",
+        "text": "Üniversitelerin sunduğu indirimler hakkında net bilgi.",
+        "cta": "Sor",
+        "href": "#teklip"
+      },
+      {
+        "icon": "message",
+        "title": "WhatsApp desteği",
+        "text": "Sorunuz varsa doğrudan yazın — resmiyete gerek yok.",
+        "cta": "Yaz",
+        "href": "https://wa.me/905396020799"
+      }
+    ]
+  },
+  "problem": {
+    "eyebrow": "Sorun ve çözüm",
+    "title": "Tanıdık geldi mi? O hâlde ilk adım da belli demektir.",
+    "subtitle": "Kartlardaki anahtarı değiştirin: solda tek başına denendiğinde olan, sağda bizimle çalışıldığında olan durum.",
+    "switchBefore": "Tek başına",
+    "switchAfter": "Bizimle",
+    "switchAria": "Durumu değiştir: tek başına / bizimle",
+    "items": [
+      {
+        "icon": "compass",
+        "before": {
+          "title": "Hangi üniversitenin seçileceği belli değil",
+          "text": "Onlarca üniversite, yüzlerce bölüm ve birbiriyle çelişen tavsiyeler. Hangi diplomanın denkliğinin olduğu da, gerçek ücretin ne kadar olduğu da net değil."
+        },
+        "after": {
+          "title": "Size uygun net bir liste",
+          "text": "Bütçenize, dil seviyenize ve istediğiniz bölüme göre 3–5 somut seçenek hazırlanır. Her birinin ücreti, koşulu ve şansı yazılı olarak belirtilir."
+        }
+      },
+      {
+        "icon": "file-x",
+        "before": {
+          "title": "Belgeler geri döner",
+          "text": "Çeviride bir hata, eksik bir sayfa ya da yanlış düzenlenmiş bir diploma — başvuru kabul edilmez ve zaman boşa gider."
+        },
+        "after": {
+          "title": "Kontrol edilmiş ve eksiksiz belge dosyası",
+          "text": "Her belge üniversiteye gönderilmeden önce kontrol listesine göre incelenir. Hata nedeniyle geri dönme riski en aza iner."
+        }
+      },
+      {
+        "icon": "calendar-clock",
+        "before": {
+          "title": "Son tarihler kaçırılıyor",
+          "text": "Her üniversitenin başvuru süresi ayrı. Bir hafta gecikmek, tüm eğitim yılının ertelenmesine yol açabilir."
+        },
+        "after": {
+          "title": "Süreler önceden planlanıyor",
+          "text": "Tüm üniversitelerin süreleri tek bir takvimde birleştirilir. Her adımdan önce size hatırlatma gönderilir — gecikmek mümkün değil."
+        }
+      },
+      {
+        "icon": "shield",
+        "before": {
+          "title": "Aracılar şeffaf çalışmıyor",
+          "text": "Parayı peşin alıyorlar, sonra iletişimi kesiyorlar. Başvurunuzun hangi aşamada olduğunu sormadan öğrenemiyorsunuz."
+        },
+        "after": {
+          "title": "Şeffaf süreç ve sürekli iletişim",
+          "text": "Başvurunuzun durumu her adımda bildirilir. Üniversiteden gelen resmî yazılar doğrudan size gösterilir."
+        }
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Nasıl çalışıyoruz",
+    "title": "Danışmanlıktan kabul mektubuna — dört adım",
+    "subtitle": "Her adımın kendi süresi ve elinize geçen somut bir çıktısı var. Hangi aşamada olduğunuzu her zaman biliyorsunuz.",
+    "durationLabel": "Süre",
+    "deliverableLabel": "Elinize geçen çıktı",
+    "steps": [
+      {
+        "index": "01",
+        "title": "Ücretsiz danışmanlık ve bölüm seçimi",
+        "duration": "1 gün",
+        "text": "Notlarınızı, dil seviyenizi, bütçenizi ve istediğiniz bölümü inceliyoruz. Buna göre size gerçekten uygun üniversitelerin listesini hazırlıyoruz.",
+        "deliverable": "Ücretleri belirtilmiş 3–5 üniversitelik liste",
+        "bullets": [
+          "Diploma notlarının analizi",
+          "Bölüm ve meslek danışmanlığı",
+          "Ücret ve burs olanakları"
+        ]
+      },
+      {
+        "index": "02",
+        "title": "Belgelerin toplanması ve kontrolü",
+        "duration": "3–7 gün",
+        "text": "Gerekli belgelerin listesini veriyor ve her birini kontrol ediyoruz. Eksik varsa, üniversiteye gönderilmeden önce tamamlanıyor.",
+        "deliverable": "Kontrolden geçmiş eksiksiz belge dosyası",
+        "bullets": [
+          "Pasaport ve diploma",
+          "Transkript (not belgesi)",
+          "Fotoğraf ve başvuru formu"
+        ]
+      },
+      {
+        "index": "03",
+        "title": "Başvuruların üniversitelere yapılması",
+        "duration": "1–2 hafta",
+        "text": "Başvurular aynı anda birkaç üniversiteye yapılır — böylece seçim olanağınız artar. Her başvurunun durumu takip edilir.",
+        "deliverable": "Yapılan başvuruların raporu ve takip numaraları",
+        "bullets": [
+          "Birden fazla üniversiteye başvuru",
+          "Sürelerin takibi",
+          "Üniversiteyle yazışma"
+        ]
+      },
+      {
+        "index": "04",
+        "title": "Kabul mektubu ve kayıt",
+        "duration": "2–4 hafta",
+        "text": "Kabul mektubu geldiği anda size iletilir. Teklifler karşılaştırılır, en uygunu seçilir ve kayıt aşaması tamamlanır.",
+        "deliverable": "Resmî kabul mektubu (Letter of Acceptance)",
+        "bullets": [
+          "Kabul mektubunun alınması",
+          "Tekliflerin karşılaştırılması",
+          "Kayıt sürecinde yönlendirme"
+        ]
+      }
+    ],
+    "scopeNote": "Not: temel hizmetimiz üniversite seçimi, belge hazırlığı ve kabul mektubunun alınmasıdır. Vize, konaklama ve uçuş konularında yönlendirici danışmanlık veriyoruz."
+  },
+  "universities": {
+    "eyebrow": "Üniversiteler",
+    "title": "Türkiye'nin önde gelen üniversiteleri",
+    "subtitle": "Öğrencilerimizin en çok başvurduğu üniversiteler. Her biri için yıllık ücret, bölümler ve başvuru tarihleri hakkında net bilgi veriyoruz.",
+    "cityLabel": "Şehir",
+    "city": "İstanbul · Bayburt · Kütahya",
+    "items": [
+      {
+        "name": "Bahçeşehir Üniversitesi",
+        "short": "BAU",
+        "note": "Geniş uluslararası değişim programları"
+      },
+      {
+        "name": "İstanbul Gelişim Üniversitesi",
+        "short": "IGU",
+        "note": "Uygulamalı alanlar ve teknik bölümler"
+      },
+      {
+        "name": "İstinye Üniversitesi",
+        "short": "ISU",
+        "note": "Sağlık alanlarında güçlü"
+      },
+      {
+        "name": "İstanbul Aydın Üniversitesi",
+        "short": "IAU",
+        "note": "Bölüm sayısı bakımından en geniş seçenek"
+      },
+      {
+        "name": "İstanbul Medipol Üniversitesi",
+        "short": "MED",
+        "note": "Tıp ve diş hekimliği"
+      }
+    ],
+    "marqueeNote": "Mor işaretliler — öğrencilerimizin kabul aldığı üniversiteler.",
+    "detail": {
+      "hint": "Üniversiteye tıklayın — ayrıntılı bilgi açılır",
+      "partner": "Başvuru hazırladığımız üniversite",
+      "other": "Listedeki üniversite",
+      "generic": "Bu üniversite için de danışmanlık veriyoruz. Yıllık ücret, bölüm listesi ve başvuru tarihleri için bize yazın.",
+      "ask": "Bu üniversite hakkında sorun",
+      "apply": "Ücretsiz danışmanlık al",
+      "close": "Kapat",
+      "cityLabel": "Şehir"
+    }
+  },
+  "proof": {
+    "eyebrow": "Sonuçlar",
+    "title": "Kabul mektupları — en iyi kanıt",
+    "subtitle": "Aşağıdakiler öğrencilerimizin gerçek kabul mektuplarıdır. Kişisel verileri korumak için isimler kısaltılmıştır.",
+    "lettersLabel": "Alınan kabul mektupları",
+    "letterCard": {
+      "accepted": "Kabul edildi",
+      "program": "Bölüm",
+      "year": "Eğitim yılı"
+    },
+    "letters": [
+      {
+        "student": "R. Matniyazov",
+        "uni": "Bahçeşehir Üniversitesi",
+        "program": "Mimarlık",
+        "year": "2025 / 2026",
+        "img": "matniyazov"
+      },
+      {
+        "student": "A. Ashyrov",
+        "uni": "Bahçeşehir Üniversitesi",
+        "program": "Hemşirelik",
+        "year": "2025 / 2026",
+        "img": "ashyrov"
+      },
+      {
+        "student": "A. Torayeva",
+        "uni": "İstanbul Aydın Üniversitesi",
+        "program": "Siyaset Bilimi ve Uluslararası İlişkiler",
+        "year": "2025 / 2026",
+        "img": "torayeva"
+      },
+      {
+        "student": "D. Orazimbetov",
+        "uni": "İstanbul Medipol Üniversitesi",
+        "program": "Kentsel Tasarım ve Peyzaj Mimarlığı",
+        "year": "2025 / 2026",
+        "img": "orazimbetov"
+      },
+      {
+        "student": "M. Baltabayeva",
+        "uni": "İstanbul Medipol Üniversitesi",
+        "program": "Fizyoterapi ve Rehabilitasyon",
+        "year": "2025 / 2026",
+        "img": "baltabayeva"
+      },
+      {
+        "student": "R. Kadyrov",
+        "uni": "İstanbul Medipol Üniversitesi",
+        "program": "Görsel İletişim Tasarımı",
+        "year": "2025 / 2026",
+        "img": "kadyrov"
+      },
+      {
+        "student": "B. Yusupov",
+        "uni": "İstanbul Medipol Üniversitesi",
+        "program": "İngilizce Öğretmenliği",
+        "year": "2025 / 2026",
+        "img": "yusupov"
+      },
+      {
+        "student": "A. Madreyimov",
+        "uni": "Bayburt Üniversitesi",
+        "program": "İlköğretim Matematik Öğretmenliği",
+        "year": "2025 / 2026",
+        "img": "madreyimov"
+      },
+      {
+        "student": "H. Torebayev",
+        "uni": "Bayburt Üniversitesi",
+        "program": "Fen Bilgisi Öğretmenliği",
+        "year": "2025 / 2026",
+        "img": "torebayev"
+      },
+      {
+        "student": "R. Kalandarov",
+        "uni": "Kütahya Dumlupınar Üniversitesi",
+        "program": "Büro Yönetimi ve Yönetici Asistanlığı",
+        "year": "2025 / 2026",
+        "img": "kalandarov"
+      },
+      {
+        "student": "Jahangir",
+        "uni": "Kütahya Dumlupınar Üniversitesi",
+        "program": "Dış Ticaret",
+        "year": "2025 / 2026",
+        "img": "jahangir"
+      }
+    ]
+  },
+  "offer": {
+    "eyebrow": "Teklif",
+    "title": "İlk danışmanlık — ücretsiz",
+    "subtitle": "Notlarınızı ve istediğiniz bölümü söyleyin — size uygun üniversitelerin listesini ve net ücret tutarlarını hazırlayalım. Bu görüşme için ücret alınmaz.",
+    "priceLabel": "İlk danışmanlık",
+    "priceValue": "Ücretsiz",
+    "priceNote": "Hizmet bedeli, seçilen üniversiteye ve başvuru sayısına göre önceden ve yazılı olarak bildirilir. Gizli ödeme yoktur.",
+    "includesLabel": "Görüşmede ne elde edersiniz",
+    "includes": [
+      "Notlarınıza uygun üniversitelerin listesi",
+      "Her üniversitenin yıllık ücreti ve burs olanağı",
+      "Gerekli belgelerin tam listesi",
+      "Başvuru sürelerine göre takvim"
+    ],
+    "guaranteeTitle": "Ödeme yalnızca sonuca göre",
+    "guaranteeText": "Danışmanlık ve üniversite seçimi ücretsizdir. Hizmet bedeli ise yalnızca siz belirli bir üniversiteyi seçtikten sonra, anlaşma esasına göre belirlenir.",
+    "slotsLeft": "Bu sezon kalan kontenjan:",
+    "slotsValue": "12"
+  },
+  "faq": {
+    "eyebrow": "Sıkça sorulan sorular",
+    "title": "Netleştirilmesi gerekenler",
+    "subtitle": "Cevabını bulamadığınız bir soru varsa aşağıdaki formdan veya WhatsApp üzerinden yazın — kısa sürede yanıtlıyoruz.",
+    "items": [
+      {
+        "q": "Türkçe bilmiyorsam okuyabilir miyim?",
+        "a": "Evet. Vakıf üniversitelerinin çoğunda bir yıllık Türkçe veya İngilizce hazırlık programı bulunuyor. Dil seviyeniz yeterli değilse önce hazırlık yılını okur, ardından asıl bölümünüze geçersiniz. Bazı bölümler tamamen İngilizce olarak da veriliyor."
+      },
+      {
+        "q": "Hangi belgeler gerekiyor?",
+        "a": "Temel liste: pasaport, lise diploması, not belgesi (transkript) ve biyometrik fotoğraf. Üniversiteye ve bölüme göre ek belge istenebilir — bunu danışmanlık aşamasında net olarak söyler ve listeyi yazılı veririz."
+      },
+      {
+        "q": "Diplomam henüz elimde yok. Başvurabilir miyim?",
+        "a": "Evet. Birçok üniversite mezuniyet sınavlarından önce de geçici belgelerle başvuru kabul ediyor. Diploma elinize geçtiğinde dosya tamamlanır. Üstelik erken başvurmak daha avantajlı: sezon başında kontenjan ve burs daha fazla oluyor."
+      },
+      {
+        "q": "Hizmetinizin bedeli ne kadar?",
+        "a": "İlk danışmanlık, üniversite seçimi ve ücret hesaplaması tamamen ücretsizdir. Belge hazırlığı ve başvuru hizmetinin bedeli ise seçilen üniversiteye ve başvuru sayısına göre belirlenir ve işe başlamadan önce yazılı olarak bildirilir."
+      },
+      {
+        "q": "Kabul mektubu ne kadar sürede geliyor?",
+        "a": "Belgeler eksiksiz ve doğruysa, genellikle başvurudan sonra 2–4 hafta içinde geliyor. Sezonun yoğun döneminde bu süre biraz uzayabilir. Durum hakkında size her hafta bilgi veriyoruz."
+      },
+      {
+        "q": "Vize, konaklama ve uçuş işlerini de yapıyor musunuz?",
+        "a": "Temel hizmetimiz üniversite seçimi, belge hazırlığı ve kabul mektubunun alınmasıdır. Vize, yurt ve uçuş konularında yönlendirici danışmanlık ve gerekli belgelerin listesini veriyoruz, ancak bu aşamalar ayrı bir anlaşmayla yürütülür."
+      }
+    ]
+  },
+  "form": {
+    "eyebrow": "İletişim",
+    "title": "İlk adımı birlikte atalım",
+    "subtitle": "Aşağıdaki alanları doldurun — kısa sürede iletişime geçip size uygun üniversitelerin listesini hazırlayalım.",
+    "fields": {
+      "name": {
+        "label": "Öğrencinin adı ve soyadı",
+        "placeholder": "Örneğin: Aygül Saparova"
+      },
+      "phone": {
+        "label": "Telefon veya WhatsApp numaranız",
+        "placeholder": "+993 6X XX XX XX"
+      },
+      "gradYear": {
+        "label": "Liseden mezuniyet yılınız",
+        "placeholder": "Yıl seçin"
+      },
+      "program": {
+        "label": "Okumak istediğiniz bölüm",
+        "placeholder": "Bölüm seçin"
+      },
+      "message": {
+        "label": "Ek sorunuz (isteğe bağlı)",
+        "placeholder": "Sizi en çok ne ilgilendiriyor?"
+      },
+      "channel": {
+        "label": "Tercih ettiğiniz iletişim yolu",
+        "placeholder": "Yöntem seçin"
+      }
+    },
+    "gradYearOptions": [
+      "2026",
+      "2025",
+      "2024",
+      "2023 ve öncesi"
+    ],
+    "programOptions": [
+      "Tıp",
+      "Diş hekimliği",
+      "Mühendislik ve teknoloji",
+      "Ekonomi ve işletme",
+      "Mimarlık ve tasarım",
+      "Uluslararası ilişkiler",
+      "Sağlık bilimleri",
+      "Henüz karar vermedim"
+    ],
+    "channelOptions": [
+      "WhatsApp",
+      "Telefon araması",
+      "Telegram",
+      "Instagram Direct"
+    ],
+    "submit": "Talebi gönder",
+    "submitting": "Gönderiliyor…",
+    "privacy": "Formu göndererek bilgilerinizin yalnızca sizinle iletişim kurmak amacıyla kullanılacağını kabul etmiş olursunuz. Üçüncü taraflarla paylaşılmaz.",
+    "successTitle": "Talebiniz alındı",
+    "successText": "Teşekkür ederiz! Kısa sürede sizinle iletişime geçip size uygun üniversitelerin listesini hazırlayacağız.",
+    "errorTitle": "Talep gönderilemedi",
+    "errorText": "Teknik bir sorun oluştu. Biraz sonra tekrar deneyin veya WhatsApp üzerinden yazın.",
+    "errors": {
+      "nameRequired": "Lütfen öğrencinin adını yazın.",
+      "nameShort": "Ad en az 2 karakterden oluşmalıdır.",
+      "phoneRequired": "Telefon numarası zorunlu alandır.",
+      "phoneInvalid": "Telefon numarası geçerli biçimde yazılmamış.",
+      "gradYearRequired": "Mezuniyet yılınızı belirtin.",
+      "consentRequired": "Devam etmek için onay gerekiyor."
+    }
+  },
+  "footer": {
+    "tagline": "Geleceğe doğru ilk ve en doğru adımı bizimle atın.",
+    "columns": {
+      "nav": "Bölümler",
+      "services": "Hizmetler",
+      "contact": "İletişim"
+    },
+    "services": [
+      "Üniversite ve bölüm seçimi",
+      "Belge hazırlığı",
+      "Başvuruların yapılması",
+      "Kabul mektubunun alınması",
+      "Kayıt sürecinde yönlendirme"
+    ],
+    "contactLabels": {
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp",
+      "phone": "Telefon",
+      "email": "E-posta"
+    },
+    "rights": "Tüm hakları saklıdır.",
+    "madeWith": "Tasarım ve geliştirme"
+  },
+  "admin": {
+    "login": {
+      "title": "Yönetim paneline giriş",
+      "subtitle": "Hangi panele gireceğinizi seçin.",
+      "sales": "Öğrenci başvuruları",
+      "salesNote": "Kanban panosu, başvurular, Telegram",
+      "analytics": "Analitik ve içerik",
+      "analyticsNote": "Göstergeler, ziyaretçiler, site içeriği",
+      "demoTitle": "Demo giriş",
+      "demoText": "Burada gerçek bir doğrulama yok — rol seçilip çereze yazılıyor. Canlıda gerçek bir giriş sistemiyle değiştirilmelidir.",
+      "back": "Siteye dön"
+    },
+    "common": {
+      "search": "Arama",
+      "searchPlaceholder": "Öğrenci adı, telefon veya üniversiteye göre arayın…",
+      "notifications": "Bildirimler",
+      "profile": "Hesabım",
+      "logout": "Çıkış",
+      "save": "Kaydet",
+      "saving": "Kaydediliyor…",
+      "saved": "Kaydedildi",
+      "cancel": "İptal",
+      "delete": "Sil",
+      "edit": "Düzenle",
+      "add": "Ekle",
+      "today": "Bugün",
+      "week": "Hafta",
+      "month": "Ay",
+      "quarter": "Çeyrek",
+      "loading": "Yükleniyor…",
+      "empty": "Burada henüz veri yok",
+      "confirmDelete": "Gerçekten silmek istiyor musunuz? Bu işlem geri alınamaz.",
+      "roleSales": "Öğrenci başvuruları yöneticisi",
+      "roleAnalytics": "Analitik ve içerik yöneticisi"
+    },
+    "sales": {
+      "title": "Başvuru paneli",
+      "subtitle": "Öğrenci başvurularını yönetme ve kabul aşamalarını izleme",
+      "nav": {
+        "board": "Kanban panosu",
+        "leads": "Tüm başvurular",
+        "calendar": "Son tarihler",
+        "telegram": "Telegram bildirimleri",
+        "settings": "Ayarlar"
+      },
+      "kpi": {
+        "newToday": "Bugünkü yeni başvurular",
+        "inProgress": "Üzerinde çalışılan",
+        "acceptedMonth": "Bu ay alınan kabul mektubu",
+        "conversion": "Başvurudan kayda dönüşüm",
+        "avgResponse": "Ortalama yanıt süresi",
+        "docsPending": "Belgesi eksik olan"
+      },
+      "columns": {
+        "new": "Yeni başvuru",
+        "consulted": "Danışmanlık verildi",
+        "documents": "Belgeler toplanıyor",
+        "applied": "Başvuru yapıldı",
+        "accepted": "Kabul mektubu geldi",
+        "enrolled": "Kayıt tamamlandı",
+        "lost": "Kaybedilen"
+      },
+      "card": {
+        "source": "Kaynak",
+        "program": "Bölüm",
+        "targetUni": "İstediği üniversite",
+        "gradYear": "Mezuniyet yılı",
+        "assignee": "Sorumlu",
+        "createdAt": "Geliş tarihi",
+        "lastTouch": "Son temas",
+        "docsLabel": "Belgeler",
+        "priorityHigh": "Yüksek",
+        "priorityMedium": "Orta",
+        "priorityLow": "Düşük",
+        "noteAdd": "Not ekle",
+        "callNow": "Ara",
+        "openChat": "WhatsApp'tan yaz"
+      },
+      "dragHint": "Aşamayı değiştirmek için kartı sürükleyin",
+      "docsChecklist": {
+        "title": "Belge kontrol listesi",
+        "passport": "Pasaport",
+        "diploma": "Diploma",
+        "transcript": "Transkript",
+        "photo": "Biyometrik fotoğraf"
+      },
+      "telegram": {
+        "title": "Telegram bildirim entegrasyonu",
+        "subtitle": "Her yeni başvuru kanala anında iletilir",
+        "statusConnected": "Bağlandı",
+        "statusDisconnected": "Bağlı değil",
+        "botLabel": "Bot",
+        "chatLabel": "Kanal veya grup kimliği",
+        "testSend": "Test mesajı gönder",
+        "testSending": "Gönderiliyor…",
+        "testSent": "Test mesajı gönderildi",
+        "events": "Hangi olaylarda bildirim gönderilsin",
+        "eventOptions": {
+          "newLead": "Yeni başvuru geldiğinde",
+          "stageChange": "Aşama değiştiğinde",
+          "accepted": "Kabul mektubu geldiğinde",
+          "lost": "Başvuru kaybedildiğinde",
+          "dailyDigest": "Günlük özet"
+        },
+        "lastMessages": "Son gönderilen bildirimler",
+        "templateLabel": "Mesaj şablonu"
+      },
+      "sources": {
+        "instagram": "Instagram",
+        "site": "Site formu",
+        "referral": "Tavsiye üzerine",
+        "whatsapp": "WhatsApp",
+        "call": "Doğrudan arama"
+      }
+    },
+    "analytics": {
+      "title": "Analitik ve içerik paneli",
+      "subtitle": "Site göstergeleri ve içerik yönetimi",
+      "nav": {
+        "overview": "Genel bakış",
+        "traffic": "Trafik",
+        "funnel": "Kabul aşamaları",
+        "content": "İçerik",
+        "cases": "Kabul mektupları",
+        "media": "Görsel ve video"
+      },
+      "kpi": {
+        "visitors": "Ziyaretçiler",
+        "sessions": "Oturumlar",
+        "conversion": "Dönüşüm oranı",
+        "avgTime": "Sitede ortalama süre",
+        "bounce": "Hemen çıkma oranı",
+        "leads": "Alınan başvurular"
+      },
+      "charts": {
+        "trafficTitle": "Trafik dinamiği",
+        "trafficSubtitle": "Günlük ziyaretçi ve başvurular",
+        "sourcesTitle": "Trafik kaynakları",
+        "funnelTitle": "Dönüşüm aşamaları",
+        "devicesTitle": "Cihaz dağılımı",
+        "langTitle": "Dil dağılımı",
+        "liveTitle": "Şu anda sitede",
+        "liveUnit": "ziyaretçi",
+        "compareLabel": "Önceki dönemle karşılaştırma"
+      },
+      "funnelStages": {
+        "visit": "Siteye giriş",
+        "scroll": "Bölümleri inceleme",
+        "formOpen": "Form açıldı",
+        "formSubmit": "Form gönderildi",
+        "consulted": "Danışmanlık yapıldı"
+      },
+      "devices": {
+        "mobile": "Mobil telefon",
+        "desktop": "Bilgisayar",
+        "tablet": "Tablet"
+      },
+      "content": {
+        "title": "Site içeriğini yönetme",
+        "subtitle": "Burada yapılan değişiklikler sitede anında görünür",
+        "langTabs": "Dil seçin",
+        "sectionLabel": "Bölüm",
+        "fieldLabel": "Alan",
+        "preview": "Önizleme",
+        "publish": "Yayımla",
+        "publishing": "Yayımlanıyor…",
+        "published": "Yayımlandı",
+        "draft": "Taslak",
+        "unsaved": "Kaydedilmemiş değişiklikler var",
+        "missingTranslation": "Çeviri eksik",
+        "translationProgress": "Çeviri tamamlanma oranı"
+      },
+      "cases": {
+        "title": "Kabul mektuplarını yönetme",
+        "addNew": "Yeni kabul mektubu ekle",
+        "studentName": "Öğrenci adı",
+        "university": "Üniversite",
+        "programLabel": "Bölüm",
+        "yearLabel": "Eğitim yılı",
+        "imageLabel": "Mektup görseli",
+        "consentLabel": "Öğrencinin onayı alındı",
+        "visible": "Sitede görünüyor",
+        "hidden": "Gizli",
+        "order": "Sıra"
+      }
+    }
+  }
+}

@@ -1,0 +1,2025 @@
+<title>Next Step Kabul Haty Ulgamy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+
+<style>
+/* ==================================================================
+   NEXT STEP CONSULTING — DIZAÝN ULGAMYNYŇ GÖRKEZMESI
+   ------------------------------------------------------------------
+   Esasy pikir: «KABUL HATY». Ýyly kagyz fony, resminama syýasy we
+   möhüriň gyzyly. Nyşan reňki gyzyl — ol Türkiýäni hem, tassyklaýjy
+   möhüri hem aňladýar, şonuň üçin diňe iň möhüm ýerlerde ulanylýar.
+   ================================================================== */
+
+:root {
+  /* --- ÝAGTY TEMA (esasy): «Kagyz» --- */
+  --paper:     #FAF9FE;
+  --surface:   #FFFFFF;
+  --line:      rgba(20, 18, 43, 0.11);
+  --line-soft: rgba(20, 18, 43, 0.055);
+  --ink:       #14122B;
+  --muted:     #58547A;
+  --faint:     #8A86AA;
+  --brand:     #8400FC;   /* logodan ölçenildi — hue 271° */
+  --brand-deep:#5C00B8;
+  --brand-ink: #FFFFFF;
+  --brand-wash:rgba(132, 0, 252, 0.07);
+  --azure:     #0CA8F0;   /* logodan ölçenildi — hue 199° */
+  --ok:        #0D9468;
+  --ok-wash:   rgba(13, 148, 104, 0.09);
+  --warn:      #B07408;
+  --warn-wash: rgba(176, 116, 8, 0.10);
+  --gold:      #B0843A;
+  --slate:     #767294;
+  /* Logonyň asyl reňkleri — interfeýs tokenlerinden aýry saklanýar */
+  --logo-violet: #8400FC;
+  --logo-azure:  #0CA8F0;
+  --slate-wash:rgba(118, 114, 148, 0.10);
+  --shadow:    0 1px 2px rgba(20,18,43,.045), 0 16px 34px -26px rgba(20,18,43,.28);
+  --shadow-lift:0 2px 6px rgba(20,18,43,.06), 0 30px 60px -30px rgba(20,18,43,.34);
+  --shadow-brand: 0 10px 30px -10px rgba(132,0,252,.55);
+  /* Liquid Glass parametrleri */
+  --glass-tint: 255 255 255;
+  --glass-alpha: .55;
+  --glass-blur: 20px;
+  --glass-spec-a: .62;
+  --glass-edge-a: .14;
+
+  --display: 'Unbounded', 'Segoe UI', system-ui, sans-serif;
+  --body:    'Golos Text', system-ui, sans-serif;
+  --mono:    'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:     #0D0B1A;
+    --surface:   #161329;
+    --line:      rgba(255, 255, 255, 0.11);
+    --line-soft: rgba(255, 255, 255, 0.055);
+    --ink:       #EDEBF8;
+    --muted:     #A09CBE;
+    --faint:     #747094;
+    --brand:     #A985FF;   /* garaňky fonda okalar ýaly ýagtylandyryldy */
+    --brand-deep:#BEA2FF;
+    --brand-ink: #110A22;
+    --brand-wash:rgba(169, 133, 255, 0.13);
+    --azure:     #5AC4FF;
+    --ok:        #34C792;
+    --ok-wash:   rgba(52, 199, 146, 0.11);
+    --warn:      #E8AC38;
+    --warn-wash: rgba(232, 172, 56, 0.11);
+    --gold:      #E3B778;
+    --slate:     #8C88AC;
+    /* Garaňky fonda logo azajyk ýagtylandyrylýar — öwüşgin saklanýar */
+    --logo-violet: #9B33FF;
+    --logo-azure:  #2FBCFF;
+    --slate-wash:rgba(140, 136, 172, 0.12);
+    --shadow:    0 1px 2px rgba(0,0,0,.4), 0 16px 34px -26px rgba(0,0,0,.85);
+    --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 30px 60px -30px rgba(0,0,0,.9);
+    --shadow-brand: 0 10px 30px -12px rgba(169,133,255,.5);
+    --glass-alpha: .07;
+    --glass-blur: 22px;
+    --glass-spec-a: .24;
+    --glass-edge-a: .10;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper:     #0C0E14;
+  --surface:   #131620;
+  --line:      rgba(255, 255, 255, 0.10);
+  --line-soft: rgba(255, 255, 255, 0.05);
+  --ink:       #EFF1F6;
+  --muted:     #9BA3B5;
+  --faint:     #6E7688;
+  --brand:     #F05A64;
+  --brand-ink: #FFFFFF;
+  --brand-wash:rgba(240, 90, 100, 0.12);
+  --ok:        #34C792;
+  --ok-wash:   rgba(52, 199, 146, 0.11);
+  --warn:      #E8AC38;
+  --warn-wash: rgba(232, 172, 56, 0.11);
+  --gold:      #E3B778;
+  --slate:     #848EA4;
+  --slate-wash:rgba(132, 142, 164, 0.11);
+  --shadow:    0 1px 2px rgba(0,0,0,.4), 0 16px 34px -26px rgba(0,0,0,.85);
+  --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 30px 60px -30px rgba(0,0,0,.9);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15px;
+  font-weight: 450;   /* 400 däl — Unbounded 900-üň gapdalynda inçe görünmez ýaly */
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 { font-family: var(--display); font-weight: 800; margin: 0; letter-spacing: -0.042em; text-wrap: balance; }
+h2 { font-weight: 900; }
+p { margin: 0; text-wrap: pretty; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+button { font: inherit; color: inherit; cursor: pointer; }
+.num { font-variant-numeric: tabular-nums; font-family: var(--mono); }
+
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* ==================================================================
+   LIQUID GLASS
+   ------------------------------------------------------------------
+   Dört gatlak: süzgüç · reňk · gyra · spekulýar.
+   Aýnany aýna edýän zat bulaşyklyk däl — GYRASYNDAKY ýagtylygyň
+   döwülmegi. Diňe blur goýulsa, ol «hapa aýna» bolup görünýär.
+   ================================================================== */
+.lg {
+  position: relative; isolation: isolate;
+  background-color: rgb(var(--glass-tint) / var(--glass-alpha));
+  backdrop-filter: blur(var(--glass-blur)) saturate(185%) brightness(1.04);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(185%) brightness(1.04);
+  box-shadow:
+    0 10px 36px -14px rgba(20,18,43,.22),
+    inset 0 1px 0 0 rgba(255,255,255, var(--glass-spec-a)),
+    inset 0 -1px 0 0 rgba(255,255,255, calc(var(--glass-spec-a) * .35)),
+    inset 0 0 0 1px rgba(255,255,255, var(--glass-edge-a));
+}
+/* Spekulýar — kursoryň yzyndan süýşýän ýalpyldy */
+.lg::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  border-radius: inherit; pointer-events: none;
+  background: radial-gradient(220px circle at var(--mx,50%) var(--my,0%), rgba(255,255,255,.40), transparent 62%);
+  opacity: 0; transition: opacity .45s cubic-bezier(.16,1,.3,1);
+}
+.lg:hover::before, .lg:focus-within::before { opacity: 1; }
+/* Gyranyň reňkli döwülmesi — hakyky aýna ýagtylygy reňklere böleýär */
+.lg::after {
+  content: ''; position: absolute; inset: 0;
+  border-radius: inherit; padding: 1px; pointer-events: none;
+  background: conic-gradient(from 140deg,
+    rgba(255,255,255,.55),
+    color-mix(in srgb, var(--azure) 40%, transparent) 18%,
+    transparent 34%, transparent 58%,
+    color-mix(in srgb, var(--brand) 45%, transparent) 78%,
+    rgba(255,255,255,.50));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+/* Basylanda material gysylýar — Apple-yň esasy duýgusy */
+.lg-press { transition: transform .42s cubic-bezier(.34,1.56,.64,1); }
+.lg-press:active { transform: scale(.972); }
+.lg-thin { --glass-blur: 16px; --glass-alpha: .62; }
+:root[data-theme="dark"] .lg-thin { --glass-alpha: .10; }
+
+/* Hakyky döwülme — diňe Chromium. Goldanmasa, setir doly taşlanýar. */
+@supports (backdrop-filter: url(#f)) {
+  .lg-refract { backdrop-filter: url(#liquid-refract) blur(var(--glass-blur)) saturate(185%); }
+}
+
+/* ==================================================================
+   FON: BENEWŞE BLUR ANIMASIÝASY
+   Aýnanyň AŞAGYNDA hereket edýär — şonuň üçin aýnanyň içindäki reňk
+   hem üýtgäp durýar we material «janly» duýulýar.
+   Diňe transform + border-radius → GPU-da işleýär.
+   ================================================================== */
+@keyframes blob-a {
+  0%,100% { transform: translate3d(0,0,0) scale(1);      border-radius: 58% 42% 55% 45% / 48% 55% 45% 52%; }
+  33%     { transform: translate3d(6%,-8%,0) scale(1.14); border-radius: 42% 58% 40% 60% / 58% 42% 58% 42%; }
+  66%     { transform: translate3d(-5%,6%,0) scale(.94);  border-radius: 50% 50% 62% 38% / 40% 60% 40% 60%; }
+}
+@keyframes blob-b {
+  0%,100% { transform: translate3d(0,0,0) scale(1.05);    border-radius: 45% 55% 48% 52% / 55% 45% 58% 42%; }
+  40%     { transform: translate3d(-8%,7%,0) scale(.90);  border-radius: 60% 40% 55% 45% / 42% 58% 40% 60%; }
+  75%     { transform: translate3d(5%,-6%,0) scale(1.18); border-radius: 38% 62% 45% 55% / 60% 40% 55% 45%; }
+}
+.aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.blob { position: absolute; will-change: transform, border-radius; }
+
+/* ==================================================================
+   UNIWERSITETLERIŇ LENTASY
+   ================================================================== */
+.uni-mq { position: relative; margin-top: 22px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent); }
+.uni-row { display: flex; overflow: hidden; margin-bottom: 12px; }
+.uni-track { display: flex; gap: 12px; width: max-content; animation: slide 58s linear infinite; }
+.uni-track.rev { animation-duration: 72s; animation-direction: reverse; }
+.uni-row:hover .uni-track { animation-play-state: paused; }
+.uni-plate {
+  display: flex; align-items: center; gap: 12px; flex: none; width: 240px;
+  border-radius: 16px; padding: 12px 14px;
+  transition: transform .5s cubic-bezier(.16,1,.3,1);
+}
+.uni-plate:hover { transform: translateY(-4px); }
+.uni-mono {
+  width: 42px; height: 42px; flex: none; border-radius: 13px; display: grid; place-items: center;
+  border: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 55%, transparent);
+  font-family: var(--display); font-weight: 800; font-size: 10px; letter-spacing: .03em;
+  color: var(--muted); transition: .45s;
+}
+.uni-plate:hover .uni-mono { color: var(--brand); border-color: color-mix(in srgb, var(--brand) 28%, transparent); }
+.uni-mono.partner { color: var(--brand); border-color: color-mix(in srgb, var(--brand) 26%, transparent); background: var(--brand-wash); }
+.uni-plate b { display: block; font-family: var(--display); font-weight: 700; font-size: 11.5px; line-height: 1.25; letter-spacing: -.04em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.uni-plate small { display: block; font-size: 9px; text-transform: uppercase; letter-spacing: .12em; color: var(--faint); margin-top: 3px; }
+.uni-note { margin-top: 18px; text-align: center; font-size: 12.5px; color: var(--faint); }
+
+/* ---------------- Karkas ---------------- */
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+.bar {
+  position: sticky; top: 0; z-index: 40; border-radius: 0;
+  /* Doly giňlikdäki panelde daşky kölege gerek däl — diňe aşaky çyzyk */
+  box-shadow: inset 0 -1px 0 0 var(--line), inset 0 1px 0 0 rgba(255,255,255,.5);
+}
+.bar::after { border-radius: 0; }
+.bar-in { display: flex; align-items: center; gap: 14px; padding: 11px 24px; max-width: 1180px; margin: 0 auto; flex-wrap: wrap; }
+.mark { display: flex; align-items: center; gap: 9px; margin-right: auto; }
+/* Logo — Instagram profilindäki nyşandan yzarlanan SVG.
+   Gradient ýok: iki düz reňkli şekil, aralarynda ak jaý. */
+.mark-badge { width: 26px; height: 29px; flex: none; display: block; }
+.mark-badge svg { display: block; width: 100%; height: 100%; }
+.mark-name { font-family: var(--display); font-weight: 800; letter-spacing: -.045em; font-size: 13.5px; line-height: 1.05; }
+.mark-sub { display: block; color: var(--faint); font-weight: 600; font-size: 8.5px; text-transform: uppercase; letter-spacing: .22em; margin-top: 2px; }
+
+.seg { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+.seg button { border: 0; background: transparent; color: var(--muted); padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 600; transition: color .2s, background .2s; }
+.seg button[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); }
+.seg button:hover:not([aria-pressed="true"]) { color: var(--ink); }
+
+/* ---------------- Bölüm + düşündiriş raýy ---------------- */
+.block { display: grid; grid-template-columns: 186px minmax(0, 1fr); gap: 34px; padding: 54px 0; border-top: 1px solid var(--line-soft); }
+.block:first-of-type { border-top: 0; }
+@media (max-width: 900px) {
+  .block { grid-template-columns: 1fr; gap: 18px; padding: 38px 0; }
+  /* Bir sütünli görnüşde sticky manysyny ýitirýär we mazmunyň
+     üstüne münýär — şonuň üçin öçürilýär. */
+  .rail { position: static; }
+}
+
+.rail { position: sticky; top: 74px; align-self: start; }
+.rail-no { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--brand); letter-spacing: .12em; }
+.rail-t { font-family: var(--display); font-weight: 700; font-size: 15px; margin-top: 6px; letter-spacing: -.025em; }
+.rail-d { color: var(--faint); font-size: 12.5px; line-height: 1.58; margin-top: 8px; }
+.rail-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.tag { font-family: var(--mono); font-size: 10px; padding: 3px 7px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); }
+
+.screen { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); overflow: hidden; box-shadow: var(--shadow); }
+.screen-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line-soft); background: var(--paper); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+.screen-url { margin-left: 10px; font-family: var(--mono); font-size: 10.5px; color: var(--faint); }
+.screen-body { padding: 34px; position: relative; }
+@media (max-width: 640px) { .screen-body { padding: 20px; } }
+
+/* ---------------- HERO ---------------- */
+.hero { overflow: hidden; }
+.hero-glow {
+  position: absolute; inset: -30% -15% auto 30%; height: 380px; pointer-events: none;
+  background:
+    radial-gradient(closest-side at 40% 45%, color-mix(in srgb, var(--brand) 16%, transparent), transparent),
+    radial-gradient(closest-side at 70% 55%, color-mix(in srgb, var(--gold) 15%, transparent), transparent);
+  filter: blur(70px);
+}
+.hero-grid {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(to right, var(--line-soft) 1px, transparent 1px), linear-gradient(to bottom, var(--line-soft) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 74% 56% at 40% 16%, #000 24%, transparent 74%);
+          mask-image: radial-gradient(ellipse 74% 56% at 40% 16%, #000 24%, transparent 74%);
+}
+.hero-in { position: relative; display: grid; grid-template-columns: minmax(0,1.02fr) minmax(0,.98fr); gap: 44px; align-items: center; }
+@media (max-width: 880px) { .hero-in { grid-template-columns: 1fr; gap: 36px; } }
+
+.pill { border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .13em; color: var(--muted); box-shadow: var(--shadow); }
+.live { position: relative; width: 6px; height: 6px; flex: none; }
+.live i { position: absolute; inset: 0; border-radius: 50%; background: var(--ok); }
+.live i:first-child { animation: ping 1.9s cubic-bezier(0,0,.2,1) infinite; }
+@keyframes ping { 75%,100% { transform: scale(2.4); opacity: 0; } }
+
+.eyebrow { font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .17em; color: var(--muted); }
+
+.hero h2 { font-size: clamp(25px, 3.5vw, 40px); line-height: 1.1; letter-spacing: -.052em; margin-top: 16px; }
+/* Nyşan sözi logonyň öz gradientini göterýär.
+   Gradient markanyň nyşany — şonuň üçin ol diňe üç ýerde ulanylýar:
+   logo, esasy CTA we şu söz. Ondan artyk ulanmak nyşany «arzan» edýär. */
+.accent {
+  background-image: linear-gradient(118deg, var(--brand) 0%, var(--brand) 34%, var(--azure) 96%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.hero-sub { color: var(--muted); font-size: 16px; line-height: 1.7; margin-top: 18px; max-width: 48ch; }
+
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
+.btn {
+  position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 9px;
+  padding: 12px 22px; border-radius: 999px; border: 1px solid transparent;
+  font-weight: 600; font-size: 14px; letter-spacing: -.01em; text-decoration: none;
+  transition: transform .25s cubic-bezier(.16,1,.3,1), filter .25s, border-color .25s, box-shadow .25s;
+}
+.btn::after {
+  content: ''; position: absolute; inset: 0; transform: translateX(-110%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent);
+  transition: transform .75s cubic-bezier(.16,1,.3,1);
+}
+.btn:hover::after { transform: translateX(110%); }
+.btn-primary {
+  background: linear-gradient(118deg, var(--brand) 0%, var(--brand) 38%, var(--azure) 100%);
+  color: #fff; box-shadow: var(--shadow-brand);
+}
+.btn-primary:hover { filter: brightness(1.07); transform: translateY(-2px); }
+.btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.btn-ghost:hover { border-color: color-mix(in srgb, var(--brand) 45%, transparent); transform: translateY(-2px); }
+.cta-hint { color: var(--faint); font-size: 13px; margin-top: 14px; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 34px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--line); }
+@media (max-width: 560px) { .stats { grid-template-columns: 1fr; } }
+.stat { background: var(--paper); padding: 15px 17px; }
+.stat-v { font-family: var(--display); font-size: 26px; font-weight: 800; letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.stat-v span { font-size: 13px; color: var(--brand); }
+.stat-l { color: var(--muted); font-size: 12px; line-height: 1.44; margin-top: 4px; }
+
+/* ---------------- KABUL HATY ---------------- */
+.letter-stack { position: relative; max-width: 400px; margin: 0 0 0 auto; perspective: 1300px; }
+@media (max-width: 880px) { .letter-stack { margin: 0 auto; } }
+.letter-ghost { position: absolute; inset: 0; border-radius: 16px; }
+.letter-ghost.g1 { transform: rotate(3.2deg) translate(10px, 18px); opacity: .7; }
+.letter-ghost.g2 { transform: rotate(-1.7deg) translate(4px, 9px); opacity: .9; }
+.letter {
+  position: relative; border-radius: 20px; padding: 26px;
+  transform: rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+  transform-style: preserve-3d; transition: transform .5s cubic-bezier(.16,1,.3,1);
+}
+.letter-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+.letter-title { font-family: var(--display); font-weight: 800; font-size: 15px; letter-spacing: .05em; }
+.letter-sub { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: .14em; color: var(--faint); margin-top: 3px; }
+.letter-demo { font-family: var(--mono); font-size: 9.5px; color: var(--faint); border: 1px solid var(--line); background: var(--paper); border-radius: 6px; padding: 3px 7px; white-space: nowrap; }
+.letter-rows { margin-top: 20px; }
+.letter-row { margin-bottom: 15px; }
+/* Giriş animasiýasy diňe `.anim` bar wagty — JS-siz ýagdaýda mazmun görnüp dur */
+.letter-rows.anim .letter-row { opacity: 0; animation: rowIn .5s cubic-bezier(.16,1,.3,1) forwards; }
+@keyframes rowIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
+.letter-row dt { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: .14em; color: var(--faint); }
+.letter-row dd { font-family: var(--display); font-weight: 700; font-size: 14.5px; letter-spacing: -.02em; margin: 3px 0 0; }
+.letter-row .rule { height: 1px; background: var(--line-soft); margin-top: 9px; }
+
+/* MÖHÜR — sahypanyň esasy pursaty */
+.seal {
+  position: absolute; right: 22px; bottom: 22px;
+  width: 92px; height: 92px; border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--brand) 55%, transparent);
+  color: var(--brand); display: grid; place-items: center; text-align: center;
+  transform: rotate(-8deg);
+}
+/* Möhür hem deslapky ýagdaýda basylan — animasiýa diňe `.anim` bilen */
+.seal.anim { opacity: 0; animation: stamp .62s cubic-bezier(.34,1.56,.64,1) forwards; }
+@keyframes stamp { from { opacity: 0; transform: scale(2.4) rotate(-26deg); } to { opacity: 1; transform: scale(1) rotate(-8deg); } }
+.seal b { display: block; font-family: var(--display); font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; line-height: 1.2; }
+.seal hr { border: 0; height: 1px; background: color-mix(in srgb, var(--brand) 50%, transparent); width: 30px; margin: 5px auto; }
+.seal span { font-family: var(--mono); font-size: 8.5px; letter-spacing: .1em; }
+
+/* ---------------- Çalt hereket kartalary ---------------- */
+.qa { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 13px; margin-top: 18px; }
+@media (max-width: 900px) { .qa { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 520px) { .qa { grid-template-columns: 1fr; } }
+.qa-card {
+  position: relative; overflow: hidden; display: flex; flex-direction: column;
+  border-radius: 18px; padding: 20px; text-decoration: none; color: inherit;
+  transition: transform .5s cubic-bezier(.16,1,.3,1), border-color .4s, box-shadow .4s;
+}
+.qa-card:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--brand) 26%, transparent); box-shadow: var(--shadow-lift); }
+/* Hover-de markanyň gradienti ýokardan syzýar */
+.qa-card::before {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, var(--brand), var(--azure));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .5s cubic-bezier(.16,1,.3,1);
+}
+.qa-card:hover::before { transform: scaleX(1); }
+.qa-ico {
+  width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center;
+  border: 1px solid var(--line); background: var(--paper); color: var(--brand);
+  margin-bottom: 16px; transition: .4s;
+}
+.qa-card:hover .qa-ico { border-color: color-mix(in srgb, var(--brand) 26%, transparent); background: var(--brand-wash); }
+.qa-card h4 { font-size: 14px; line-height: 1.3; letter-spacing: -.04em; }
+.qa-card p { flex: 1; color: var(--muted); font-size: 13px; line-height: 1.52; margin-top: 8px; }
+.qa-go { display: inline-flex; align-items: center; gap: 5px; margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--brand); }
+.qa-card:hover .qa-go svg { transform: translate(2px,-2px); }
+.qa-go svg { transition: transform .3s cubic-bezier(.16,1,.3,1); }
+
+/* ---------------- Umumy ---------------- */
+.sec-head { max-width: 62ch; }
+.sec-head h3 { font-size: clamp(19px, 2.2vw, 26px); line-height: 1.16; letter-spacing: -.045em; margin-top: 12px; }
+.sec-head p { color: var(--muted); margin-top: 12px; font-size: 15px; }
+
+.notice { display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--warn) 38%, transparent); background: var(--warn-wash); color: var(--warn); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-top: 14px; }
+
+/* Agyry / çözgüt */
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 24px; }
+@media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+.flip { position: relative; overflow: hidden; text-align: left; width: 100%; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); padding: 20px; transition: transform .45s cubic-bezier(.16,1,.3,1), border-color .45s, background .45s, box-shadow .45s; }
+.flip:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+.flip[data-state="after"] { border-color: color-mix(in srgb, var(--ok) 34%, transparent); background: var(--ok-wash); }
+.flip-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.flip-ico { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; border: 1px solid var(--line); color: var(--muted); background: var(--paper); flex: none; transition: .45s; }
+.flip[data-state="after"] .flip-ico { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 32%, transparent); background: var(--ok-wash); }
+/* «Öň» ýagdaýy bitarap çal — nyşan gyzyly bilen garyşmaz ýaly */
+.state-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; border: 1px solid color-mix(in srgb, var(--slate) 40%, transparent); color: var(--slate); background: var(--slate-wash); white-space: nowrap; }
+.flip[data-state="after"] .state-chip { border-color: color-mix(in srgb, var(--ok) 40%, transparent); color: var(--ok); background: var(--ok-wash); }
+.flip h4 { font-size: 15px; margin-top: 16px; letter-spacing: -.04em; }
+.flip p { color: var(--muted); font-size: 13.5px; margin-top: 8px; line-height: 1.58; }
+.flip-body { min-height: 140px; }
+.fade { animation: fade .4s cubic-bezier(.16,1,.3,1); }
+@keyframes fade { from { opacity: 0; transform: translateY(9px); } }
+.master { display: flex; justify-content: center; margin-top: 22px; }
+#masterSwitch button[aria-pressed="true"] { background: var(--slate); }
+#masterSwitch button[data-v="after"][aria-pressed="true"] { background: var(--ok); }
+
+/* Timeline */
+.tl { position: relative; margin-top: 24px; padding-left: 54px; }
+@media (max-width: 640px) { .tl { padding-left: 0; } }
+.tl-line { position: absolute; left: 19px; top: 8px; bottom: 30px; width: 2px; background: var(--line); border-radius: 2px; overflow: hidden; }
+@media (max-width: 640px) { .tl-line { display: none; } }
+.tl-fill { position: absolute; inset: 0 0 auto 0; background: linear-gradient(to bottom, var(--brand), var(--ok)); height: 0; transition: height .35s linear; }
+.step { position: relative; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); padding: 20px 22px; margin-bottom: 14px; }
+.step-dot { position: absolute; left: -54px; top: 18px; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; border: 2px solid var(--line); background: var(--paper); color: var(--faint); font-family: var(--mono); font-size: 12px; font-weight: 600; transition: .4s; }
+@media (max-width: 640px) { .step-dot { display: none; } }
+.step.on .step-dot { border-color: var(--brand); background: var(--brand); color: var(--brand-ink); }
+.step-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.step h4 { font-size: 16px; letter-spacing: -.04em; }
+.chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.step > p { color: var(--muted); font-size: 14px; margin-top: 10px; max-width: 62ch; }
+.bullets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.bullets li { border: 1px solid var(--line); background: var(--paper); border-radius: 8px; padding: 5px 10px; font-size: 12.5px; color: var(--muted); }
+.deliver { display: flex; gap: 10px; align-items: flex-start; margin-top: 15px; padding: 12px 14px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--brand) 20%, transparent); background: var(--brand-wash); }
+.deliver-l { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--brand); }
+.deliver-v { font-size: 13.5px; font-weight: 600; margin-top: 3px; }
+.scope-note { margin-top: 18px; padding: 14px 16px; border: 1px dashed var(--line); border-radius: 14px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+
+/* Uniwersitetler */
+.unis { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 13px; margin-top: 24px; }
+@media (max-width: 860px) { .unis { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 560px) { .unis { grid-template-columns: 1fr; } }
+.uni { position: relative; overflow: hidden; border-radius: 18px; padding: 20px; transition: transform .45s cubic-bezier(.16,1,.3,1); }
+.uni:hover { transform: translateY(-3px); }
+.uni-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.uni-short { width: 52px; height: 52px; border-radius: 15px; border: 1px solid var(--line); background: var(--paper); color: var(--muted); display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 13px; letter-spacing: .05em; flex: none; transition: .45s; }
+.uni:hover .uni-short { border-color: color-mix(in srgb, var(--brand) 30%, transparent); background: var(--brand-wash); color: var(--brand); }
+.uni-no { font-family: var(--mono); font-size: 10px; color: var(--faint); letter-spacing: .12em; }
+.uni h4 { font-size: 14.5px; margin-top: 16px; line-height: 1.26; letter-spacing: -.04em; }
+.uni p { color: var(--muted); font-size: 13px; margin-top: 8px; line-height: 1.5; }
+.uni-rule { position: absolute; left: 20px; right: 20px; bottom: 0; height: 1px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .5s cubic-bezier(.16,1,.3,1); }
+.uni:hover .uni-rule { transform: scaleX(1); }
+.city { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 12.5px; color: var(--muted); margin-top: 16px; box-shadow: var(--shadow); }
+
+/* Kabul hatlarynyň lentasy */
+.marquee-wrap { position: relative; margin-top: 22px; -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent); }
+.mq { display: flex; overflow: hidden; margin-bottom: 13px; }
+.mq-track { display: flex; gap: 13px; width: max-content; animation: slide 62s linear infinite; }
+.mq-track.rev { animation-direction: reverse; }
+.mq:hover .mq-track { animation-play-state: paused; }
+@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.lcard { width: 248px; flex: none; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); padding: 16px; transition: box-shadow .3s; }
+.lcard:hover { box-shadow: var(--shadow-lift); }
+.lcard-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-bottom: 1px solid var(--line-soft); padding-bottom: 11px; }
+.lcard-uni { font-family: var(--display); font-weight: 800; font-size: 13.5px; letter-spacing: -.02em; }
+.ok-chip { display: inline-flex; align-items: center; gap: 4px; border: 1px solid color-mix(in srgb, var(--ok) 34%, transparent); background: var(--ok-wash); color: var(--ok); border-radius: 999px; padding: 2px 7px; font-size: 9px; font-weight: 700; white-space: nowrap; }
+.lcard dt { font-family: var(--mono); font-size: 9px; text-transform: uppercase; letter-spacing: .12em; color: var(--faint); margin-top: 12px; }
+.lcard dd { margin: 3px 0 0; font-size: 13px; font-weight: 600; line-height: 1.35; }
+.lcard-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin-top: 12px; }
+.lcard-foot .num { font-size: 10.5px; color: var(--muted); }
+.lcard-foot span:last-child { font-size: 12.5px; color: var(--muted); font-weight: 500; }
+
+/* Pikirler */
+.tcards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 20px; }
+@media (max-width: 860px) { .tcards { grid-template-columns: 1fr; } }
+.tcard { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); padding: 20px; transition: .45s cubic-bezier(.16,1,.3,1); }
+.tcard:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: color-mix(in srgb, var(--brand) 22%, transparent); }
+.tcard > p { flex: 1; font-size: 14.5px; line-height: 1.62; margin-top: 14px; }
+.tcard-foot { display: flex; align-items: center; gap: 11px; border-top: 1px solid var(--line-soft); margin-top: 18px; padding-top: 16px; }
+.av-l { width: 38px; height: 38px; border-radius: 50%; background: var(--brand-wash); color: var(--brand); display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 14px; flex: none; }
+.tcard-foot b { font-size: 13px; display: block; }
+.tcard-foot small { color: var(--muted); font-size: 12.5px; display: block; }
+.play { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 10px; font-size: 10px; font-weight: 600; color: var(--muted); flex: none; transition: .25s; }
+.play:hover { border-color: color-mix(in srgb, var(--brand) 40%, transparent); color: var(--brand); }
+
+/* Teklip */
+.offer { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background: var(--surface); }
+@media (max-width: 800px) { .offer { grid-template-columns: 1fr; } }
+.offer-l { padding: 28px; }
+.offer-r { padding: 28px; background: var(--paper); border-left: 1px solid var(--line); }
+@media (max-width: 800px) { .offer-r { border-left: 0; border-top: 1px solid var(--line); } }
+.offer h3 { font-size: clamp(18px, 2vw, 24px); line-height: 1.18; letter-spacing: -.045em; margin-top: 12px; }
+.offer-sub { color: var(--muted); margin-top: 12px; font-size: 14.5px; max-width: 46ch; }
+.inc { margin-top: 20px; display: grid; gap: 9px; }
+.inc li { display: flex; gap: 10px; align-items: flex-start; color: var(--muted); font-size: 14px; }
+.tick { flex: none; width: 18px; height: 18px; border-radius: 50%; background: var(--ok-wash); color: var(--ok); display: grid; place-items: center; margin-top: 3px; }
+.price-box { border: 1px solid color-mix(in srgb, var(--brand) 24%, transparent); background: var(--brand-wash); border-radius: 16px; padding: 20px; }
+.price-l { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--brand); }
+.price-v { font-family: var(--display); font-size: 31px; font-weight: 800; letter-spacing: -.04em; margin-top: 6px; }
+.price-n { color: var(--muted); font-size: 12.5px; margin-top: 8px; line-height: 1.52; }
+.guarantee { display: flex; gap: 12px; border: 1px solid var(--line); border-radius: 16px; padding: 17px; margin-top: 13px; background: var(--surface); }
+.guarantee b { font-size: 14px; }
+.guarantee p { color: var(--muted); font-size: 12.5px; margin-top: 6px; line-height: 1.52; }
+.slots { display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 13px 17px; margin-top: 13px; }
+.slots span { color: var(--muted); font-size: 13px; }
+.slots b { font-family: var(--display); font-size: 21px; color: var(--brand); font-variant-numeric: tabular-nums; }
+
+/* FAQ + forma */
+.close { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); gap: 26px; margin-top: 24px; }
+@media (max-width: 860px) { .close { grid-template-columns: 1fr; } }
+.faq-item { border-bottom: 1px solid var(--line-soft); }
+.faq-item:first-child { border-top: 1px solid var(--line-soft); }
+.faq-q { display: flex; width: 100%; gap: 18px; align-items: flex-start; justify-content: space-between; background: none; border: 0; padding: 15px 0; text-align: left; transition: color .2s; }
+.faq-q:hover { color: var(--brand); }
+.faq-q > span:first-child { font-size: 15.5px; font-weight: 600; letter-spacing: -.018em; }
+.faq-sign { flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--muted); transition: transform .4s cubic-bezier(.16,1,.3,1), background .3s, color .3s, border-color .3s; margin-top: 2px; }
+.faq-item.open .faq-sign { transform: rotate(45deg); background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s cubic-bezier(.16,1,.3,1); }
+.faq-item.open .faq-a { grid-template-rows: 1fr; }
+.faq-a > div { overflow: hidden; }
+.faq-a p { color: var(--muted); font-size: 14px; padding-bottom: 16px; padding-right: 28px; max-width: 62ch; }
+
+.form { border: 1px solid var(--line); border-radius: 18px; background: var(--paper); padding: 24px; }
+.form h4 { font-size: 19px; margin-top: 10px; }
+.form > p { color: var(--muted); font-size: 13.5px; margin-top: 8px; }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+@media (max-width: 520px) { .fields { grid-template-columns: 1fr; } }
+.f-wide { grid-column: 1 / -1; }
+.f label { display: block; font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 6px; }
+.f input, .f select { width: 100%; padding: 10px 13px; border-radius: 11px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; font-size: 13.5px; transition: border-color .2s, box-shadow .2s; }
+.f input::placeholder { color: var(--faint); }
+.f input:focus, .f select:focus { outline: 0; border-color: var(--brand); box-shadow: 0 0 0 4px var(--brand-wash); }
+.privacy { color: var(--faint); font-size: 11px; text-align: center; margin-top: 12px; line-height: 1.5; }
+
+/* ---------------- ADMIN ---------------- */
+.app { display: grid; grid-template-columns: 200px minmax(0,1fr); min-height: 470px; }
+@media (max-width: 760px) { .app { grid-template-columns: 1fr; } }
+.side { border-right: 1px solid var(--line); background: var(--paper); padding: 16px; }
+@media (max-width: 760px) { .side { display: none; } }
+.who { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 11px; display: flex; gap: 10px; align-items: center; margin: 14px 0; }
+.av { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 12px; color: #fff; flex: none; }
+.who b { font-size: 12.5px; display: block; }
+.who small { font-size: 10.5px; color: var(--faint); display: block; line-height: 1.32; }
+.snav li { display: flex; align-items: center; gap: 9px; padding: 8px 11px; border-radius: 10px; color: var(--muted); font-size: 12.5px; margin-bottom: 2px; }
+.snav li.on { background: var(--brand-wash); color: var(--brand); font-weight: 600; }
+.snav li.on.g { background: var(--ok-wash); color: var(--ok); }
+.badge { margin-left: auto; background: var(--brand); color: #fff; border-radius: 999px; font-size: 9.5px; font-weight: 700; padding: 1px 6px; font-variant-numeric: tabular-nums; }
+.appbody { padding: 18px; min-width: 0; }
+.apphead { margin-bottom: 15px; }
+.apphead h4 { font-size: 17px; }
+.apphead p { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.kpi { border: 1px solid var(--line); border-radius: 13px; background: var(--surface); padding: 13px 15px; }
+.kpi small { color: var(--muted); font-size: 11.5px; line-height: 1.32; display: block; }
+.kpi b { font-family: var(--display); font-size: 21px; font-weight: 800; letter-spacing: -.035em; display: block; margin-top: 6px; font-variant-numeric: tabular-nums; }
+.kpi i { font-style: normal; font-size: 11.5px; font-weight: 700; color: var(--ok); font-variant-numeric: tabular-nums; }
+.kpi i.dn { color: var(--brand); }
+
+/* Kanban */
+.board { display: flex; gap: 10px; overflow-x: auto; padding: 15px 0 6px; }
+.col { flex: none; width: 172px; border: 1px solid var(--line); border-radius: 13px; background: var(--paper); padding: 9px; }
+.col-h { display: flex; align-items: center; gap: 6px; padding: 0 3px 6px; }
+.col-h i { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.col-h b { font-size: 11px; font-weight: 600; flex: 1; line-height: 1.2; }
+.col-h span { font-size: 9.5px; font-weight: 700; color: var(--muted); background: var(--line-soft); border: 1px solid var(--line); border-radius: 999px; padding: 0 5px; font-variant-numeric: tabular-nums; }
+.col-sum { font-family: var(--mono); font-size: 9px; color: var(--faint); padding: 0 3px 8px; }
+.lead { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 10px; margin-bottom: 7px; cursor: grab; transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s; }
+.lead:hover { transform: translateY(-2px) rotate(-.6deg); box-shadow: var(--shadow); }
+.lead.urgent { border-color: color-mix(in srgb, var(--warn) 38%, transparent); }
+.lead-top { display: flex; justify-content: space-between; gap: 6px; }
+.lead b { font-size: 11.5px; font-weight: 600; }
+.lead-prog { font-size: 10.5px; color: var(--muted); display: flex; align-items: center; gap: 4px; margin-top: 5px; }
+.docs-row { display: flex; align-items: center; justify-content: space-between; margin: 9px 0 4px; }
+.docs-row span { font-size: 9px; color: var(--faint); }
+.docs-row b { font-family: var(--mono); font-size: 9.5px; color: var(--muted); }
+.docs-bar { height: 5px; border-radius: 999px; background: var(--line-soft); border: 1px solid var(--line); overflow: hidden; }
+.docs-bar i { display: block; height: 100%; background: var(--brand); }
+.docs-bar i.full { background: var(--ok); }
+.lead-chips { display: flex; gap: 4px; margin-top: 9px; flex-wrap: wrap; }
+.mini { font-size: 9px; font-weight: 600; border-radius: 5px; padding: 2px 5px; border: 1px solid var(--line); color: var(--muted); }
+.mini.hi { color: var(--brand); border-color: color-mix(in srgb, var(--brand) 32%, transparent); background: var(--brand-wash); }
+.mini.md { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 32%, transparent); }
+
+/* Telegram */
+.tg { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 16px; }
+.tg-h { display: flex; gap: 11px; align-items: flex-start; justify-content: space-between; }
+.tg-ico { width: 34px; height: 34px; border-radius: 11px; background: rgba(34,158,217,.13); color: #229ED9; display: grid; place-items: center; flex: none; }
+.tg b { font-size: 13.5px; }
+.tg-h p { color: var(--muted); font-size: 11.5px; margin-top: 2px; }
+.tg-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 7px 3px; font-size: 12.5px; }
+.sw { width: 34px; height: 19px; border-radius: 999px; background: var(--line); position: relative; flex: none; transition: background .3s; border: 0; padding: 0; }
+.sw i { position: absolute; top: 3px; left: 3px; width: 13px; height: 13px; border-radius: 50%; background: #fff; transition: left .3s cubic-bezier(.16,1,.3,1); box-shadow: 0 1px 2px rgba(0,0,0,.25); }
+.sw.on { background: var(--ok); }
+.sw.on i { left: 18px; }
+.tpl { font-family: var(--mono); font-size: 10.5px; line-height: 1.68; color: var(--muted); background: var(--paper); border: 1px solid var(--line); border-radius: 11px; padding: 12px; margin-top: 12px; white-space: pre-wrap; overflow-x: auto; }
+
+/* Analitika */
+.grid2 { display: grid; grid-template-columns: minmax(0,1.85fr) minmax(0,1.15fr); gap: 12px; margin-top: 13px; }
+@media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 12px; }
+@media (max-width: 900px) { .grid3 { grid-template-columns: 1fr; } }
+.panel { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 16px; }
+.panel h5 { font-size: 13.5px; font-weight: 700; letter-spacing: -.02em; }
+.panel > p { color: var(--muted); font-size: 11.5px; margin-top: 3px; }
+.funnel li { margin-bottom: 11px; }
+.fn-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 5px; }
+.fn-top > span:first-child { font-size: 12.5px; }
+.fn-n { font-family: var(--mono); font-size: 11.5px; font-weight: 600; }
+.fn-r { font-family: var(--mono); font-size: 10.5px; font-weight: 700; margin-left: 7px; }
+.fn-r.good { color: var(--ok); } .fn-r.mid { color: var(--warn); } .fn-r.bad { color: var(--brand); }
+.fn-bar { height: 8px; border-radius: 999px; background: var(--line-soft); border: 1px solid var(--line); overflow: hidden; }
+.fn-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--brand), var(--ok)); }
+.legend li { display: flex; align-items: center; gap: 9px; font-size: 12.5px; margin-bottom: 7px; }
+.legend i { width: 9px; height: 9px; border-radius: 3px; flex: none; }
+.legend > li > span { color: var(--muted); flex: 1; }
+.legend b { font-family: var(--mono); font-size: 11.5px; }
+.live-n { font-family: var(--display); font-size: 38px; font-weight: 800; letter-spacing: -.045em; font-variant-numeric: tabular-nums; }
+.spark { display: flex; align-items: flex-end; gap: 3px; height: 40px; margin-top: 13px; }
+.spark i { flex: 1; border-radius: 2px; background: color-mix(in srgb, var(--brand) 32%, transparent); transition: height .7s ease-out; }
+
+/* Mazmun redaktory */
+.cm-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 11px 16px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.prog { flex: 1; min-width: 120px; height: 7px; border-radius: 999px; background: var(--line-soft); border: 1px solid var(--line); overflow: hidden; }
+.prog i { display: block; height: 100%; background: var(--warn); width: 92%; }
+.cm-row { padding: 16px; border-bottom: 1px solid var(--line-soft); }
+.cm-row:last-child { border-bottom: 0; }
+.cm-meta { display: flex; align-items: center; gap: 9px; margin-bottom: 9px; flex-wrap: wrap; }
+.cm-sec { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); background: var(--line-soft); border-radius: 5px; padding: 2px 7px; }
+.cm-lab { font-size: 12.5px; font-weight: 500; }
+.cm-key { margin-left: auto; font-family: var(--mono); font-size: 10px; color: var(--faint); }
+.cm-cols { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; }
+@media (max-width: 760px) { .cm-cols { grid-template-columns: 1fr; } }
+.cm-col label { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--faint); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 5px; }
+.cm-col .miss { color: var(--brand); }
+.cm-col textarea { width: 100%; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--ink); font: inherit; font-size: 12.5px; padding: 9px 11px; resize: none; transition: border-color .2s, box-shadow .2s; }
+.cm-col textarea:focus { outline: 0; border-color: var(--brand); box-shadow: 0 0 0 4px var(--brand-wash); }
+.cm-col.empty textarea { border-color: color-mix(in srgb, var(--brand) 48%, transparent); }
+
+/* Logo görkezmesi */
+.logo-demo { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.logo-box {
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 12px;
+  min-width: 150px; flex: 1; padding: 22px 18px; border: 1px solid var(--line);
+  border-radius: 16px; background: var(--surface);
+}
+.logo-box.dark { background: #0D0B1A; border-color: rgba(255,255,255,.12); --logo-violet: #9B33FF; --logo-azure: #2FBCFF; }
+.logo-box.dark small { color: #A09CBE; }
+.logo-box span { display: block; }
+.logo-box svg { display: block; width: 100%; height: auto; }
+.logo-box small { color: var(--faint); font-size: 11px; }
+
+/* Tokenler */
+.tokens { display: grid; grid-template-columns: repeat(auto-fill, minmax(152px, 1fr)); gap: 10px; margin-top: 20px; }
+.tok { border: 1px solid var(--line); border-radius: 13px; overflow: hidden; background: var(--surface); }
+.tok-sw { height: 50px; border-bottom: 1px solid var(--line-soft); }
+.tok-m { padding: 10px 12px; }
+.tok-m b { font-family: var(--mono); font-size: 11px; display: block; }
+.tok-m small { color: var(--faint); font-size: 10.5px; display: block; margin-top: 2px; line-height: 1.38; }
+.scale { margin-top: 20px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--surface); }
+.scale-row { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: baseline; padding: 13px 18px; border-bottom: 1px solid var(--line-soft); }
+.scale-row:last-child { border-bottom: 0; }
+.scale-row > code { font-family: var(--mono); font-size: 10.5px; color: var(--faint); }
+.s-h1 { font-family: var(--display); font-weight: 900; font-size: 30px; letter-spacing: -.055em; line-height: 1.05; }
+.s-h2 { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -.05em; }
+.s-h3 { font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: -.04em; }
+.s-b  { font-size: 15px; }
+.s-m  { font-size: 10.5px; text-transform: uppercase; letter-spacing: .17em; font-weight: 600; color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); margin-top: 18px; padding: 28px 0 44px; color: var(--faint); font-size: 12.5px; }
+.foot-in { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+</style>
+
+<!-- Liquid Glass üçin döwülme süzgüji — sahypada bir gezek -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0">
+  <filter id="liquid-refract" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.006 0.011" numOctaves="2" seed="7" result="noise"/>
+    <feGaussianBlur in="noise" stdDeviation="2.4" result="soft"/>
+    <feDisplacementMap in="SourceGraphic" in2="soft" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<div class="bar lg lg-thin">
+  <div class="bar-in">
+    <div class="mark">
+      <div class="mark-badge"><svg viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Next Step Consulting"><path fill="var(--logo-violet)" d="M0 38 V10 A10 10 0 0 1 10 0 H27 A2 2 0 0 1 29 2 V29.5 L10.5 11 Q7 11 7 14.5 V38 Z"/><path fill="var(--logo-azure)" d="M40 7 V35 A10 10 0 0 1 30 45 H13 A2 2 0 0 1 11 43 V15.5 L29.5 34 Q33 34 33 30.5 V7 Z"/></svg></div>
+      <div class="mark-name">Next Step<span class="mark-sub">Consulting</span></div>
+    </div>
+    <div class="seg" role="group" aria-label="Dil">
+      <button data-lang="tm" aria-pressed="true">TM</button>
+      <button data-lang="ru" aria-pressed="false">RU</button>
+      <button data-lang="tr" aria-pressed="false">TR</button>
+    </div>
+    <div class="seg" role="group" aria-label="Tema">
+      <button data-theme-btn="light" aria-pressed="true">Ýagty</button>
+      <button data-theme-btn="dark" aria-pressed="false">Garaňky</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ 01 · HERO ============ -->
+  <section class="block">
+    <div class="rail">
+      <div class="rail-no">01 / HERO</div>
+      <div class="rail-t">Hatyň möhürlenmegi</div>
+      <p class="rail-d">Sagdaky wizual stok surat däl — talybyň almak isleýän zadynyň özi. Sahypa açylanda hat ýazylýar we üstüne möhür basylýar.</p>
+      <div class="rail-tags"><span class="tag">liquid glass</span><span class="tag">3D tilt</span><span class="tag">stamp 0.62s</span><span class="tag">benewşe blur</span></div>
+    </div>
+
+    <div class="screen">
+      <div class="screen-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="screen-url">nextstep.tm/<b data-bind="urlLang">tm</b></span></div>
+      <div class="screen-body hero">
+        <div class="aurora">
+          <span class="blob" style="width:46%;height:60%;top:-16%;left:2%;background:radial-gradient(closest-side,color-mix(in srgb,var(--brand) 34%,transparent),transparent 78%);filter:blur(70px);animation:blob-a 30s ease-in-out infinite"></span>
+          <span class="blob" style="width:40%;height:52%;top:2%;left:44%;background:radial-gradient(closest-side,color-mix(in srgb,var(--azure) 30%,transparent),transparent 78%);filter:blur(76px);animation:blob-b 38s ease-in-out -6s infinite"></span>
+          <span class="blob" style="width:32%;height:44%;top:34%;left:20%;background:radial-gradient(closest-side,color-mix(in srgb,var(--brand) 22%,transparent),transparent 78%);filter:blur(64px);animation:blob-b 44s ease-in-out -14s infinite"></span>
+          <span class="blob" style="width:28%;height:38%;top:-8%;left:70%;background:radial-gradient(closest-side,color-mix(in srgb,var(--brand) 18%,transparent),transparent 78%);filter:blur(58px);animation:blob-a 26s ease-in-out -9s infinite"></span>
+        </div>
+        <div class="hero-grid"></div>
+        <div class="hero-in">
+          <div>
+            <span class="pill lg"><span class="live"><i></i><i></i></span><span data-bind="hero.badge"></span></span>
+            <p class="eyebrow" style="margin-top:18px" data-bind="hero.overline"></p>
+            <h2><span data-bind="hero.t1"></span> <span class="accent" data-bind="hero.t2"></span> <span data-bind="hero.t3"></span></h2>
+            <p class="hero-sub" data-bind="hero.sub"></p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#arza" data-magnet><span data-bind="hero.cta1"></span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="#uni" data-magnet>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12.5V17c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-4.5"/></svg>
+                <span data-bind="hero.cta2"></span>
+              </a>
+            </div>
+            <p class="cta-hint" data-bind="hero.hint"></p>
+
+            <div class="stats" data-bind-list="hero.stats"></div>
+          </div>
+
+          <!-- ---- KABUL HATY ---- -->
+          <div class="letter-stack">
+            <div class="letter-ghost g1 lg" aria-hidden="true"></div>
+            <div class="letter-ghost g2 lg" aria-hidden="true"></div>
+            <div class="letter lg lg-refract" id="letter" role="img" data-bind-aria="hero.letterAlt">
+              <div class="letter-head">
+                <div>
+                  <div class="letter-title" data-bind="hero.letterTitle"></div>
+                  <div class="letter-sub">Letter of Acceptance</div>
+                </div>
+                <span class="letter-demo" data-bind="hero.letterDemo"></span>
+              </div>
+              <dl class="letter-rows" id="letterRows"></dl>
+              <div class="seal" id="seal">
+                <div>
+                  <b data-bind="hero.letterStatus"></b>
+                  <hr>
+                  <span>2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 01b · ÇALT HEREKET ============ -->
+  <section class="block">
+    <div class="rail">
+      <div class="rail-no">01b / ÇALT HEREKET</div>
+      <div class="rail-t">Girişiň dört gapysy</div>
+      <p class="rail-d">Bäsdeş seljermesinden alnan element. Sahypany okaman ýoluny saýlaýan ulanyjy üçin — haýsy gapydan girse-de gerek ýerine düşýär.</p>
+      <div class="rail-tags"><span class="tag">bäsdeşden</span><span class="tag">WhatsApp</span><span class="tag">sansyz wada</span></div>
+    </div>
+
+    <div class="screen"><div class="screen-body">
+      <p class="eyebrow" data-bind="quick.eyebrow"></p>
+      <div class="qa" id="qaCards"></div>
+    </div></div>
+  </section>
+
+  <!-- ============ 02 · AGYRY / ÇÖZGÜT ============ -->
+  <section class="block">
+    <div class="rail">
+      <div class="rail-no">02 / AGYRY → ÇÖZGÜT</div>
+      <div class="rail-t">Özüňi tanamak</div>
+      <p class="rail-d">«Öň» ýagdaýy bitarap çal bilen bellenýär — nyşan reňki (benewşe) «erbet» many bilen garyşmaly däl. Bir reňk — bir many.</p>
+      <div class="rail-tags"><span class="tag">before/after</span><span class="tag">iki dereje</span></div>
+    </div>
+
+    <div class="screen"><div class="screen-body">
+      <div class="sec-head">
+        <p class="eyebrow" data-bind="problem.eyebrow"></p>
+        <h3 data-bind="problem.title"></h3>
+        <p data-bind="problem.sub"></p>
+      </div>
+      <div class="master">
+        <div class="seg" role="group" id="masterSwitch">
+          <button data-v="before" aria-pressed="true" data-bind="problem.before"></button>
+          <button data-v="after" aria-pressed="false" data-bind="problem.after"></button>
+        </div>
+      </div>
+      <div class="cards" id="flipCards"></div>
+    </div></div>
+  </section>
+
+  <!-- ============ 03 · IŞ TERTIBI ============ -->
+  <section class="block">
+    <div class="rail">
+      <div class="rail-no">03 / IŞ TERTIBI</div>
+      <div class="rail-t">Dört ädim</div>
+      <p class="rail-d">Her ädimde möhlet we eliňize gowşýan resminama görkezilýär. Bu «pul töleýän, elime hiç zat düşmeýär» gorkusyny aýyrýar.</p>
+      <div class="rail-tags"><span class="tag">scroll-fill</span><span class="tag">deliverable</span><span class="tag">gerim belligi</span></div>
+    </div>
+
+    <div class="screen"><div class="screen-body">
+      <div class="sec-head">
+        <p class="eyebrow" data-bind="process.eyebrow"></p>
+        <h3 data-bind="process.title"></h3>
+        <p data-bind="process.sub"></p>
+      </div>
+      <div class="tl">
+        <div class="tl-line"><i class="tl-fill" id="tlFill"></i></div>
+        <div id="steps"></div>
+      </div>
+      <p class="scope-note" data-bind="process.scope"></p>
+    </div></div>
+  </section>
+
+  <!-- ============ 04 · UNIWERSITETLER ============ -->
+  <section class="block" id="uni">
+    <div class="rail">
+      <div class="rail-no">04 / UNIWERSITETLER</div>
+      <div class="rail-t">Barlanýan bölek</div>
+      <p class="rail-d">Iki hatar garşylyklaýyn süýşýär (58 we 72 sek). Logotipiň ýerine bitewi monogram — olar hukuk taýdan goralan nyşanlar. Benewşe bellenenler — arza taýýarlaýanlarymyz.</p>
+      <div class="rail-tags"><span class="tag">lenta 58/72s</span><span class="tag">hover pause</span><span class="tag">logosyz</span></div>
+    </div>
+
+    <div class="screen"><div class="screen-body">
+      <div class="sec-head">
+        <p class="eyebrow" data-bind="uni.eyebrow"></p>
+        <h3 data-bind="uni.title"></h3>
+        <p data-bind="uni.sub"></p>
+        <span class="city">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <span data-bind="uni.city"></span>
+        </span>
+      </div>
+      <div class="uni-mq">
+        <div class="uni-row"><div class="uni-track" id="uniA"></div></div>
+        <div class="uni-row"><div class="uni-track rev" id="uniB"></div></div>
+      </div>
+      <p class="uni-note" data-bind="uni.note"></p>
+
+      <div class="unis" id="unis" style="margin-top:26px"></div>
+    </div></div>
+  </section>
+
+  <!-- ============ 05 · KABUL HATLARY ============ -->
+  <section class="block">
+    <div class="rail">
+      <div class="rail-no">05 / SUBUTNAMA</div>
+      <div class="rail-t">Hatlaryň lentasy</div>
+      <p class="rail-d">Iki hatar garşylyklaýyn, haýal (62 sek) süýşýär — «bularyň soňy ýok» duýgusyny berýär. Kursor üstüne gelende saklanýar.</p>
+      <div class="rail-tags"><span class="tag">marquee 62s</span><span class="tag">hover pause</span><span class="tag">razylyk</span></div>
+    </div>
+
+    <div class="screen"><div class="screen-body" style="padding-left:0;padding-right:0">
+      <div class="sec-head" style="padding:0 34px">
+        <p class="eyebrow" data-bind="proof.eyebrow"></p>
+        <h3 data-bind="proof.title"></h3>
+        <p data-bind="proof.sub"></p>
+        <span class="notice">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.4" stroke-linecap="round"/></svg>
+          <span data-bind="proof.notice"></span>
+        </span>
+      </div>
+
+      <p class="eyebrow" style="padding:0 34px;margin-top:26px" data-bind="proof.lettersLabel"></p>
+      <div class="marquee-wrap">
+        <div class="mq"><div class="mq-track" id="mqA"></div></div>
+        <div class="mq"><div class="mq-track rev" id="mqB"></div></div>
+      </div>
+
+      <div style="padding:0 34px">
+        <p class="eyebrow" style="margin-top:26px" data-bind="proof.testimonialsLabel"></p>
+        <div class="tcards" id="tcards"></div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- ============ 06 · TEKLIP · FAQ · FORMA ============ -->
+  <section class="block" id="arza">
+    <div class="rail">
+      <div class="rail-no">06 / ÝAPYLYŞ</div>
+      <div class="rail-t">Töwekgelçiligi aýyrmak</div>
+      <p class="rail-d">Ilkinji maslahat tölegsiz, FAQ galan şübheleri ýapýar, forma bolsa ýanaşyk durýar — jogaby tapan adam skroll etmeli bolmaýar.</p>
+      <div class="rail-tags"><span class="tag">accordion</span><span class="tag">3 hökmany meýdan</span></div>
+    </div>
+
+    <div class="screen"><div class="screen-body">
+      <div class="offer">
+        <div class="offer-l">
+          <p class="eyebrow" data-bind="offer.eyebrow"></p>
+          <h3 data-bind="offer.title"></h3>
+          <p class="offer-sub" data-bind="offer.sub"></p>
+          <ul class="inc" data-bind-list="offer.includes"></ul>
+        </div>
+        <div class="offer-r">
+          <div class="price-box">
+            <div class="price-l" data-bind="offer.priceL"></div>
+            <div class="price-v" data-bind="offer.priceV"></div>
+            <p class="price-n" data-bind="offer.priceN"></p>
+          </div>
+          <div class="guarantee">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--ok)" stroke-width="2" style="flex:none;margin-top:2px"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6z"/><path d="M9 12l2 2 4-4" stroke-linecap="round"/></svg>
+            <div><b data-bind="offer.gT"></b><p data-bind="offer.gD"></p></div>
+          </div>
+          <div class="slots"><span data-bind="offer.slots"></span><b>12</b></div>
+        </div>
+      </div>
+
+      <div class="close">
+        <div>
+          <p class="eyebrow" data-bind="faq.eyebrow"></p>
+          <h3 style="font-size:23px;margin-top:10px" data-bind="faq.title"></h3>
+          <div id="faqList" style="margin-top:16px"></div>
+        </div>
+
+        <div class="form">
+          <p class="eyebrow" data-bind="form.eyebrow"></p>
+          <h4 data-bind="form.title"></h4>
+          <p data-bind="form.sub"></p>
+          <div class="fields">
+            <div class="f f-wide"><label data-bind="form.f1"></label><input type="text" data-bind-ph="form.p1"></div>
+            <div class="f"><label data-bind="form.f2"></label><input type="tel" dir="ltr" data-bind-ph="form.p2"></div>
+            <div class="f"><label data-bind="form.f3"></label><select data-bind-opts="form.years"></select></div>
+            <div class="f f-wide"><label data-bind="form.f4"></label><select data-bind-opts="form.programs"></select></div>
+          </div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:18px" type="button">
+            <span data-bind="form.submit"></span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3L10.5 13.5M21 3l-6.5 18-4-8-8-4z"/></svg>
+          </button>
+          <p class="privacy" data-bind="form.privacy"></p>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- ============ 07 · ADMIN 1 ============ -->
+  <section class="block">
+    <div class="rail">
+      <div class="rail-no">07 / ADMIN 1</div>
+      <div class="rail-t">Ýüztutmalar paneli</div>
+      <p class="rail-d">Kartadaky esasy görkeziji — resminamalaryň ilerlemesi. Bu işde iň ýygy gijikdiriji sebäp: ýygnalmadyk resminama.</p>
+      <div class="rail-tags"><span class="tag">@dnd-kit</span><span class="tag">optimistik</span><span class="tag">möhlet duýduryşy</span></div>
+    </div>
+
+    <div class="screen">
+      <div class="screen-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="screen-url">nextstep.tm/<b data-bind="urlLang">tm</b>/admin/satuw</span></div>
+      <div class="app">
+        <aside class="side">
+          <div class="mark"><div class="mark-badge"><svg viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Next Step Consulting"><path fill="var(--logo-violet)" d="M0 38 V10 A10 10 0 0 1 10 0 H27 A2 2 0 0 1 29 2 V29.5 L10.5 11 Q7 11 7 14.5 V38 Z"/><path fill="var(--logo-azure)" d="M40 7 V35 A10 10 0 0 1 30 45 H13 A2 2 0 0 1 11 43 V15.5 L29.5 34 Q33 34 33 30.5 V7 Z"/></svg></div><div class="mark-name">Next Step</div></div>
+          <div class="who">
+            <div class="av" style="background:var(--brand)">SM</div>
+            <div><b>Serdar M.</b><small data-bind="admin.role1"></small></div>
+          </div>
+          <ul class="snav" data-bind-list="admin.nav1"></ul>
+        </aside>
+
+        <div class="appbody">
+          <div class="apphead"><h4 data-bind="admin.t1"></h4><p data-bind="admin.s1"></p></div>
+          <div class="kpis" data-bind-list="admin.kpi1"></div>
+
+          <div class="grid2">
+            <div style="min-width:0"><div class="board" id="board"></div></div>
+            <div class="tg">
+              <div class="tg-h">
+                <div style="display:flex;gap:11px">
+                  <div class="tg-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3L10.5 13.5M21 3l-6.5 18-4-8-8-4z"/></svg></div>
+                  <div><b data-bind="admin.tgT"></b><p data-bind="admin.tgS"></p></div>
+                </div>
+                <span class="ok-chip"><span class="live"><i></i><i></i></span><span data-bind="admin.tgOk"></span></span>
+              </div>
+              <div style="margin-top:12px">
+                <div class="tg-row"><span data-bind="admin.tgE1"></span><button class="sw on" aria-label="on"><i></i></button></div>
+                <div class="tg-row"><span data-bind="admin.tgE2"></span><button class="sw on" aria-label="on"><i></i></button></div>
+                <div class="tg-row"><span data-bind="admin.tgE3"></span><button class="sw on" aria-label="on"><i></i></button></div>
+                <div class="tg-row"><span data-bind="admin.tgE4"></span><button class="sw" aria-label="off"><i></i></button></div>
+              </div>
+              <div class="tpl" data-bind="admin.tgTpl"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 · ADMIN 2 ============ -->
+  <section class="block">
+    <div class="rail">
+      <div class="rail-no">08 / ADMIN 2</div>
+      <div class="rail-t">Seljerme we mazmun</div>
+      <p class="rail-d">Üç dil gapdal-gapdal: terjime edilende many ýitmeýär, ýetmeýän meýdan bolsa derrew gyzyl bilen bellenýär.</p>
+      <div class="rail-tags"><span class="tag">recharts</span><span class="tag">SSE janly</span><span class="tag">3 dil redaktor</span></div>
+    </div>
+
+    <div class="screen">
+      <div class="screen-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="screen-url">nextstep.tm/<b data-bind="urlLang">tm</b>/admin/analitika</span></div>
+      <div class="app">
+        <aside class="side">
+          <div class="mark"><div class="mark-badge"><svg viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Next Step Consulting"><path fill="var(--logo-violet)" d="M0 38 V10 A10 10 0 0 1 10 0 H27 A2 2 0 0 1 29 2 V29.5 L10.5 11 Q7 11 7 14.5 V38 Z"/><path fill="var(--logo-azure)" d="M40 7 V35 A10 10 0 0 1 30 45 H13 A2 2 0 0 1 11 43 V15.5 L29.5 34 Q33 34 33 30.5 V7 Z"/></svg></div><div class="mark-name">Next Step</div></div>
+          <div class="who">
+            <div class="av" style="background:var(--ok)">AG</div>
+            <div><b>Aýnur G.</b><small data-bind="admin.role2"></small></div>
+          </div>
+          <ul class="snav" data-bind-list="admin.nav2"></ul>
+        </aside>
+
+        <div class="appbody">
+          <div class="apphead"><h4 data-bind="admin.t2"></h4><p data-bind="admin.s2"></p></div>
+          <div class="kpis" data-bind-list="admin.kpi2"></div>
+
+          <div class="grid2">
+            <div class="panel">
+              <h5 data-bind="admin.chT"></h5>
+              <p data-bind="admin.chS"></p>
+              <svg viewBox="0 0 560 190" role="img" data-bind-aria="admin.chAlt" style="display:block;width:100%;height:auto;margin-top:12px">
+                <defs>
+                  <linearGradient id="aV" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--brand)" stop-opacity=".26"/><stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="aL" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--ok)" stop-opacity=".26"/><stop offset="100%" stop-color="var(--ok)" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <g stroke="var(--line)" stroke-width="1">
+                  <line x1="34" x2="548" y1="30" y2="30"/><line x1="34" x2="548" y1="70" y2="70"/>
+                  <line x1="34" x2="548" y1="110" y2="110"/><line x1="34" x2="548" y1="150" y2="150"/>
+                </g>
+                <g fill="var(--faint)" font-size="9" font-family="JetBrains Mono, monospace">
+                  <text x="4" y="33">400</text><text x="4" y="73">300</text><text x="4" y="113">200</text><text x="4" y="153">100</text>
+                  <text x="34" y="172">14.08</text><text x="162" y="172">21.08</text><text x="292" y="172">28.08</text>
+                  <text x="420" y="172">04.09</text><text x="510" y="172">12.09</text>
+                </g>
+                <path fill="url(#aV)" d="M34 118 L 90 104 L 146 112 L 202 88 L 258 95 L 314 72 L 370 80 L 426 56 L 482 62 L 548 38 L 548 150 L 34 150 Z"/>
+                <path fill="none" stroke="var(--brand)" stroke-width="2.2" stroke-linejoin="round" d="M34 118 L 90 104 L 146 112 L 202 88 L 258 95 L 314 72 L 370 80 L 426 56 L 482 62 L 548 38"/>
+                <path fill="url(#aL)" d="M34 141 L 90 137 L 146 139 L 202 132 L 258 134 L 314 127 L 370 129 L 426 120 L 482 122 L 548 112 L 548 150 L 34 150 Z"/>
+                <path fill="none" stroke="var(--ok)" stroke-width="2.2" stroke-linejoin="round" d="M34 141 L 90 137 L 146 139 L 202 132 L 258 134 L 314 127 L 370 129 L 426 120 L 482 122 L 548 112"/>
+                <circle cx="548" cy="38" r="4" fill="var(--brand)"/>
+                <line x1="34" x2="548" y1="150" y2="150" stroke="var(--line)"/>
+              </svg>
+              <ul class="legend" style="margin-top:10px;display:flex;gap:18px">
+                <li><i style="background:var(--brand)"></i><span data-bind="admin.legV"></span></li>
+                <li><i style="background:var(--ok)"></i><span data-bind="admin.legL"></span></li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span class="live"><i></i><i></i></span>
+                <h5 style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)" data-bind="admin.liveT"></h5>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:8px;margin-top:10px">
+                <span class="live-n" id="liveN">23</span>
+                <span style="color:var(--muted);font-size:13px" data-bind="admin.liveU"></span>
+              </div>
+              <div class="spark" id="spark"></div>
+              <p style="font-family:var(--mono);font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-top:16px" data-bind="admin.langT"></p>
+              <ul class="legend" style="margin-top:9px">
+                <li><span style="flex:none">🇹🇲 TM</span><div class="fn-bar" style="flex:1"><i style="width:61%"></i></div><b>61%</b></li>
+                <li><span style="flex:none">🇷🇺 RU</span><div class="fn-bar" style="flex:1"><i style="width:27%"></i></div><b>27%</b></li>
+                <li><span style="flex:none">🇹🇷 TR</span><div class="fn-bar" style="flex:1"><i style="width:12%"></i></div><b>12%</b></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid3">
+            <div class="panel">
+              <h5 data-bind="admin.fnT"></h5>
+              <ul class="funnel" style="margin-top:14px" data-bind-list="admin.funnel"></ul>
+            </div>
+            <div class="panel">
+              <h5 data-bind="admin.srcT"></h5>
+              <div style="display:flex;align-items:center;gap:16px;margin-top:12px">
+                <svg viewBox="0 0 100 100" width="90" height="90" role="img" data-bind-aria="admin.srcAlt">
+                  <circle cx="50" cy="50" r="36" fill="none" stroke="var(--brand)" stroke-width="15" stroke-dasharray="104 122" transform="rotate(-90 50 50)"/>
+                  <circle cx="50" cy="50" r="36" fill="none" stroke="var(--ok)" stroke-width="15" stroke-dasharray="47 179" transform="rotate(76 50 50)"/>
+                  <circle cx="50" cy="50" r="36" fill="none" stroke="var(--gold)" stroke-width="15" stroke-dasharray="32 194" transform="rotate(152 50 50)"/>
+                  <circle cx="50" cy="50" r="36" fill="none" stroke="var(--slate)" stroke-width="15" stroke-dasharray="43 183" transform="rotate(203 50 50)"/>
+                </svg>
+                <ul class="legend" style="flex:1" data-bind-list="admin.sources"></ul>
+              </div>
+            </div>
+            <div class="panel">
+              <h5 data-bind="admin.devT"></h5>
+              <ul class="legend" style="margin-top:14px" data-bind-list="admin.devices"></ul>
+              <p style="color:var(--faint);font-size:11.5px;margin-top:12px;line-height:1.48" data-bind="admin.devNote"></p>
+            </div>
+          </div>
+
+          <div class="panel" style="margin-top:12px;padding:0">
+            <div style="padding:16px"><h5 data-bind="admin.cmT"></h5><p data-bind="admin.cmS"></p></div>
+            <div class="cm-head">
+              <span style="font-size:12px;color:var(--muted)" data-bind="admin.cmProg"></span>
+              <span class="prog"><i></i></span>
+              <b class="num" style="font-size:12.5px">92%</b>
+            </div>
+            <div id="cmRows"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 09 · TOKENLER ============ -->
+  <section class="block">
+    <div class="rail">
+      <div class="rail-no">09 / TOKENLER</div>
+      <div class="rail-t">Dizaýn ulgamy</div>
+      <p class="rail-d">Komponentlerde göni reňk ýazylmaýar. Tema çalşanda diňe tokenleriň bahasy üýtgeýär — kod üýtgewsiz galýar.</p>
+      <div class="rail-tags"><span class="tag">CSS üýtgeýjiler</span><span class="tag">12 sütün</span><span class="tag">4px ritm</span></div>
+    </div>
+
+    <div>
+      <div class="sec-head">
+        <p class="eyebrow">Reňk tokenleri</p>
+        <h3 style="font-size:23px">Häzirki temadaky hakyky bahalar</h3>
+        <p>Reňkler <b>markanyň öz logosyndan ölçenildi</b>: benewşe <code style="font-family:var(--mono);font-size:12px">#8400FC</code> (hue 271°) we gök <code style="font-family:var(--mono);font-size:12px">#0CA8F0</code> (hue 199°).</p>
+        <p style="margin-top:8px"><b>Logonyň özünde gradient ýok</b> — ol iki düz reňkli, 180° simmetrik şekilden ybarat. Gradient bolsa şol reňk geçişiniň dowamy hökmünde diňe üç ýerde ulanylýar: esasy CTA, sözbaşydaky nyşan söz we karta gyralary.</p>
+        <p style="margin-top:8px">Gök reňk ak fonda 2,7:1 kontrast berýär — <b>ýazgy üçin ýaramaýar</b>, diňe doldurgy we gradient hökmünde ulanylýar. Benewşe 6,2:1 berýär, ýazgy üçin dogry.</p>
+      </div>
+      <div class="tokens">
+        <div class="tok"><div class="tok-sw" style="background:var(--paper)"></div><div class="tok-m"><b>--paper</b><small>Sahypanyň fony</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:var(--surface)"></div><div class="tok-m"><b>--surface</b><small>Kartalar, paneller</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:var(--brand)"></div><div class="tok-m"><b>--brand</b><small>Logonyň benewşesi · #8400FC</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:var(--azure)"></div><div class="tok-m"><b>--azure</b><small>Gradientiň ikinji ujy · #0CA8F0</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:linear-gradient(118deg,var(--brand),var(--azure))"></div><div class="tok-m"><b>gradient</b><small>Markanyň nyşany — üç ýerde</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:var(--warn)"></div><div class="tok-m"><b>--warn</b><small>Möhlet ýakynlaşdy</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:var(--slate)"></div><div class="tok-m"><b>--slate</b><small>«Öň» ýagdaýy — bitarap</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:var(--ok)"></div><div class="tok-m"><b>--ok</b><small>Kabul edildi, tamamlandy</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:var(--muted)"></div><div class="tok-m"><b>--muted</b><small>Ikinji derejeli ýazgy</small></div></div>
+        <div class="tok"><div class="tok-sw" style="background:var(--ink)"></div><div class="tok-m"><b>--ink</b><small>Resminama syýasy</small></div></div>
+      </div>
+
+      <div class="sec-head" style="margin-top:34px">
+        <p class="eyebrow">Logo</p>
+        <h3 style="font-size:23px">Instagram profilinden yzarlandy</h3>
+        <p>Asyl surat 150×150 piksel — saýt üçin ýeterlik däl. Geometriýasy ölçenip SVG-de gaýtadan guruldy: islendik ölçegde arassa, göwrümi ~0,6 KB, möhleti gutarýan CDN salgysyna bagly däl.</p>
+      </div>
+      <div class="logo-demo">
+        <div class="logo-box"><span style="width:96px"><svg viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Next Step Consulting"><path fill="var(--logo-violet)" d="M0 38 V10 A10 10 0 0 1 10 0 H27 A2 2 0 0 1 29 2 V29.5 L10.5 11 Q7 11 7 14.5 V38 Z"/><path fill="var(--logo-azure)" d="M40 7 V35 A10 10 0 0 1 30 45 H13 A2 2 0 0 1 11 43 V15.5 L29.5 34 Q33 34 33 30.5 V7 Z"/></svg></span><small>Nyşan</small></div>
+        <div class="logo-box"><span style="width:44px"><svg viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Next Step Consulting"><path fill="var(--logo-violet)" d="M0 38 V10 A10 10 0 0 1 10 0 H27 A2 2 0 0 1 29 2 V29.5 L10.5 11 Q7 11 7 14.5 V38 Z"/><path fill="var(--logo-azure)" d="M40 7 V35 A10 10 0 0 1 30 45 H13 A2 2 0 0 1 11 43 V15.5 L29.5 34 Q33 34 33 30.5 V7 Z"/></svg></span><small>Menýudaky ölçeg</small></div>
+        <div class="logo-box"><span style="width:22px"><svg viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Next Step Consulting"><path fill="var(--logo-violet)" d="M0 38 V10 A10 10 0 0 1 10 0 H27 A2 2 0 0 1 29 2 V29.5 L10.5 11 Q7 11 7 14.5 V38 Z"/><path fill="var(--logo-azure)" d="M40 7 V35 A10 10 0 0 1 30 45 H13 A2 2 0 0 1 11 43 V15.5 L29.5 34 Q33 34 33 30.5 V7 Z"/></svg></span><small>Iň kiçi — 22px</small></div>
+        <div class="logo-box dark"><span style="width:64px"><svg viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Next Step Consulting"><path fill="var(--logo-violet)" d="M0 38 V10 A10 10 0 0 1 10 0 H27 A2 2 0 0 1 29 2 V29.5 L10.5 11 Q7 11 7 14.5 V38 Z"/><path fill="var(--logo-azure)" d="M40 7 V35 A10 10 0 0 1 30 45 H13 A2 2 0 0 1 11 43 V15.5 L29.5 34 Q33 34 33 30.5 V7 Z"/></svg></span><small>Garaňky fonda</small></div>
+      </div>
+
+      <div class="sec-head" style="margin-top:34px">
+        <p class="eyebrow">Tipografiýa</p>
+        <h3 style="font-size:23px">Wix Madefor Display · Golos Text · JetBrains Mono</h3>
+        <p>Üç şrift hem <code style="font-family:var(--mono);font-size:12px">cyrillic</code> we <code style="font-family:var(--mono);font-size:12px">latin-ext</code> toplumlaryny doly goldaýar — türkmençäniň <b>ä ň ö ş ü ý ž</b> harplary hem rus kirillisi bir stilde çykýar.</p>
+      </div>
+      <div class="scale">
+        <div class="scale-row"><code>h1 · −0.045em</code><div class="s-h1">Kabul haty</div></div>
+        <div class="scale-row"><code>h2 · −0.035em</code><div class="s-h2">Письмо о зачислении</div></div>
+        <div class="scale-row"><code>h3 · −0.025em</code><div class="s-h3">Kabul mektubu</div></div>
+        <div class="scale-row"><code>body · 1.68</code><div class="s-b">Ugur we uniwersitet saýlamakdan resminamalary taýýarlamaga çenli ähli tapgyry biz alyp barýarys.</div></div>
+        <div class="scale-row"><code>micro · +0.17em</code><div class="s-m">Gelejege tarap ilkinji ädim</div></div>
+        <div class="scale-row"><code>mono · tnum</code><div class="num" style="font-size:15px">2026/2027 · 5 uniwersitet · 2–4 hepde</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="foot-in">
+    <span>Next Step Consulting — dizaýn ulgamynyň we binagärliginiň görkezmesi.</span>
+    <span>Kabul hatlary we pikirler <b>görkezme maglumatlardyr</b>.</span>
+  </div>
+</footer>
+
+<script>
+/* ==================================================================
+   ÜÇ DILDÄKI MAZMUN — `messages/*.json` faýllarynyň gysgaldylan nusgasy
+   ================================================================== */
+const T = {
+tm: {
+  urlLang: 'tm',
+  hero: {
+    badge: '2026/2027 okuw ýyly üçin arzalar kabul edilýär',
+    overline: 'Gelejege tarap ilkinji we iň dogry ädim',
+    t1: 'Türkiýäniň uniwersitetine', t2: 'kabul hatyny', t3: 'almagyň dogry ýoly',
+    sub: 'Ugur we uniwersitet saýlamakdan başlap, resminamalary taýýarlamaga we arzany tabşyrmaga çenli ähli tapgyry biz alyp barýarys. Siz diňe okuwa taýýarlanyň.',
+    cta1: 'Mugt maslahat al', cta2: 'Uniwersitetleri gör',
+    hint: 'WhatsApp arkaly gysga wagtda jogap berýäris',
+    stats: [['5',' uniwersitet','Stambulyň öňdebaryjy hususy uniwersitetleri boýunça arza'],['4',' ädim','Maslahatdan kabul hatyna çenli aýdyň ýol'],['3',' dil','Türkmen, rus we türk dillerinde doly goldaw']],
+    letterAlt: 'Uniwersitetden gelen kabul hatynyň şekili',
+    letterTitle: 'KABUL HATY', letterStatus: 'Kabul edildi', letterDemo: 'Görkezme nusga',
+    letterRows: [['Talyp','A. MYRADOW'],['Uniwersitet','BAHÇEŞEHİR ÜNİVERSİTESİ'],['Ugry','COMPUTER ENGINEERING'],['Okuw ýyly','2026 / 2027']]
+  },
+  quick: {
+    eyebrow: 'Nireden başlaly?',
+    items: [
+      ['rocket','Garaşmak ýok — başlalyň','Uniwersiteti saýlaň, arzany biz taýýarlap tabşyrarys.','Başla'],
+      ['search','Uniwersitetiňizi tapyň','Bahalaryňyza görä laýyk gelýän uniwersitetleriň sanawy.','Gör'],
+      ['percent','Ýeňillik mümkinçilikleri','Uniwersitetleriň hödürleýän arzanladyşlary barada anyk maglumat.','Sora'],
+      ['message','WhatsApp goldawy','Soragyňyz bolsa, göni ýazyň — resmiýetsiz jogap berýäris.','Ýaz']
+    ]
+  },
+  problem: {
+    eyebrow: 'Kynçylyk we çözgüt',
+    title: 'Tanyş ýagdaýmy? Onda ilkinji ädim eýýäm bellidir.',
+    sub: 'Çeňňegi süýşüriň: çepde — özbaşdak synanyşanyňda, sagda — biz bilen işlenende bolýan ýagdaý.',
+    before: 'Özbaşdak', after: 'Biz bilen',
+    items: [
+      ['compass','Haýsy uniwersiteti saýlamalydygy belli däl','Onlarça uniwersitet, ýüzlerçe ugur we biri-birine gapma-garşy maslahatlar. Tölegiň hakyky möçberi hem anyk däl.','Size laýyk gelýän anyk sanaw','Bahaňyza, dil derejäňize we isleýän ugruňyza görä 3–5 sany teklip taýýarlanýar. Her biriniň tölegi we şerti ýazmaça görkezilýär.'],
+      ['file','Resminamalar yzyna gaýtarylýar','Terjimede ýalňyşlyk, ýetmeýän sahypa ýa-da nädogry attestat — arza kabul edilmän yzyna gelýär we wagt ýitýär.','Barlanan we doly resminama bukjasy','Her resminama ugradylmazdan öň barlag sanawy boýunça barlanýar. Yzyna gaýtarylma töwekgelçiligi iň pes derejä düşýär.'],
+      ['calendar','Möhletler sypdyrylýar','Her uniwersitetiň arza kabul ediş möhleti aýry. Bir hepde gijä galmak tutuş okuw ýylynyň yza süýşmegine getirýär.','Möhletler öňünden meýilleşdirilýär','Ähli möhletler bir senenamada birleşdirilýär. Her ädimden öň size ýatlatma iberilýär — gijä galmak mümkin däl.'],
+      ['shield','Araçylar aýdyň işlemeýär','Puly öňünden alýarlar, soňra habarlaşmagy bes edýärler. Arzaňyzyň haýsy tapgyrdadygyny soramasaň bileniň däl.','Aç-açan tertip we hemişelik habarlaşyk','Arzaňyzyň ýagdaýy her ädimde habar berilýär. Uniwersitetden gelen resmi hatlar size göni görkezilýär.']
+    ]
+  },
+  process: {
+    eyebrow: 'Iş tertibi', title: 'Maslahatdan kabul hatyna — dört ädim',
+    sub: 'Her ädimiň öz möhleti we eliňize gowşýan anyk netijesi bar. Siz haýsy tapgyrdadygyňyzy hemişe bilýärsiňiz.',
+    del: 'Eliňize gowşýan netije',
+    scope: 'Bellik: biziň esasy hyzmatymyz — uniwersitet saýlamak, resminamalary taýýarlamak we kabul hatyny almak. Wiza, ýaşaýyş jaýy we uçuş meseleleri boýunça size ugrukdyryjy maslahat berýäris.',
+    steps: [
+      ['01','Mugt maslahat we ugur saýlamak','1 gün','Bahalaryňyzy, dil derejäňizi, býujetiňizi we isleýän ugruňyzy öwrenýäris. Şoňa görä size hakykatdan laýyk gelýän uniwersitetleriň sanawyny taýýarlaýarys.','Tölegleri görkezilen 3–5 uniwersitetiň sanawy',['Attestatyň bahalarynyň seljermesi','Ugur boýunça maslahat','Töleg we ýeňillik mümkinçilikleri']],
+      ['02','Resminamalary ýygnamak we barlamak','3–7 gün','Zerur resminamalaryň sanawyny berýäris we her birini barlaýarys. Kemçilik bar bolsa, ugradylmazdan öň düzedilýär.','Barlagdan geçen doly resminama bukjasy',['Pasport we attestat','Transkript','Surat we arza formasy']],
+      ['03','Arzalaryň uniwersitetlere tabşyrylmagy','1–2 hepde','Arzalar birnäçe uniwersitete birbada tabşyrylýar — saýlaw mümkinçiligiňiz artýar. Her arzanyň ýagdaýy yzarlanýar.','Tabşyrylan arzalaryň hasabaty',['Birnäçe uniwersitete arza','Möhletleriň gözegçiligi','Uniwersitet bilen ýazyşyk']],
+      ['04','Kabul haty we ýazgy','2–4 hepde','Kabul haty gelen badyna size berilýär. Teklipler deňeşdirilip, iň amatlysy saýlanýar we ýazgy tapgyry tamamlanýar.','Resmi kabul haty (Letter of Acceptance)',['Kabul hatyny almak','Teklipleri deňeşdirmek','Ýazgy boýunça ugrukdyrma']]
+    ]
+  },
+  uni: {
+    eyebrow: 'Uniwersitetler', title: 'Stambulyň öňdebaryjy hususy uniwersitetleri',
+    sub: 'Talyplarymyzyň iň köp ýüz tutýan uniwersitetleri. Her biriniň ýyllyk tölegi, ugurlary we arza möhletleri boýunça anyk maglumat berýäris.',
+    city: 'Stambul',
+    note: 'Türkiýäniň öňde baryjy hususy uniwersitetleri. Benewşe bellenenler — häzirki wagtda arza taýýarlaýanlarymyz.',
+    items: [
+      ['Bahçeşehir Üniversitesi','BAU','Halkara alyş-çalyş maksatnamalary giň'],
+      ['İstanbul Gelişim Üniversitesi','IGU','Amaly ugurlar we tehniki hünärler'],
+      ['İstinye Üniversitesi','ISU','Saglygy goraýyş ugurlary güýçli'],
+      ['İstanbul Aydın Üniversitesi','IAU','Ugurlaryň sany boýunça iň giň saýlaw'],
+      ['İstanbul Medipol Üniversitesi','MED','Lukmançylyk we diş lukmançylygy']
+    ]
+  },
+  proof: {
+    eyebrow: 'Netijeler', title: 'Kabul hatlary — iň gowy subutnama',
+    sub: 'Aşakdaky hatlar we pikirler görkezme maglumatlardyr. Saýt işe girizilmezden öň olar hakyky hatlaryň şekilleri bilen, talyplaryň razylygy alnyp çalşyrylmalydyr.',
+    notice: 'Görkezme maglumat',
+    lettersLabel: 'Alnan kabul hatlary', testimonialsLabel: 'Talyplaryň pikirleri',
+    accepted: 'Kabul edildi', programLabel: 'Ugry',
+    letters: [
+      ['A. Myradow','Bahçeşehir','Kompýuter inženerligi','2025/26'],
+      ['G. Saparowa','Medipol','Diş lukmançylygy','2025/26'],
+      ['D. Ataýew','İstinye','Fizioterapiýa','2025/26'],
+      ['M. Hojaýewa','İstanbul Aydın','Halkara söwda','2025/26'],
+      ['R. Berdiýew','Gelişim','Awiasiýa dolandyryşy','2025/26'],
+      ['S. Nurgeldiýewa','Bahçeşehir','Arhitektura','2025/26']
+    ],
+    testimonials: [
+      ['Aýlar M.','Talyp, Bahçeşehir Üniversitesi','video','1:12','Resminamalaryň sanawyny özbaşdak düzüp bilmedim. Bu ýerde her sahypa barlanyp berildi we arza ilkinji gezekde kabul edildi.'],
+      ['Merdan H.','Talybyň kakasy','audio','0:52','Iň esasy zat — her ädimde habar berildi. Ogluň arzasynyň nirededigini soramak gerek bolmady.'],
+      ['Şemşat B.','Talyp, Medipol Üniversitesi','text','','Türk dilini bilmeýärdim we gorkýardym. Taýýarlyk ýyly barada düşündirdiler, indi ikinji ýylymda okaýaryn.']
+    ]
+  },
+  offer: {
+    eyebrow: 'Teklip', title: 'Ilkinji maslahat — tölegsiz',
+    sub: 'Bahalaryňyzy we isleýän ugruňyzy aýdyň — size laýyk uniwersitetleriň sanawyny we takyk töleg möçberlerini taýýarlap bereris.',
+    includes: ['Bahalaryňyza görä laýyk uniwersitetleriň sanawy','Her uniwersitetiň ýyllyk tölegi we ýeňillik mümkinçiligi','Zerur resminamalaryň doly sanawy','Arza tabşyrmagyň möhletleri boýunça senenama'],
+    priceL: 'Ilkinji maslahat', priceV: 'Tölegsiz',
+    priceN: 'Hyzmatyň bahasy saýlanan uniwersitete we arzalaryň sanyna görä öňünden, ýazmaça aýdylýar. Gizlin töleg ýok.',
+    gT: 'Töleg diňe netije boýunça',
+    gD: 'Maslahat we uniwersitetleriň saýlanmagy tölegsizdir. Hyzmatyň bahasy diňe siz anyk uniwersiteti saýlanyňyzdan soň kesgitlenýär.',
+    slots: 'Şu möwsüm üçin galan orun:'
+  },
+  faq: {
+    eyebrow: 'Ýygy-ýygydan berilýän soraglar', title: 'Aýdyňlaşdyrmaly zatlar',
+    items: [
+      ['Türk dilini bilmesem, okap bilerinmi?','Hawa. Hususy uniwersitetleriň aglabasynda türk dili ýa-da iňlis dili boýunça bir ýyllyk taýýarlyk sapagy (hazırlık) bar. Dil derejäňiz ýeterlik bolmasa, ilki şol taýýarlyk ýylyny okaýarsyňyz, soňra esasy hünäriňize geçýärsiňiz.'],
+      ['Haýsy resminamalar gerek?','Esasy sanaw: pasport, orta mekdebiň attestaty, baha sahypasy (transkript) we biometrik surat. Uniwersitete we ugra görä goşmaça resminama talap edilip bilner — ony maslahat tapgyrynda anyk aýdýarys.'],
+      ['Attestatym entek elimde ýok. Arza berip bilerinmi?','Hawa. Köp uniwersitet gutardyş synaglaryndan öň hem wagtlaýyn resminamalar bilen arzany kabul edýär. Tersine, ir ýüz tutmak has gowy: orunlar we ýeňillikler möwsümiň başynda has köp bolýar.'],
+      ['Hyzmatyňyzyň bahasy näçe?','Ilkinji maslahat, uniwersitetleriň saýlanmagy we töleg hasaplamasy doly tölegsizdir. Resminamalary taýýarlamak hyzmatynyň bahasy bolsa işe başlamazdan öň ýazmaça aýdylýar.'],
+      ['Kabul haty näçe wagtda gelýär?','Resminamalar doly we dogry bolsa, adatça 2–4 hepdäniň dowamynda gelýär. Möwsümiň gyzgalaňly wagtynda bu möhlet biraz uzalyp bilýär. Her hepde ýagdaý barada habar berilýär.']
+    ]
+  },
+  form: {
+    eyebrow: 'Baglanyşyk', title: 'Ilkinji ädimi bilelikde ädeliň',
+    sub: 'Meýdanlary dolduryň — gysga wagtda habarlaşyp, size laýyk uniwersitetleriň sanawyny taýýarlarys.',
+    f1: 'Talybyň ady we familiýasy', p1: 'Meselem: Aýgül Saparowa',
+    f2: 'Telefon ýa-da WhatsApp', p2: '+993 6X XX XX XX',
+    f3: 'Mekdebi gutarýan ýylyňyz',
+    f4: 'Okamak isleýän ugruňyz',
+    years: ['Ýyly saýlaň','2026','2025','2024','2023-nji ýyl we ondan öň'],
+    programs: ['Ugry saýlaň','Lukmançylyk','Diş lukmançylygy','Inženerçilik we tehnologiýa','Ykdysadyýet we dolandyryş','Arhitektura we dizaýn','Entek kesgitlemedim'],
+    submit: 'Arzany ibermek',
+    privacy: 'Formy ibermek bilen maglumatlaryňyzyň diňe siziň bilen habarlaşmak maksady bilen ulanyljakdygyna razylyk berýärsiňiz.'
+  },
+  admin: {
+    role1: 'Talyp arzalarynyň dolandyryjysy', role2: 'Seljerme we mazmun dolandyryjysy',
+    t1: 'Arzalar paneli', s1: 'Talyp ýüztutmalaryny dolandyrmak we kabul tapgyrlaryny yzarlamak',
+    t2: 'Seljerme we mazmun paneli', s2: 'Saýtyň görkezijileri we mazmunyň dolandyrylyşy',
+    nav1: [['Kanban tagtasy',1,'1'],['Ähli ýüztutmalar',0],['Möhletler',0],['Telegram bildirişleri',0],['Sazlamalar',0]],
+    nav2: [['Umumy görnüş',1],['Gatnaw',0],['Kabul tapgyrlary',0],['Mazmun',0],['Kabul hatlary',0],['Suratlar we wideo',0]],
+    kpi1: [['Şu günki täze ýüztutmalar','1','+25,0%',0],['Iş alnyp barylýan','3','+8,3%',0],['Şu aýda kabul haty','2','+16,7%',0],['Resminamasy ýetmeýän','2','−12,5%',1]],
+    kpi2: [['Myhmanlar','7 184','+18,6%',0],['Alnan ýüztutmalar','294','+24,1%',0],['Öwrülme derejesi','4,1%','+4,7%',0],['Saýtda ortaça wagt','2:48','−3,2%',1]],
+    columns: ['Täze ýüztutma','Maslahat berildi','Resminamalar ýygnalýar','Arza tabşyryldy','Kabul haty geldi','Ýazgy tamamlandy'],
+    prio: ['Ýokary','Orta','Pes'], docs: 'Resminamalar',
+    tgT: 'Telegram integrasiýasy', tgS: 'Her täze ýüztutma kanala şobada iberilýär', tgOk: 'Birikdirildi',
+    tgE1: 'Täze ýüztutma gelende', tgE2: 'Tapgyr üýtgände', tgE3: 'Kabul haty gelende', tgE4: 'Ýüztutma ýitirilende',
+    tgTpl: '🎓 Täze ýüztutma\\n👤 {name}\\n📞 {phone}\\n📚 Ugry: {program}\\n🗓 Gutarýan ýyly: {gradYear}\\n🌐 Çeşme: {source} · Dil: {locale}\\n🕒 {time}',
+    chT: 'Gatnawyň dinamikasy', chS: 'Soňky 30 gün: günlük myhmanlar we ýüztutmalar',
+    chAlt: 'Soňky 30 günüň gatnaw dinamikasynyň grafigi',
+    legV: 'Myhmanlar', legL: 'Ýüztutmalar',
+    liveT: 'Häzirki wagtda saýtda', liveU: 'myhman', langT: 'Dil boýunça paýlanyş',
+    fnT: 'Kabul tapgyrlary',
+    funnel: [['Saýta giriş','6 480','',''],['Bölümler bilen tanyşmak','3 910','60,3%','good'],['Forma açyldy','812','20,8%','bad'],['Forma iberildi','294','36,2%','mid'],['Maslahat geçirildi','138','46,9%','mid']],
+    srcT: 'Gatnawyň çeşmeleri', srcAlt: 'Gatnawyň çeşmeleri boýunça paýlanyş',
+    sources: [['Instagram','46%','var(--brand)'],['Google / organiki','21%','var(--ok)'],['Göni giriş','14%','var(--gold)'],['WhatsApp','11%','var(--slate)'],['Tanyş boýunça','8%','var(--muted)']],
+    devT: 'Enjamlar boýunça',
+    devices: [['Mobil telefon','78%','var(--brand)'],['Kompýuter','17%','var(--ok)'],['Planşet','5%','var(--gold)']],
+    devNote: 'Myhmanlaryň dörtden üçüsinden gowragy telefonda — talyplar üçin bu adaty. Şonuň üçin dizaýn ilki mobil ekran üçin gurulýar.',
+    cmT: 'Saýtyň mazmunyny dolandyrmak', cmS: 'Üç dil gapdal-gapdal: terjime edilende many ýitmeýär',
+    cmProg: 'Terjimäniň dolulygy', miss: 'Terjime ýetmeýär',
+    cmRows: [
+      ['Hero','Sözbaşynyň nyşan sözi','hero.titleAccent',['kabul hatyny','письму о зачислении','kabul mektubu']],
+      ['Iş tertibi','Hyzmatyň gerimi barada bellik','process.scopeNote',['Esasy hyzmatymyz — uniwersitet saýlamak we kabul hatyny almak.','Наша основная услуга — выбор университета и получение письма.','']]
+    ]
+  }
+},
+
+ru: {
+  urlLang: 'ru',
+  hero: {
+    badge: 'Идёт приём заявок на 2026/2027 учебный год',
+    overline: 'Первый и самый верный шаг в будущее',
+    t1: 'Верный путь к', t2: 'письму о зачислении', t3: 'в университет Турции',
+    sub: 'От выбора направления и университета до подготовки документов и подачи заявки — все этапы ведём мы. Вам остаётся только готовиться к учёбе.',
+    cta1: 'Бесплатная консультация', cta2: 'Смотреть университеты',
+    hint: 'Отвечаем в WhatsApp в короткий срок',
+    stats: [['5',' университетов','Готовим заявки в ведущие частные университеты Стамбула'],['4',' шага','Понятный путь от консультации до письма'],['3',' языка','Поддержка на туркменском, русском и турецком']],
+    letterAlt: 'Изображение письма о зачислении из университета',
+    letterTitle: 'ПИСЬМО О ЗАЧИСЛЕНИИ', letterStatus: 'Зачислен', letterDemo: 'Демо-образец',
+    letterRows: [['Студент','A. MYRADOW'],['Университет','BAHÇEŞEHİR ÜNİVERSİTESİ'],['Направление','COMPUTER ENGINEERING'],['Учебный год','2026 / 2027']]
+  },
+  quick: {
+    eyebrow: 'С чего начать?',
+    items: [
+      ['rocket','Не ждите — начнём','Выберите университет, а заявку подготовим и подадим мы.','Начать'],
+      ['search','Найдите свой университет','Список университетов, подходящих под ваши оценки.','Смотреть'],
+      ['percent','Возможности скидок','Точная информация о скидках, которые предлагают университеты.','Спросить'],
+      ['message','Поддержка в WhatsApp','Есть вопрос — напишите напрямую, отвечаем без формальностей.','Написать']
+    ]
+  },
+  problem: {
+    eyebrow: 'Проблема и решение',
+    title: 'Узнаёте ситуацию? Значит, первый шаг уже понятен.',
+    sub: 'Переключите тумблер: слева — как бывает при самостоятельной попытке, справа — как проходит с нами.',
+    before: 'Самостоятельно', after: 'С нами',
+    items: [
+      ['compass','Непонятно, какой университет выбрать','Десятки университетов, сотни направлений и противоречивые советы. Реальная стоимость обучения тоже неясна.','Конкретный список под вас','Под ваш бюджет, уровень языка и направление готовится 3–5 вариантов. По каждому письменно указана стоимость и условия.'],
+      ['file','Документы возвращают обратно','Ошибка в переводе, недостающая страница или неверный аттестат — заявку не принимают, и время уходит впустую.','Проверенный и полный пакет','Каждый документ проверяется по контрольному списку до отправки. Риск возврата сводится к минимуму.'],
+      ['calendar','Сроки упускаются','У каждого университета свой срок приёма. Опоздание на неделю может сдвинуть поступление на целый учебный год.','Сроки спланированы заранее','Все сроки сведены в один календарь. Перед каждым этапом приходит напоминание — опоздать невозможно.'],
+      ['shield','Посредники работают непрозрачно','Деньги берут вперёд, а потом перестают выходить на связь. На каком этапе заявка — не узнать, пока сам не спросишь.','Прозрачный процесс и постоянная связь','О статусе заявки сообщают на каждом этапе. Официальные письма из университета показываются вам напрямую.']
+    ]
+  },
+  process: {
+    eyebrow: 'Как мы работаем', title: 'От консультации до письма — четыре шага',
+    sub: 'У каждого шага свой срок и конкретный результат, который вы получаете на руки.',
+    del: 'Что вы получаете',
+    scope: 'Примечание: наша основная услуга — выбор университета, подготовка документов и получение письма о зачислении. По визе, жилью и перелёту мы даём ориентирующую консультацию.',
+    steps: [
+      ['01','Бесплатная консультация и выбор направления','1 день','Разбираем ваши оценки, уровень языка, бюджет и желаемое направление. На основе этого готовим список подходящих университетов.','Список из 3–5 университетов со стоимостью',['Разбор оценок аттестата','Консультация по направлению','Стоимость и возможные скидки']],
+      ['02','Сбор и проверка документов','3–7 дней','Даём список необходимых документов и проверяем каждый. Если есть недочёты, они исправляются до отправки.','Полный пакет документов после проверки',['Паспорт и аттестат','Транскрипт','Фото и форма заявки']],
+      ['03','Подача заявок в университеты','1–2 недели','Заявки подаются сразу в несколько университетов — так у вас больше вариантов. Статус каждой отслеживается.','Отчёт по поданным заявкам',['Заявки в несколько вузов','Контроль сроков','Переписка с университетом']],
+      ['04','Письмо о зачислении и запись','2–4 недели','Письмо передаётся вам сразу по получении. Предложения сравниваются, выбирается лучшее, этап записи завершается.','Официальное письмо (Letter of Acceptance)',['Получение письма','Сравнение предложений','Сопровождение при записи']]
+    ]
+  },
+  uni: {
+    eyebrow: 'Университеты', title: 'Ведущие частные университеты Стамбула',
+    sub: 'Университеты, в которые наши студенты обращаются чаще всего. По каждому даём точную информацию о стоимости, направлениях и сроках.',
+    city: 'Стамбул',
+    note: 'Ведущие частные университеты Турции. Отмеченные фиолетовым — те, в которые мы сейчас готовим заявки.',
+    items: [
+      ['Bahçeşehir Üniversitesi','BAU','Широкие программы международного обмена'],
+      ['İstanbul Gelişim Üniversitesi','IGU','Прикладные направления и технические специальности'],
+      ['İstinye Üniversitesi','ISU','Сильные направления в здравоохранении'],
+      ['İstanbul Aydın Üniversitesi','IAU','Самый широкий выбор по числу направлений'],
+      ['İstanbul Medipol Üniversitesi','MED','Медицина и стоматология']
+    ]
+  },
+  proof: {
+    eyebrow: 'Результаты', title: 'Письма о зачислении — лучшее доказательство',
+    sub: 'Письма и отзывы ниже — демонстрационные данные. До запуска сайта их необходимо заменить на реальные, с согласия студентов.',
+    notice: 'Демонстрационные данные',
+    lettersLabel: 'Полученные письма о зачислении', testimonialsLabel: 'Отзывы студентов',
+    accepted: 'Зачислен', programLabel: 'Направление',
+    letters: [
+      ['А. Мурадов','Bahçeşehir','Компьютерная инженерия','2025/26'],
+      ['Г. Сапарова','Medipol','Стоматология','2025/26'],
+      ['Д. Атаев','İstinye','Физиотерапия','2025/26'],
+      ['М. Ходжаева','İstanbul Aydın','Международная торговля','2025/26'],
+      ['Р. Бердыев','Gelişim','Управление авиацией','2025/26'],
+      ['С. Нургельдыева','Bahçeşehir','Архитектура','2025/26']
+    ],
+    testimonials: [
+      ['Айлар М.','Студентка, Bahçeşehir Üniversitesi','video','1:12','Сама я не смогла собрать список документов. Здесь проверили каждую страницу, и заявку приняли с первого раза.'],
+      ['Мердан Х.','Отец студента','audio','0:52','Самое главное — сообщали на каждом этапе. Не пришлось спрашивать, где находится заявка сына.'],
+      ['Шемшат Б.','Студентка, Medipol Üniversitesi','text','','Я не знала турецкого и боялась. Мне объяснили про подготовительный год — сейчас учусь уже на втором курсе.']
+    ]
+  },
+  offer: {
+    eyebrow: 'Предложение', title: 'Первая консультация — бесплатно',
+    sub: 'Расскажите о своих оценках и желаемом направлении — подготовим список подходящих университетов и точные суммы.',
+    includes: ['Список подходящих университетов под ваши оценки','Годовая стоимость и скидки по каждому','Полный перечень необходимых документов','Календарь сроков подачи заявок'],
+    priceL: 'Первая консультация', priceV: 'Бесплатно',
+    priceN: 'Стоимость называется заранее и письменно, исходя из университета и количества заявок. Скрытых платежей нет.',
+    gT: 'Оплата только за результат',
+    gD: 'Консультация и подбор университетов бесплатны. Стоимость определяется только после того, как вы выбрали конкретный университет.',
+    slots: 'Свободных мест в этом сезоне:'
+  },
+  faq: {
+    eyebrow: 'Частые вопросы', title: 'То, что важно прояснить',
+    items: [
+      ['Смогу ли я учиться, если не знаю турецкого?','Да. В большинстве частных университетов есть годичный подготовительный курс (hazırlık) турецкого или английского. Если уровня недостаточно, вы сначала проходите подготовительный год, затем переходите на основную специальность.'],
+      ['Какие документы нужны?','Базовый список: паспорт, аттестат, лист оценок (транскрипт) и биометрическая фотография. В зависимости от университета могут потребоваться дополнительные документы — об этом мы говорим на консультации.'],
+      ['Аттестата ещё нет на руках. Можно подать заявку?','Да. Многие университеты принимают заявку ещё до выпускных экзаменов, по временным документам. Более того, подавать раньше выгоднее: в начале сезона больше мест и скидок.'],
+      ['Сколько стоят ваши услуги?','Первая консультация, подбор университетов и расчёт стоимости бесплатны. Цена услуги по подготовке документов называется письменно до начала работы.'],
+      ['Через сколько приходит письмо о зачислении?','Если документы полные и верные, обычно в течение 2–4 недель. В пик сезона срок может немного увеличиться. О статусе мы сообщаем каждую неделю.']
+    ]
+  },
+  form: {
+    eyebrow: 'Контакт', title: 'Сделаем первый шаг вместе',
+    sub: 'Заполните поля — свяжемся в короткий срок и подготовим список подходящих университетов.',
+    f1: 'Имя и фамилия студента', p1: 'Например: Айгуль Сапарова',
+    f2: 'Телефон или WhatsApp', p2: '+993 6X XX XX XX',
+    f3: 'Год окончания школы',
+    f4: 'Желаемое направление',
+    years: ['Выберите год','2026','2025','2024','2023 год и ранее'],
+    programs: ['Выберите направление','Медицина','Стоматология','Инженерия и технологии','Экономика и управление','Архитектура и дизайн','Пока не определил(а)'],
+    submit: 'Отправить заявку',
+    privacy: 'Отправляя форму, вы соглашаетесь, что данные будут использованы только для связи с вами.'
+  },
+  admin: {
+    role1: 'Менеджер по заявкам студентов', role2: 'Менеджер по аналитике и контенту',
+    t1: 'Панель заявок', s1: 'Управление обращениями студентов и контроль этапов поступления',
+    t2: 'Панель аналитики и контента', s2: 'Показатели сайта и управление содержимым',
+    nav1: [['Kanban-доска',1,'1'],['Все обращения',0],['Сроки',0],['Уведомления Telegram',0],['Настройки',0]],
+    nav2: [['Обзор',1],['Трафик',0],['Этапы поступления',0],['Контент',0],['Письма о зачислении',0],['Фото и видео',0]],
+    kpi1: [['Новых обращений сегодня','1','+25,0%',0],['В работе','3','+8,3%',0],['Писем в этом месяце','2','+16,7%',0],['Не хватает документов','2','−12,5%',1]],
+    kpi2: [['Посетители','7 184','+18,6%',0],['Полученные обращения','294','+24,1%',0],['Конверсия','4,1%','+4,7%',0],['Среднее время на сайте','2:48','−3,2%',1]],
+    columns: ['Новое обращение','Консультация','Сбор документов','Заявка подана','Письмо получено','Запись завершена'],
+    prio: ['Высокий','Средний','Низкий'], docs: 'Документы',
+    tgT: 'Интеграция Telegram', tgS: 'Каждое новое обращение мгновенно уходит в канал', tgOk: 'Подключено',
+    tgE1: 'При новом обращении', tgE2: 'При смене этапа', tgE3: 'При получении письма', tgE4: 'При потере обращения',
+    tgTpl: '🎓 Новое обращение\\n👤 {name}\\n📞 {phone}\\n📚 Направление: {program}\\n🗓 Год выпуска: {gradYear}\\n🌐 Источник: {source} · Язык: {locale}\\n🕒 {time}',
+    chT: 'Динамика трафика', chS: 'Последние 30 дней: посетители и обращения',
+    chAlt: 'График динамики трафика за последние 30 дней',
+    legV: 'Посетители', legL: 'Обращения',
+    liveT: 'Сейчас на сайте', liveU: 'посетителей', langT: 'Распределение по языкам',
+    fnT: 'Этапы конверсии',
+    funnel: [['Заход на сайт','6 480','',''],['Просмотр разделов','3 910','60,3%','good'],['Форма открыта','812','20,8%','bad'],['Форма отправлена','294','36,2%','mid'],['Консультация проведена','138','46,9%','mid']],
+    srcT: 'Источники трафика', srcAlt: 'Распределение по источникам трафика',
+    sources: [['Instagram','46%','var(--brand)'],['Google / органика','21%','var(--ok)'],['Прямые заходы','14%','var(--gold)'],['WhatsApp','11%','var(--slate)'],['По рекомендации','8%','var(--muted)']],
+    devT: 'По устройствам',
+    devices: [['Мобильный телефон','78%','var(--brand)'],['Компьютер','17%','var(--ok)'],['Планшет','5%','var(--gold)']],
+    devNote: 'Более трёх четвертей посетителей — с телефона; для студентов это норма. Поэтому дизайн строится в первую очередь под мобильный экран.',
+    cmT: 'Управление содержимым сайта', cmS: 'Три языка рядом: при переводе смысл не теряется',
+    cmProg: 'Полнота перевода', miss: 'Не хватает перевода',
+    cmRows: [
+      ['Hero','Акцентное слово заголовка','hero.titleAccent',['kabul hatyny','письму о зачислении','kabul mektubu']],
+      ['Процесс','Примечание об объёме услуги','process.scopeNote',['Esasy hyzmatymyz — uniwersitet saýlamak we kabul hatyny almak.','Наша основная услуга — выбор университета и получение письма.','']]
+    ]
+  }
+},
+
+tr: {
+  urlLang: 'tr',
+  hero: {
+    badge: '2026/2027 eğitim yılı için başvurular alınıyor',
+    overline: 'Geleceğe doğru ilk ve en doğru adım',
+    t1: "Türkiye'deki üniversiteden", t2: 'kabul mektubu', t3: 'almanın doğru yolu',
+    sub: 'Bölüm ve üniversite seçiminden belge hazırlığına ve başvurunun yapılmasına kadar tüm aşamaları biz yürütüyoruz. Size yalnızca eğitime hazırlanmak kalıyor.',
+    cta1: 'Ücretsiz danışmanlık al', cta2: 'Üniversiteleri gör',
+    hint: 'WhatsApp üzerinden kısa sürede yanıt veriyoruz',
+    stats: [['5',' üniversite',"İstanbul'un önde gelen vakıf üniversitelerine başvuru"],['4',' adım','Danışmanlıktan kabul mektubuna net bir yol'],['3',' dil','Türkmence, Rusça ve Türkçe tam destek']],
+    letterAlt: 'Üniversiteden gelen kabul mektubunun görseli',
+    letterTitle: 'KABUL MEKTUBU', letterStatus: 'Kabul edildi', letterDemo: 'Gösterim örneği',
+    letterRows: [['Öğrenci','A. MYRADOW'],['Üniversite','BAHÇEŞEHİR ÜNİVERSİTESİ'],['Bölüm','COMPUTER ENGINEERING'],['Eğitim yılı','2026 / 2027']]
+  },
+  quick: {
+    eyebrow: 'Nereden başlamalı?',
+    items: [
+      ['rocket','Beklemeyin — başlayalım','Üniversitenizi seçin, başvuruyu biz hazırlayıp yapalım.','Başla'],
+      ['search','Üniversitenizi bulun','Notlarınıza uygun üniversitelerin listesi.','İncele'],
+      ['percent','Burs ve indirim olanakları','Üniversitelerin sunduğu indirimler hakkında net bilgi.','Sor'],
+      ['message','WhatsApp desteği','Sorunuz varsa doğrudan yazın — resmiyete gerek yok.','Yaz']
+    ]
+  },
+  problem: {
+    eyebrow: 'Sorun ve çözüm',
+    title: 'Tanıdık geldi mi? O hâlde ilk adım da belli demektir.',
+    sub: 'Anahtarı değiştirin: solda tek başına denendiğinde, sağda bizimle çalışıldığında olan durum.',
+    before: 'Tek başına', after: 'Bizimle',
+    items: [
+      ['compass','Hangi üniversitenin seçileceği belli değil','Onlarca üniversite, yüzlerce bölüm ve çelişen tavsiyeler. Gerçek ücretin ne kadar olduğu da net değil.','Size uygun net bir liste','Bütçenize, dil seviyenize ve bölüme göre 3–5 seçenek hazırlanır. Her birinin ücreti ve koşulu yazılı belirtilir.'],
+      ['file','Belgeler geri döner','Çeviride bir hata, eksik bir sayfa ya da yanlış diploma — başvuru kabul edilmez ve zaman boşa gider.','Kontrol edilmiş eksiksiz dosya','Her belge gönderilmeden önce kontrol listesine göre incelenir. Geri dönme riski en aza iner.'],
+      ['calendar','Son tarihler kaçırılıyor','Her üniversitenin başvuru süresi ayrı. Bir hafta gecikmek tüm eğitim yılının ertelenmesine yol açabilir.','Süreler önceden planlanıyor','Tüm süreler tek takvimde birleştirilir. Her adımdan önce hatırlatma gönderilir — gecikmek mümkün değil.'],
+      ['shield','Aracılar şeffaf çalışmıyor','Parayı peşin alıyorlar, sonra iletişimi kesiyorlar. Başvurunun hangi aşamada olduğunu sormadan öğrenemiyorsunuz.','Şeffaf süreç ve sürekli iletişim','Başvurunuzun durumu her adımda bildirilir. Üniversiteden gelen resmî yazılar doğrudan size gösterilir.']
+    ]
+  },
+  process: {
+    eyebrow: 'Nasıl çalışıyoruz', title: 'Danışmanlıktan kabul mektubuna — dört adım',
+    sub: 'Her adımın kendi süresi ve elinize geçen somut bir çıktısı var.',
+    del: 'Elinize geçen çıktı',
+    scope: 'Not: temel hizmetimiz üniversite seçimi, belge hazırlığı ve kabul mektubunun alınmasıdır. Vize, konaklama ve uçuş konularında yönlendirici danışmanlık veriyoruz.',
+    steps: [
+      ['01','Ücretsiz danışmanlık ve bölüm seçimi','1 gün','Notlarınızı, dil seviyenizi, bütçenizi ve istediğiniz bölümü inceliyoruz. Buna göre size uygun üniversitelerin listesini hazırlıyoruz.','Ücretleri belirtilmiş 3–5 üniversitelik liste',['Diploma notlarının analizi','Bölüm danışmanlığı','Ücret ve burs olanakları']],
+      ['02','Belgelerin toplanması ve kontrolü','3–7 gün','Gerekli belgelerin listesini veriyor ve her birini kontrol ediyoruz. Eksik varsa gönderilmeden önce tamamlanıyor.','Kontrolden geçmiş eksiksiz dosya',['Pasaport ve diploma','Transkript','Fotoğraf ve başvuru formu']],
+      ['03','Başvuruların yapılması','1–2 hafta','Başvurular aynı anda birkaç üniversiteye yapılır — seçim olanağınız artar. Her başvurunun durumu takip edilir.','Yapılan başvuruların raporu',['Birden fazla üniversiteye başvuru','Sürelerin takibi','Üniversiteyle yazışma']],
+      ['04','Kabul mektubu ve kayıt','2–4 hafta','Kabul mektubu geldiği anda size iletilir. Teklifler karşılaştırılır, en uygunu seçilir ve kayıt tamamlanır.','Resmî kabul mektubu (Letter of Acceptance)',['Mektubun alınması','Tekliflerin karşılaştırılması','Kayıtta yönlendirme']]
+    ]
+  },
+  uni: {
+    eyebrow: 'Üniversiteler', title: "İstanbul'un önde gelen vakıf üniversiteleri",
+    sub: 'Öğrencilerimizin en çok başvurduğu üniversiteler. Her biri için ücret, bölümler ve başvuru süreleri hakkında net bilgi veriyoruz.',
+    city: 'İstanbul',
+    note: 'Türkiye’nin önde gelen vakıf üniversiteleri. Moru işaretli olanlar — şu anda başvuru hazırladığımız üniversiteler.',
+    items: [
+      ['Bahçeşehir Üniversitesi','BAU','Geniş uluslararası değişim programları'],
+      ['İstanbul Gelişim Üniversitesi','IGU','Uygulamalı alanlar ve teknik bölümler'],
+      ['İstinye Üniversitesi','ISU','Sağlık alanlarında güçlü'],
+      ['İstanbul Aydın Üniversitesi','IAU','Bölüm sayısı bakımından en geniş seçenek'],
+      ['İstanbul Medipol Üniversitesi','MED','Tıp ve diş hekimliği']
+    ]
+  },
+  proof: {
+    eyebrow: 'Sonuçlar', title: 'Kabul mektupları — en iyi kanıt',
+    sub: 'Aşağıdaki mektuplar ve görüşler gösterim verileridir. Site yayına alınmadan önce öğrencilerin onayı alınarak gerçek görsellerle değiştirilmelidir.',
+    notice: 'Gösterim verisi',
+    lettersLabel: 'Alınan kabul mektupları', testimonialsLabel: 'Öğrenci görüşleri',
+    accepted: 'Kabul edildi', programLabel: 'Bölüm',
+    letters: [
+      ['A. Myradow','Bahçeşehir','Bilgisayar Mühendisliği','2025/26'],
+      ['G. Saparowa','Medipol','Diş Hekimliği','2025/26'],
+      ['D. Ataýew','İstinye','Fizyoterapi','2025/26'],
+      ['M. Hojaýewa','İstanbul Aydın','Uluslararası Ticaret','2025/26'],
+      ['R. Berdiýew','Gelişim','Havacılık Yönetimi','2025/26'],
+      ['S. Nurgeldiýewa','Bahçeşehir','Mimarlık','2025/26']
+    ],
+    testimonials: [
+      ['Aýlar M.','Öğrenci, Bahçeşehir Üniversitesi','video','1:12','Belge listesini kendi başıma hazırlayamadım. Burada her sayfa kontrol edildi ve başvurum ilk seferde kabul edildi.'],
+      ['Merdan H.','Öğrenci velisi','audio','0:52','En önemlisi — her adımda bilgi verildi. Oğlumun başvurusunun nerede olduğunu sormak zorunda kalmadım.'],
+      ['Şemşat B.','Öğrenci, Medipol Üniversitesi','text','','Türkçe bilmiyordum ve korkuyordum. Hazırlık yılını anlattılar, şimdi ikinci sınıftayım.']
+    ]
+  },
+  offer: {
+    eyebrow: 'Teklif', title: 'İlk danışmanlık — ücretsiz',
+    sub: 'Notlarınızı ve istediğiniz bölümü söyleyin — size uygun üniversitelerin listesini ve net ücretleri hazırlayalım.',
+    includes: ['Notlarınıza uygun üniversitelerin listesi','Her üniversitenin yıllık ücreti ve burs olanağı','Gerekli belgelerin tam listesi','Başvuru sürelerine göre takvim'],
+    priceL: 'İlk danışmanlık', priceV: 'Ücretsiz',
+    priceN: 'Hizmet bedeli, üniversiteye ve başvuru sayısına göre önceden ve yazılı bildirilir. Gizli ödeme yoktur.',
+    gT: 'Ödeme yalnızca sonuca göre',
+    gD: 'Danışmanlık ve üniversite seçimi ücretsizdir. Hizmet bedeli yalnızca siz belirli bir üniversiteyi seçtikten sonra belirlenir.',
+    slots: 'Bu sezon kalan kontenjan:'
+  },
+  faq: {
+    eyebrow: 'Sıkça sorulan sorular', title: 'Netleştirilmesi gerekenler',
+    items: [
+      ['Türkçe bilmiyorsam okuyabilir miyim?','Evet. Vakıf üniversitelerinin çoğunda bir yıllık Türkçe veya İngilizce hazırlık programı var. Dil seviyeniz yeterli değilse önce hazırlık yılını okur, ardından asıl bölümünüze geçersiniz.'],
+      ['Hangi belgeler gerekiyor?','Temel liste: pasaport, lise diploması, not belgesi (transkript) ve biyometrik fotoğraf. Üniversiteye göre ek belge istenebilir — bunu danışmanlık aşamasında net söyleriz.'],
+      ['Diplomam henüz elimde yok. Başvurabilir miyim?','Evet. Birçok üniversite mezuniyet sınavlarından önce de geçici belgelerle başvuru kabul ediyor. Üstelik erken başvurmak daha avantajlı: sezon başında kontenjan ve burs daha fazla.'],
+      ['Hizmetinizin bedeli ne kadar?','İlk danışmanlık, üniversite seçimi ve ücret hesaplaması ücretsizdir. Belge hazırlığı hizmetinin bedeli işe başlamadan önce yazılı olarak bildirilir.'],
+      ['Kabul mektubu ne kadar sürede geliyor?','Belgeler eksiksiz ve doğruysa genellikle 2–4 hafta içinde geliyor. Yoğun dönemde bu süre biraz uzayabilir. Durum hakkında her hafta bilgi veriyoruz.']
+    ]
+  },
+  form: {
+    eyebrow: 'İletişim', title: 'İlk adımı birlikte atalım',
+    sub: 'Alanları doldurun — kısa sürede iletişime geçip size uygun üniversitelerin listesini hazırlayalım.',
+    f1: 'Öğrencinin adı ve soyadı', p1: 'Örneğin: Aygül Saparova',
+    f2: 'Telefon veya WhatsApp', p2: '+993 6X XX XX XX',
+    f3: 'Liseden mezuniyet yılınız',
+    f4: 'Okumak istediğiniz bölüm',
+    years: ['Yıl seçin','2026','2025','2024','2023 ve öncesi'],
+    programs: ['Bölüm seçin','Tıp','Diş hekimliği','Mühendislik ve teknoloji','Ekonomi ve işletme','Mimarlık ve tasarım','Henüz karar vermedim'],
+    submit: 'Talebi gönder',
+    privacy: 'Formu göndererek bilgilerinizin yalnızca sizinle iletişim için kullanılacağını kabul edersiniz.'
+  },
+  admin: {
+    role1: 'Öğrenci başvuruları yöneticisi', role2: 'Analitik ve içerik yöneticisi',
+    t1: 'Başvuru paneli', s1: 'Öğrenci başvurularını yönetme ve kabul aşamalarını izleme',
+    t2: 'Analitik ve içerik paneli', s2: 'Site göstergeleri ve içerik yönetimi',
+    nav1: [['Kanban panosu',1,'1'],['Tüm başvurular',0],['Son tarihler',0],['Telegram bildirimleri',0],['Ayarlar',0]],
+    nav2: [['Genel bakış',1],['Trafik',0],['Kabul aşamaları',0],['İçerik',0],['Kabul mektupları',0],['Görsel ve video',0]],
+    kpi1: [['Bugünkü yeni başvurular','1','+25,0%',0],['Üzerinde çalışılan','3','+8,3%',0],['Bu ay kabul mektubu','2','+16,7%',0],['Belgesi eksik olan','2','−12,5%',1]],
+    kpi2: [['Ziyaretçiler','7 184','+18,6%',0],['Alınan başvurular','294','+24,1%',0],['Dönüşüm oranı','%4,1','+4,7%',0],['Sitede ortalama süre','2:48','−3,2%',1]],
+    columns: ['Yeni başvuru','Danışmanlık verildi','Belgeler toplanıyor','Başvuru yapıldı','Kabul mektubu geldi','Kayıt tamamlandı'],
+    prio: ['Yüksek','Orta','Düşük'], docs: 'Belgeler',
+    tgT: 'Telegram entegrasyonu', tgS: 'Her yeni başvuru kanala anında iletilir', tgOk: 'Bağlandı',
+    tgE1: 'Yeni başvuru geldiğinde', tgE2: 'Aşama değiştiğinde', tgE3: 'Kabul mektubu geldiğinde', tgE4: 'Başvuru kaybedildiğinde',
+    tgTpl: '🎓 Yeni başvuru\\n👤 {name}\\n📞 {phone}\\n📚 Bölüm: {program}\\n🗓 Mezuniyet yılı: {gradYear}\\n🌐 Kaynak: {source} · Dil: {locale}\\n🕒 {time}',
+    chT: 'Trafik dinamiği', chS: 'Son 30 gün: ziyaretçi ve başvurular',
+    chAlt: 'Son 30 günün trafik dinamiği grafiği',
+    legV: 'Ziyaretçiler', legL: 'Başvurular',
+    liveT: 'Şu anda sitede', liveU: 'ziyaretçi', langT: 'Dil dağılımı',
+    fnT: 'Dönüşüm aşamaları',
+    funnel: [['Siteye giriş','6 480','',''],['Bölümleri inceleme','3 910','60,3%','good'],['Form açıldı','812','20,8%','bad'],['Form gönderildi','294','36,2%','mid'],['Danışmanlık yapıldı','138','46,9%','mid']],
+    srcT: 'Trafik kaynakları', srcAlt: 'Trafik kaynaklarına göre dağılım',
+    sources: [['Instagram','46%','var(--brand)'],['Google / organik','21%','var(--ok)'],['Doğrudan giriş','14%','var(--gold)'],['WhatsApp','11%','var(--slate)'],['Tavsiye üzerine','8%','var(--muted)']],
+    devT: 'Cihaz dağılımı',
+    devices: [['Mobil telefon','78%','var(--brand)'],['Bilgisayar','17%','var(--ok)'],['Tablet','5%','var(--gold)']],
+    devNote: 'Ziyaretçilerin dörtte üçünden fazlası telefondan; öğrenciler için bu normal. Bu yüzden tasarım öncelikle mobil ekran için kurgulanıyor.',
+    cmT: 'Site içeriğini yönetme', cmS: 'Üç dil yan yana: çeviride anlam kaybolmuyor',
+    cmProg: 'Çeviri tamamlanma oranı', miss: 'Çeviri eksik',
+    cmRows: [
+      ['Hero','Başlığın vurgu sözcüğü','hero.titleAccent',['kabul hatyny','письму о зачислении','kabul mektubu']],
+      ['Süreç','Hizmet kapsamı notu','process.scopeNote',['Esasy hyzmatymyz — uniwersitet saýlamak we kabul hatyny almak.','Наша основная услуга — выбор университета и получение письма.','']]
+    ]
+  }
+}
+};
+
+/* Görkezme ýüztutmalar: [sütün, at, ugur, dil, ilerlik, çeşme, resminama %, gyssagly] */
+const LEADS = [
+  [0,'Gurbanmyrat A.','Inženerçilik','🇹🇲',0,'Instagram',0,0],
+  [1,'Ольга Петрова','Медицина','🇷🇺',0,'Saýt',25,0],
+  [2,'Mähri Yılmaz','Mimarlık','🇹🇷',1,'Tanyş',75,1],
+  [3,'Jennet H.','Ykdysadyýet','🇹🇲',1,'WhatsApp',100,1],
+  [4,'Batyr Sähedow','Diş lukmançylygy','🇹🇲',0,'Jaň',100,0],
+  [5,'Aýlar N.','Halkara gatnaşyklar','🇹🇲',2,'Instagram',100,0]
+];
+const COL_TONE = ['var(--slate)','color-mix(in srgb, var(--brand) 60%, transparent)','var(--warn)','var(--brand)','color-mix(in srgb, var(--ok) 70%, transparent)','var(--ok)'];
+
+const ALL_UNIS = [['BAU', 'Bahçeşehir Üniversitesi', 1], ['IGU', 'İstanbul Gelişim Üniversitesi', 1], ['ISU', 'İstinye Üniversitesi', 1], ['IAU', 'İstanbul Aydın Üniversitesi', 1], ['MED', 'İstanbul Medipol Üniv.', 1], ['ÜSK', 'Üsküdar Üniversitesi', 0], ['YED', 'Yeditepe Üniversitesi', 0], ['BLG', 'İstanbul Bilgi Üniversitesi', 0], ['ALT', 'Altınbaş Üniversitesi', 0], ['OKN', 'İstanbul Okan Üniversitesi', 0], ['IKU', 'İstanbul Kültür Üniv.', 0], ['BYK', 'Beykent Üniversitesi', 0], ['KHAS', 'Kadir Has Üniversitesi', 0], ['NŞT', 'Nişantaşı Üniversitesi', 0]];
+
+const ICONS = {
+  rocket: '<path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2 2 0 00-2.9-.1z"/><path d="M12 15l-3-3a17 17 0 013-6c2.2-2.6 5-3.4 7.5-3.4.3 2.5-.5 5.3-3.1 7.5a17 17 0 01-6 3z"/><path d="M9 12H6l2.5-4h3.2M12 15v3l4-2.5v-3.2"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/>',
+  percent: '<path d="M19 5L5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/>',
+  message: '<path d="M21 11.5a8.4 8.4 0 01-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1121 11.5z"/>',
+  compass: '<circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/>',
+  file: '<path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/><path d="M9.5 12.5l5 5M14.5 12.5l-5 5"/>',
+  calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M12 13.5V16l1.8 1.1"/>',
+  shield: '<path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6z"/><path d="M9 12l2 2 4-4"/>'
+};
+const ico = (n, s) => `<svg width="${s||17}" height="${s||17}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">${ICONS[n]||ICONS.compass}</svg>`;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+let LANG = 'tm';
+let cardStates = [0,0,0,0];
+
+const get = (path, obj) => path.split('.').reduce((a,k) => a && a[k], obj);
+
+function render() {
+  const d = T[LANG];
+
+  document.querySelectorAll('[data-bind]').forEach(el => {
+    const v = get(el.dataset.bind, d);
+    if (typeof v === 'string') el.textContent = v;
+  });
+  document.querySelectorAll('[data-bind-aria]').forEach(el => {
+    const v = get(el.dataset.bindAria, d);
+    if (typeof v === 'string') el.setAttribute('aria-label', v);
+  });
+  document.querySelectorAll('[data-bind-ph]').forEach(el => {
+    const v = get(el.dataset.bindPh, d);
+    if (typeof v === 'string') el.placeholder = v;
+  });
+  document.querySelectorAll('[data-bind-opts]').forEach(el => {
+    const v = get(el.dataset.bindOpts, d) || [];
+    el.innerHTML = v.map((o,i) => `<option${i===0?' selected':''}>${esc(o)}</option>`).join('');
+  });
+
+  /* Hero */
+  document.querySelector('[data-bind-list="hero.stats"]').innerHTML =
+    d.hero.stats.map(s => `<div class="stat"><div class="stat-v">${esc(s[0])}<span>${esc(s[1])}</span></div><div class="stat-l">${esc(s[2])}</div></div>`).join('');
+
+  document.getElementById('letterRows').innerHTML = d.hero.letterRows.map((r,i) =>
+    `<div class="letter-row" style="animation-delay:${(.35 + i*.1).toFixed(2)}s"><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd><div class="rule"></div></div>`).join('');
+
+
+  /* Çalt hereket kartalary */
+  document.getElementById('qaCards').innerHTML = d.quick.items.map(q => `
+    <a class="qa-card lg lg-press" href="#">
+      <span class="qa-ico">${ico(q[0], 19)}</span>
+      <h4>${esc(q[1])}</h4>
+      <p>${esc(q[2])}</p>
+      <span class="qa-go">${esc(q[3])}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+      </span>
+    </a>`).join('');
+
+  /* Agyry / çözgüt */
+  document.getElementById('flipCards').innerHTML = d.problem.items.map((it,i) => {
+    const after = cardStates[i] === 1;
+    return `<button class="flip" data-state="${after?'after':'before'}" data-card="${i}">
+      <div class="flip-top">
+        <span class="flip-ico">${ico(it[0])}</span>
+        <span class="state-chip">${after
+          ? '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg>'
+          : '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16v.4"/></svg>'
+        }${esc(after ? d.problem.after : d.problem.before)}</span>
+      </div>
+      <div class="flip-body fade">
+        <h4>${esc(after ? it[3] : it[1])}</h4>
+        <p>${esc(after ? it[4] : it[2])}</p>
+      </div>
+    </button>`;
+  }).join('');
+
+  /* Iş tertibi */
+  document.getElementById('steps').innerHTML = d.process.steps.map(s => `
+    <article class="step">
+      <span class="step-dot">${esc(s[0])}</span>
+      <div class="step-head">
+        <h4>${esc(s[1])}</h4>
+        <span class="chip">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          ${esc(s[2])}
+        </span>
+      </div>
+      <p>${esc(s[3])}</p>
+      <ul class="bullets">${s[5].map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+      <div class="deliver">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" style="flex:none;margin-top:2px"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 15l2 2 4-4" stroke-linecap="round"/></svg>
+        <div><div class="deliver-l">${esc(d.process.del)}</div><div class="deliver-v">${esc(s[4])}</div></div>
+      </div>
+    </article>`).join('');
+
+  /* Uniwersitetleriň lentasy — iki hatar garşylyklaýyn */
+  const plate = u => `<article class="uni-plate lg lg-press">
+      <span class="uni-mono${u[2] ? ' partner' : ''}">${esc(u[0])}</span>
+      <span style="min-width:0"><b>${esc(u[1])}</b><small>İstanbul</small></span>
+    </article>`;
+  const halfU = Math.ceil(ALL_UNIS.length / 2);
+  const rA = ALL_UNIS.slice(0, halfU), rB = ALL_UNIS.slice(halfU);
+  document.getElementById('uniA').innerHTML = [...rA, ...rA].map(plate).join('');
+  document.getElementById('uniB').innerHTML = [...rB, ...rB].map(plate).join('');
+
+  /* Uniwersitetler */
+  document.getElementById('unis').innerHTML = d.uni.items.map((u,i) => `
+    <article class="uni lg lg-press">
+      <div class="uni-top">
+        <span class="uni-short">${esc(u[1])}</span>
+        <span class="uni-no">${String(i+1).padStart(2,'0')}</span>
+      </div>
+      <h4>${esc(u[0])}</h4>
+      <p>${esc(u[2])}</p>
+      <span class="uni-rule"></span>
+    </article>`).join('');
+
+  /* Kabul hatlarynyň lentasy */
+  const letterCard = l => `
+    <article class="lcard">
+      <div class="lcard-top">
+        <span class="lcard-uni">${esc(l[1])}</span>
+        <span class="ok-chip">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg>
+          ${esc(d.proof.accepted)}
+        </span>
+      </div>
+      <dl>
+        <dt>${esc(d.proof.programLabel)}</dt>
+        <dd>${esc(l[2])}</dd>
+      </dl>
+      <div class="lcard-foot"><span class="num">${esc(l[3])}</span><span>${esc(l[0])}</span></div>
+    </article>`;
+  const ls = d.proof.letters;
+  document.getElementById('mqA').innerHTML = [...ls, ...ls].map(letterCard).join('');
+  document.getElementById('mqB').innerHTML = [...ls].reverse().concat([...ls].reverse()).map(letterCard).join('');
+
+  /* Pikirler */
+  document.getElementById('tcards').innerHTML = d.proof.testimonials.map(t => `
+    <article class="tcard">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="color-mix(in srgb, var(--brand) 32%, transparent)"><path d="M7 7h5v5c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7zm8 0h5v5c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-3z"/></svg>
+      <p>«${esc(t[4])}»</p>
+      <div class="tcard-foot">
+        <span class="av-l">${esc(t[0].charAt(0))}</span>
+        <div style="min-width:0;flex:1"><b>${esc(t[0])}</b><small>${esc(t[1])}</small></div>
+        ${t[2] !== 'text' ? `<button class="play">
+          ${t[2]==='video'
+            ? '<svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg>'
+            : '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v4"/></svg>'}
+          <span class="num">${esc(t[3])}</span>
+        </button>` : ''}
+      </div>
+    </article>`).join('');
+
+  /* Teklip */
+  document.querySelector('[data-bind-list="offer.includes"]').innerHTML =
+    d.offer.includes.map(x => `<li><span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span>${esc(x)}</li>`).join('');
+
+  /* FAQ */
+  document.getElementById('faqList').innerHTML = d.faq.items.map((q,i) => `
+    <div class="faq-item${i===0?' open':''}">
+      <button class="faq-q" data-faq="${i}" aria-expanded="${i===0}">
+        <span>${esc(q[0])}</span>
+        <span class="faq-sign"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="faq-a"><div><p>${esc(q[1])}</p></div></div>
+    </div>`).join('');
+
+  /* ---- Admin ---- */
+  const a = d.admin;
+  const navIco = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" style="flex:none"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>';
+
+  document.querySelector('[data-bind-list="admin.nav1"]').innerHTML = a.nav1.map(n =>
+    `<li class="${n[1]?'on':''}">${navIco}<span>${esc(n[0])}</span>${n[2]?`<span class="badge">${esc(n[2])}</span>`:''}</li>`).join('');
+  document.querySelector('[data-bind-list="admin.nav2"]').innerHTML = a.nav2.map(n =>
+    `<li class="${n[1]?'on g':''}">${navIco}<span>${esc(n[0])}</span></li>`).join('');
+
+  const kpi = list => list.map(k =>
+    `<div class="kpi"><small>${esc(k[0])}</small><b>${esc(k[1])}</b><i class="${k[3]?'dn':''}">${k[3]?'↓':'↑'} ${esc(k[2])}</i></div>`).join('');
+  document.querySelector('[data-bind-list="admin.kpi1"]').innerHTML = kpi(a.kpi1);
+  document.querySelector('[data-bind-list="admin.kpi2"]').innerHTML = kpi(a.kpi2);
+
+  document.getElementById('board').innerHTML = a.columns.map((col,ci) => {
+    const inCol = LEADS.filter(l => l[0] === ci);
+    const avg = inCol.length ? Math.round(inCol.reduce((s,l)=>s+l[6],0)/inCol.length) : 0;
+    return `<div class="col">
+      <div class="col-h"><i style="background:${COL_TONE[ci]}"></i><b>${esc(col)}</b><span>${inCol.length}</span></div>
+      ${inCol.length ? `<div class="col-sum">${avg}% ${esc(a.docs.toLowerCase())}</div>` : ''}
+      ${inCol.map(l => `
+        <div class="lead${l[7]?' urgent':''}">
+          <div class="lead-top"><b>${esc(l[1])}</b><span>${l[3]}</span></div>
+          <div class="lead-prog">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12.5V17c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-4.5"/></svg>
+            ${esc(l[2])}
+          </div>
+          <div class="docs-row"><span>${esc(a.docs)}</span><b>${l[6]}%</b></div>
+          <div class="docs-bar"><i class="${l[6]===100?'full':''}" style="width:${l[6]}%"></i></div>
+          <div class="lead-chips">
+            <span class="mini ${l[4]===0?'hi':l[4]===1?'md':''}">${esc(a.prio[l[4]])}</span>
+            <span class="mini">${esc(l[5])}</span>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  }).join('');
+
+  document.querySelector('[data-bind-list="admin.funnel"]').innerHTML = a.funnel.map((f,i) => {
+    const w = [100,60,12.5,4.5,2.1][i];
+    return `<li>
+      <div class="fn-top"><span>${esc(f[0])}</span><span><span class="fn-n">${esc(f[1])}</span>${f[2]?`<span class="fn-r ${f[3]}">${esc(f[2])}</span>`:''}</span></div>
+      <div class="fn-bar"><i style="width:${w}%"></i></div>
+    </li>`;
+  }).join('');
+
+  document.querySelector('[data-bind-list="admin.sources"]').innerHTML = a.sources.map(s =>
+    `<li><i style="background:${s[2]}"></i><span>${esc(s[0])}</span><b>${esc(s[1])}</b></li>`).join('');
+  document.querySelector('[data-bind-list="admin.devices"]').innerHTML = a.devices.map(s =>
+    `<li><i style="background:${s[2]}"></i><span>${esc(s[0])}</span><div class="fn-bar" style="flex:1;max-width:80px"><i style="width:${parseInt(s[1])}%"></i></div><b>${esc(s[1])}</b></li>`).join('');
+
+  document.getElementById('cmRows').innerHTML = a.cmRows.map(r => `
+    <div class="cm-row">
+      <div class="cm-meta"><span class="cm-sec">${esc(r[0])}</span><span class="cm-lab">${esc(r[1])}</span><code class="cm-key">${esc(r[2])}</code></div>
+      <div class="cm-cols">
+        ${['🇹🇲 TM','🇷🇺 RU','🇹🇷 TR'].map((lab,i) => {
+          const empty = !r[3][i];
+          return `<div class="cm-col${empty?' empty':''}">
+            <label><span>${lab}</span>${empty?`<span class="miss">${esc(a.miss)}</span>`:''}</label>
+            <textarea rows="2">${esc(r[3][i])}</textarea>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`).join('');
+}
+
+/* ---------------- Wakalar ---------------- */
+document.addEventListener('click', e => {
+  const langBtn = e.target.closest('[data-lang]');
+  if (langBtn) {
+    LANG = langBtn.dataset.lang;
+    document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b === langBtn));
+    render();
+    return;
+  }
+  const themeBtn = e.target.closest('[data-theme-btn]');
+  if (themeBtn) {
+    document.documentElement.setAttribute('data-theme', themeBtn.dataset.themeBtn);
+    document.querySelectorAll('[data-theme-btn]').forEach(b => b.setAttribute('aria-pressed', b === themeBtn));
+    return;
+  }
+  const master = e.target.closest('#masterSwitch button');
+  if (master) {
+    const v = master.dataset.v === 'after' ? 1 : 0;
+    cardStates = [v,v,v,v];
+    document.querySelectorAll('#masterSwitch button').forEach(b => b.setAttribute('aria-pressed', b === master));
+    render();
+    return;
+  }
+  const card = e.target.closest('[data-card]');
+  if (card) { const i = +card.dataset.card; cardStates[i] = cardStates[i] ? 0 : 1; render(); return; }
+
+  const faq = e.target.closest('[data-faq]');
+  if (faq) {
+    const item = faq.closest('.faq-item');
+    const open = item.classList.contains('open');
+    item.parentElement.querySelectorAll('.faq-item').forEach(x => {
+      x.classList.remove('open');
+      x.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!open) { item.classList.add('open'); faq.setAttribute('aria-expanded', 'true'); }
+    return;
+  }
+  const sw = e.target.closest('.sw');
+  if (sw) sw.classList.toggle('on');
+});
+
+/* LIQUID GLASS — spekulýaryň kursory yzarlamagy.
+   `setProperty` göni DOM-a ýazýar: her piksel hereketde React ýa-da
+   gaýtadan çyzyş ýok, şonuň üçin ol mugt diýen ýaly. */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.addEventListener('mousemove', e => {
+    const el = e.target.closest('.lg');
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    el.style.setProperty('--mx', (((e.clientX - r.left) / r.width) * 100).toFixed(1) + '%');
+    el.style.setProperty('--my', (((e.clientY - r.top) / r.height) * 100).toFixed(1) + '%');
+  }, { passive: true });
+}
+
+/* Kabul hatynyň 3D öwrülmegi */
+const letter = document.getElementById('letter');
+if (letter && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  letter.addEventListener('mousemove', e => {
+    const r = letter.getBoundingClientRect();
+    letter.style.setProperty('--rx', (-((e.clientY - r.top) / r.height - .5) * 7).toFixed(2) + 'deg');
+    letter.style.setProperty('--ry', (((e.clientX - r.left) / r.width - .5) * 10).toFixed(2) + 'deg');
+  });
+  letter.addEventListener('mouseleave', () => {
+    letter.style.setProperty('--rx', '0deg'); letter.style.setProperty('--ry', '0deg');
+  });
+}
+
+/* Magnit düwmeler */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('[data-magnet]').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      btn.style.transform = `translate(${((e.clientX - (r.left + r.width/2)) * .22).toFixed(1)}px, ${((e.clientY - (r.top + r.height/2)) * .3).toFixed(1)}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+}
+
+/* Timeline: skroll boýunça dolmak */
+const tlFill = document.getElementById('tlFill');
+function onScroll() {
+  const tl = document.querySelector('.tl');
+  if (!tl || !tlFill) return;
+  const r = tl.getBoundingClientRect();
+  const p = Math.min(1, Math.max(0, (innerHeight * .68 - r.top) / Math.max(1, r.height * .82)));
+  tlFill.style.height = (p * 100).toFixed(1) + '%';
+  document.querySelectorAll('.step').forEach(s => {
+    s.classList.toggle('on', s.getBoundingClientRect().top < innerHeight * .72);
+  });
+}
+addEventListener('scroll', onScroll, { passive: true });
+addEventListener('resize', onScroll);
+
+/* Janly myhmanlar + sparkline */
+const spark = document.getElementById('spark');
+if (spark) spark.innerHTML = Array.from({ length: 22 }, () => '<i style="height:40%"></i>').join('');
+let tick = 0, live = 23;
+function pulse() {
+  tick++;
+  live = Math.max(9, live + Math.round((Math.random() - .45) * 5));
+  const n = document.getElementById('liveN');
+  if (n) n.textContent = live;
+  if (spark) [...spark.children].forEach((b, i) => {
+    b.style.height = (26 + ((Math.sin((i + tick) / 2.2) + 1) / 2) * 68) + '%';
+  });
+}
+
+render();
+onScroll();
+
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  /* Giriş animasiýasy diňe şu ýerde işe girizilýär. Mazmun eýýäm
+     görnüp dur — animasiýa ony gizlemeýär, diňe peýda bolşuny bezeýär. */
+  const rows = document.getElementById('letterRows');
+  const seal = document.getElementById('seal');
+  requestAnimationFrame(() => {
+    rows?.classList.add('anim');
+    /* Möhür setirler ýazylyp bolandan soň basylýar */
+    setTimeout(() => seal?.classList.add('anim'), 780);
+  });
+  pulse();
+  setInterval(pulse, 4000);
+}
+</script>

@@ -1,0 +1,648 @@
+{
+  "meta": {
+    "locale": "tm",
+    "name": "Türkmen dili",
+    "shortName": "TM",
+    "dir": "ltr",
+    "title": "Next Step Consulting — Türkiýäniň uniwersitetlerine talyp kabul ediş maslahaty",
+    "description": "Ugur we uniwersitet saýlamakdan resminamalary taýýarlamaga we kabul hatyny almaga çenli — ähli tapgyry biz alyp barýarys. Türkmen, rus we türk dillerinde hyzmat.",
+    "ogAlt": "Next Step Consulting — Türkiýede okamak üçin maslahat beriş gullugy"
+  },
+  "nav": {
+    "brand": "Next Step",
+    "brandSuffix": "Consulting",
+    "links": {
+      "problem": "Kynçylyk we çözgüt",
+      "process": "Iş tertibi",
+      "universities": "Uniwersitetler",
+      "proof": "Netijeler",
+      "faq": "Soraglar"
+    },
+    "cta": "Mugt maslahat al",
+    "menuOpen": "Menýuny aç",
+    "menuClose": "Menýuny ýap",
+    "themeLight": "Ýagty tema",
+    "themeDark": "Garaňky tema",
+    "languageLabel": "Dil"
+  },
+  "hero": {
+    "badge": "2026/2027 okuw ýyly üçin arzalar kabul edilýär",
+    "slogan": "Gelejege tarap ilkinji we iň dogry ädimi biz bilen başlaň!",
+    "titleLead": "Türkiýäniň uniwersitetine",
+    "titleAccent": "kabul hatyny",
+    "titleTail": "almagyň dogry ýoly",
+    "subtitle": "Ugur we uniwersitet saýlamakdan başlap, resminamalary taýýarlamaga we arzany tabşyrmaga çenli ähli tapgyry biz alyp barýarys. Siz diňe okuwa taýýarlanyň — galan işi biz çözeris.",
+    "ctaPrimary": "Mugt maslahat al",
+    "ctaSecondary": "Uniwersitetleri gör",
+    "ctaHint": "WhatsApp arkaly gysga wagtda jogap berýäris",
+    "scrollHint": "Aşak süýşüriň"
+  },
+  "quickActions": {
+    "eyebrow": "Nireden başlaly?",
+    "items": [
+      {
+        "icon": "rocket",
+        "title": "Garaşmak ýok — başlalyň",
+        "text": "Uniwersiteti saýlaň, arzany biz taýýarlap tabşyrarys.",
+        "cta": "Başla",
+        "href": "#arza"
+      },
+      {
+        "icon": "search",
+        "title": "Uniwersitetiňizi tapyň",
+        "text": "Bahalaryňyza görä laýyk gelýän uniwersitetleriň sanawy.",
+        "cta": "Gör",
+        "href": "#uniwersitetler"
+      },
+      {
+        "icon": "percent",
+        "title": "Ýeňillik mümkinçilikleri",
+        "text": "Uniwersitetleriň hödürleýän arzanladyşlary barada anyk maglumat.",
+        "cta": "Sora",
+        "href": "#teklip"
+      },
+      {
+        "icon": "message",
+        "title": "WhatsApp goldawy",
+        "text": "Soragyňyz bolsa, göni ýazyň — resmiýetsiz jogap berýäris.",
+        "cta": "Ýaz",
+        "href": "https://wa.me/905396020799"
+      }
+    ]
+  },
+  "problem": {
+    "eyebrow": "Kynçylyk we çözgüt",
+    "title": "Tanyş ýagdaýmy? Onda ilkinji ädim eýýäm bellidir.",
+    "subtitle": "Kartadaky çeňňegi süýşüriň: çepde — özbaşdak synanyşanyňda bolýan ýagdaý, sagda — biz bilen işlenende bolýan ýagdaý.",
+    "switchBefore": "Özbaşdak",
+    "switchAfter": "Biz bilen",
+    "switchAria": "Ýagdaýy çalyşmak: özbaşdak / biz bilen",
+    "items": [
+      {
+        "icon": "compass",
+        "before": {
+          "title": "Haýsy uniwersiteti saýlamalydygy belli däl",
+          "text": "Onlarça uniwersitet, ýüzlerçe ugur we biri-birine gapma-garşy maslahatlar. Haýsysynyň diplomynyň ykrar edilýändigi hem, tölegiň hakyky möçberi hem anyk däl."
+        },
+        "after": {
+          "title": "Size laýyk gelýän anyk sanaw",
+          "text": "Bahaňyza, dil derejäňize we isleýän ugruňyza görä 3–5 sany anyk teklip taýýarlanýar. Her biriniň tölegi, şerti we mümkinçiligi ýazmaça görkezilýär."
+        }
+      },
+      {
+        "icon": "file-x",
+        "before": {
+          "title": "Resminamalar yzyna gaýtarylýar",
+          "text": "Terjimede ýalňyşlyk, ýetmeýän sahypa ýa-da nädogry görnüşde taýýarlanan attestat — arza kabul edilmän yzyna gelýär we wagt ýitýär."
+        },
+        "after": {
+          "title": "Barlanan we doly resminama bukjasy",
+          "text": "Her resminama uniwersitete ugradylmazdan öň barlag sanawy boýunça barlanýar. Ýalňyşlyk sebäpli yzyna gaýtarylma töwekgelçiligi iň pes derejä düşýär."
+        }
+      },
+      {
+        "icon": "calendar-clock",
+        "before": {
+          "title": "Möhletler sypdyrylýar",
+          "text": "Her uniwersitetiň arza kabul ediş möhleti aýry. Bir hepde gijä galmak tutuş okuw ýylynyň yza süýşmegine getirýär."
+        },
+        "after": {
+          "title": "Möhletler öňünden meýilleşdirilýär",
+          "text": "Ähli uniwersitetiň möhletleri bir senenamada birleşdirilýär. Her ädimden öň size ýatlatma iberilýär — gijä galmak mümkin däl."
+        }
+      },
+      {
+        "icon": "shield",
+        "before": {
+          "title": "Araçylar aýdyň işlemeýär",
+          "text": "Puly öňünden alýarlar, soňra habarlaşmagy bes edýärler. Arzaňyzyň haýsy tapgyrdadygyny soramasaň bileniň däl."
+        },
+        "after": {
+          "title": "Aç-açan tertip we hemişelik habarlaşyk",
+          "text": "Arzaňyzyň haýsy tapgyrdadygy her ädimde habar berilýär. Uniwersitetden gelen resmi hatlar size göni görkezilýär."
+        }
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Iş tertibi",
+    "title": "Maslahatdan kabul hatyna — dört ädim",
+    "subtitle": "Her ädimiň öz möhleti we eliňize gowşýan anyk netijesi bar. Siz haýsy tapgyrdadygyňyzy hemişe bilýärsiňiz.",
+    "durationLabel": "Möhlet",
+    "deliverableLabel": "Eliňize gowşýan netije",
+    "steps": [
+      {
+        "index": "01",
+        "title": "Mugt maslahat we ugur saýlamak",
+        "duration": "1 gün",
+        "text": "Bahalaryňyzy, dil derejäňizi, býujetiňizi we isleýän ugruňyzy öwrenýäris. Şoňa görä size hakykatdan laýyk gelýän uniwersitetleriň sanawyny taýýarlaýarys.",
+        "deliverable": "Tölegleri görkezilen 3–5 uniwersitetiň sanawy",
+        "bullets": [
+          "Attestatyň bahalarynyň seljermesi",
+          "Ugur we hünär boýunça maslahat",
+          "Töleg we ýeňillik mümkinçilikleri"
+        ]
+      },
+      {
+        "index": "02",
+        "title": "Resminamalary ýygnamak we barlamak",
+        "duration": "3–7 gün",
+        "text": "Zerur resminamalaryň sanawyny berýäris we her birini barlaýarys. Kemçilik bar bolsa, uniwersitete ugradylmazdan öň düzedilýär.",
+        "deliverable": "Barlagdan geçen doly resminama bukjasy",
+        "bullets": [
+          "Pasport we attestat",
+          "Transkript (baha sahypasy)",
+          "Surat we arza formasy"
+        ]
+      },
+      {
+        "index": "03",
+        "title": "Arzalaryň uniwersitetlere tabşyrylmagy",
+        "duration": "1–2 hepde",
+        "text": "Arzalar birnäçe uniwersitete birbada tabşyrylýar — şeýlelikde saýlaw mümkinçiligiňiz artýar. Her arzanyň ýagdaýy yzarlanýar.",
+        "deliverable": "Tabşyrylan arzalaryň hasabaty we yzarlaýyş belgileri",
+        "bullets": [
+          "Birnäçe uniwersitete arza",
+          "Möhletleriň gözegçiligi",
+          "Uniwersitet bilen ýazyşyk"
+        ]
+      },
+      {
+        "index": "04",
+        "title": "Kabul haty we ýazgy",
+        "duration": "2–4 hepde",
+        "text": "Kabul haty gelen badyna size berilýär. Teklipler deňeşdirilip, iň amatlysy saýlanýar we ýazgy tapgyry tamamlanýar.",
+        "deliverable": "Resmi kabul haty (Letter of Acceptance)",
+        "bullets": [
+          "Kabul hatyny almak",
+          "Teklipleri deňeşdirmek",
+          "Ýazgy boýunça ugrukdyrma"
+        ]
+      }
+    ],
+    "scopeNote": "Bellik: biziň esasy hyzmatymyz — uniwersitet saýlamak, resminamalary taýýarlamak we kabul hatyny almak. Wiza, ýaşaýyş jaýy we uçuş meseleleri boýunça size ugrukdyryjy maslahat berýäris."
+  },
+  "universities": {
+    "eyebrow": "Hyzmatdaş uniwersitetler",
+    "title": "Türkiýäniň öňdebaryjy uniwersitetleri",
+    "subtitle": "Talyplarymyzyň iň köp ýüz tutýan uniwersitetleri. Her biriniň ýyllyk tölegi, ugurlary we arza möhletleri boýunça anyk maglumat berýäris.",
+    "cityLabel": "Şäher",
+    "city": "Stambul · Bayburt · Kütahya",
+    "items": [
+      {
+        "name": "Bahçeşehir Üniversitesi",
+        "short": "BAU",
+        "note": "Halkara alyş-çalyş maksatnamalary giň"
+      },
+      {
+        "name": "İstanbul Gelişim Üniversitesi",
+        "short": "IGU",
+        "note": "Amaly ugurlar we tehniki hünärler"
+      },
+      {
+        "name": "İstinye Üniversitesi",
+        "short": "ISU",
+        "note": "Saglygy goraýyş ugurlary güýçli"
+      },
+      {
+        "name": "İstanbul Aydın Üniversitesi",
+        "short": "IAU",
+        "note": "Ugurlaryň sany boýunça iň giň saýlaw"
+      },
+      {
+        "name": "İstanbul Medipol Üniversitesi",
+        "short": "MED",
+        "note": "Lukmançylyk we diş lukmançylygy"
+      }
+    ],
+    "marqueeNote": "Nyşany benewşe bellenenler — talyplarymyzyň kabul edilen uniwersitetleri.",
+    "detail": {
+      "hint": "Uniwersitetiň üstüne basyň — jikme-jik maglumat açylýar",
+      "partner": "Arza taýýarlaýan uniwersitetimiz",
+      "other": "Sanawdaky uniwersitet",
+      "generic": "Bu uniwersitet boýunça hem maslahat berýäris. Ýyllyk töleg, ugurlaryň sanawy we arza möhletleri barada anyk maglumat üçin bize ýazyň.",
+      "ask": "Şu uniwersitet barada soraň",
+      "apply": "Mugt maslahat al",
+      "close": "Ýap",
+      "cityLabel": "Şäher"
+    }
+  },
+  "proof": {
+    "eyebrow": "Netijeler",
+    "title": "Kabul hatlary — iň gowy subutnama",
+    "subtitle": "Aşakdakylar — biziň talyplarymyzyň hakyky kabul hatlary. Şahsy maglumatlary goramak üçin at gysgaldylyp berilýär.",
+    "lettersLabel": "Alnan kabul hatlary",
+    "letterCard": {
+      "accepted": "Kabul edildi",
+      "program": "Ugry",
+      "year": "Okuw ýyly"
+    },
+    "letters": [
+      {
+        "student": "R. Matniyazov",
+        "uni": "Bahçeşehir Üniversitesi",
+        "program": "Arhitektura",
+        "year": "2025 / 2026",
+        "img": "matniyazov"
+      },
+      {
+        "student": "A. Ashyrov",
+        "uni": "Bahçeşehir Üniversitesi",
+        "program": "Şepagat uýasy",
+        "year": "2025 / 2026",
+        "img": "ashyrov"
+      },
+      {
+        "student": "A. Torayeva",
+        "uni": "İstanbul Aydın Üniversitesi",
+        "program": "Syýasat we halkara gatnaşyklary",
+        "year": "2025 / 2026",
+        "img": "torayeva"
+      },
+      {
+        "student": "D. Orazimbetov",
+        "uni": "İstanbul Medipol Üniversitesi",
+        "program": "Şäher dizaýny we arhitekturasy",
+        "year": "2025 / 2026",
+        "img": "orazimbetov"
+      },
+      {
+        "student": "M. Baltabayeva",
+        "uni": "İstanbul Medipol Üniversitesi",
+        "program": "Fizioterapiýa we reabilitasiýa",
+        "year": "2025 / 2026",
+        "img": "baltabayeva"
+      },
+      {
+        "student": "R. Kadyrov",
+        "uni": "İstanbul Medipol Üniversitesi",
+        "program": "Wizual aragatnaşyk dizaýny",
+        "year": "2025 / 2026",
+        "img": "kadyrov"
+      },
+      {
+        "student": "B. Yusupov",
+        "uni": "İstanbul Medipol Üniversitesi",
+        "program": "Iňlis dili mugallymçylygy",
+        "year": "2025 / 2026",
+        "img": "yusupov"
+      },
+      {
+        "student": "A. Madreyimov",
+        "uni": "Bayburt Üniversitesi",
+        "program": "Başlangyç matematika mugallymçylygy",
+        "year": "2025 / 2026",
+        "img": "madreyimov"
+      },
+      {
+        "student": "H. Torebayev",
+        "uni": "Bayburt Üniversitesi",
+        "program": "Fen mugallymçylygy",
+        "year": "2025 / 2026",
+        "img": "torebayev"
+      },
+      {
+        "student": "R. Kalandarov",
+        "uni": "Kütahya Dumlupınar Üniversitesi",
+        "program": "Ofis dolandyryşy we ýerine ýetiriji kömekçi",
+        "year": "2025 / 2026",
+        "img": "kalandarov"
+      },
+      {
+        "student": "Jahangir",
+        "uni": "Kütahya Dumlupınar Üniversitesi",
+        "program": "Daşary söwda",
+        "year": "2025 / 2026",
+        "img": "jahangir"
+      }
+    ]
+  },
+  "offer": {
+    "eyebrow": "Teklip",
+    "title": "Ilkinji maslahat — tölegsiz",
+    "subtitle": "Bahalaryňyzy we isleýän ugruňyzy aýdyň — size laýyk gelýän uniwersitetleriň sanawyny we takyk töleg möçberlerini taýýarlap bereris. Bu maslahat üçin töleg alynmaýar.",
+    "priceLabel": "Ilkinji maslahat",
+    "priceValue": "Tölegsiz",
+    "priceNote": "Hyzmatyň bahasy saýlanan uniwersitete we arzalaryň sanyna görä öňünden, ýazmaça görnüşde aýdylýar. Gizlin töleg ýok.",
+    "includesLabel": "Maslahatda näme alarsyňyz",
+    "includes": [
+      "Bahalaryňyza görä laýyk uniwersitetleriň sanawy",
+      "Her uniwersitetiň ýyllyk tölegi we ýeňillik mümkinçiligi",
+      "Zerur resminamalaryň doly sanawy",
+      "Arza tabşyrmagyň möhletleri boýunça senenama"
+    ],
+    "guaranteeTitle": "Töleg diňe netije boýunça",
+    "guaranteeText": "Maslahat we uniwersitetleriň saýlanmagy tölegsizdir. Hyzmatyň bahasy bolsa diňe siz anyk uniwersiteti saýlanyňyzdan soň, ylalaşyk esasynda kesgitlenýär.",
+    "slotsLeft": "Şu möwsüm üçin galan orun:",
+    "slotsValue": "12"
+  },
+  "faq": {
+    "eyebrow": "Ýygy-ýygydan berilýän soraglar",
+    "title": "Aýdyňlaşdyrmaly zatlar",
+    "subtitle": "Jogabyny tapmadyk soragyňyz bolsa, aşakdaky formada ýazyň ýa-da WhatsApp arkaly ýazyň — gysga wagtda jogap berýäris.",
+    "items": [
+      {
+        "q": "Türk dilini bilmesem, okap bilerinmi?",
+        "a": "Hawa. Hususy uniwersitetleriň aglabasynda türk dili ýa-da iňlis dili boýunça bir ýyllyk taýýarlyk sapagy (hazırlık) bar. Dil derejäňiz ýeterlik bolmasa, ilki şol taýýarlyk ýylyny okaýarsyňyz, soňra esasy hünäriňize geçýärsiňiz. Käbir ugurlar doly iňlis dilinde hem okadylýar."
+      },
+      {
+        "q": "Haýsy resminamalar gerek?",
+        "a": "Esasy sanaw: pasport, orta mekdebiň attestaty, baha sahypasy (transkript) we biometrik surat. Uniwersitete we ugra görä goşmaça resminama talap edilip bilner — ony maslahat tapgyrynda anyk aýdýarys we sanawy size ýazmaça berýäris."
+      },
+      {
+        "q": "Attestatym entek elimde ýok. Arza berip bilerinmi?",
+        "a": "Hawa. Köp uniwersitet gutardyş synaglaryndan öň hem, wagtlaýyn resminamalar bilen arzany kabul edýär. Attestat elňize gelenden soň bukja doldurylýar. Tersine, ir ýüz tutmak has gowy: orunlar we ýeňillikler möwsümiň başynda has köp bolýar."
+      },
+      {
+        "q": "Hyzmatyňyzyň bahasy näçe?",
+        "a": "Ilkinji maslahat, uniwersitetleriň saýlanmagy we töleg hasaplamasy doly tölegsizdir. Resminamalary taýýarlamak we arza tabşyrmak hyzmatynyň bahasy bolsa saýlanan uniwersitete we arzalaryň sanyna görä kesgitlenýär we işe başlamazdan öň ýazmaça aýdylýar."
+      },
+      {
+        "q": "Kabul haty näçe wagtda gelýär?",
+        "a": "Resminamalar doly we dogry bolsa, adatça arza tabşyrylandan soň 2–4 hepdäniň dowamynda gelýär. Möwsümiň gyzgalaňly wagtynda bu möhlet biraz uzalyp bilýär. Her hepde ýagdaý barada size habar berilýär."
+      },
+      {
+        "q": "Wiza, ýaşaýyş jaýy we uçuş meselelerini hem çözýärsiňizmi?",
+        "a": "Biziň esasy hyzmatymyz — uniwersiteti saýlamak, resminamalary taýýarlamak we kabul hatyny almak. Wiza, umumy ýaşaýyş jaýy we uçuş meseleleri boýunça size ugrukdyryjy maslahat we zerur resminamalaryň sanawyny berýäris, emma bu tapgyrlar aýratyn ylalaşyk esasynda alnyp barylýar."
+      }
+    ]
+  },
+  "form": {
+    "eyebrow": "Baglanyşyk",
+    "title": "Ilkinji ädimi bilelikde ädeliň",
+    "subtitle": "Aşakdaky meýdanlary dolduryň — gysga wagtyň içinde habarlaşyp, size laýyk uniwersitetleriň sanawyny taýýarlarys.",
+    "fields": {
+      "name": {
+        "label": "Talybyň ady we familiýasy",
+        "placeholder": "Meselem: Aýgül Saparowa"
+      },
+      "phone": {
+        "label": "Telefon ýa-da WhatsApp belgiňiz",
+        "placeholder": "+993 6X XX XX XX"
+      },
+      "gradYear": {
+        "label": "Mekdebi gutarýan (gutaran) ýylyňyz",
+        "placeholder": "Ýyly saýlaň"
+      },
+      "program": {
+        "label": "Okamak isleýän ugruňyz",
+        "placeholder": "Ugry saýlaň"
+      },
+      "message": {
+        "label": "Goşmaça sorag (islege görä)",
+        "placeholder": "Haýsy sorag sizi iň köp gyzyklandyrýar?"
+      },
+      "channel": {
+        "label": "Habarlaşmak üçin amatly usul",
+        "placeholder": "Usuly saýlaň"
+      }
+    },
+    "gradYearOptions": [
+      "2026",
+      "2025",
+      "2024",
+      "2023-nji ýyl we ondan öň"
+    ],
+    "programOptions": [
+      "Lukmançylyk",
+      "Diş lukmançylygy",
+      "Inženerçilik we tehnologiýa",
+      "Ykdysadyýet we dolandyryş",
+      "Arhitektura we dizaýn",
+      "Halkara gatnaşyklar",
+      "Saglygy goraýyş ugurlary",
+      "Entek kesgitlemedim"
+    ],
+    "channelOptions": [
+      "WhatsApp",
+      "Telefon jaňy",
+      "Telegram",
+      "Instagram Direct"
+    ],
+    "submit": "Arzany ibermek",
+    "submitting": "Iberilýär…",
+    "privacy": "Formy ibermek bilen siz maglumatlaryňyzyň diňe siziň bilen habarlaşmak maksady bilen ulanyljakdygyna razylyk berýärsiňiz. Üçünji taraplara berilmeýär.",
+    "successTitle": "Arzaňyz kabul edildi",
+    "successText": "Sag boluň! Gysga wagtyň içinde siziň bilen habarlaşarys we size laýyk uniwersitetleriň sanawyny taýýarlarys.",
+    "errorTitle": "Arza iberilmedi",
+    "errorText": "Tehniki näsazlyk ýüze çykdy. Biraz salymdan gaýtadan synanyşyň ýa-da WhatsApp arkaly ýazyň.",
+    "errors": {
+      "nameRequired": "Talybyň adyny ýazmagyňyzy haýyş edýäris.",
+      "nameShort": "At azyndan 2 harpdan ybarat bolmaly.",
+      "phoneRequired": "Telefon belgiňiz hökmany meýdandyr.",
+      "phoneInvalid": "Telefon belgisi dogry görnüşde ýazylmadyk.",
+      "gradYearRequired": "Mekdebi gutarýan ýylyňyzy görkeziň.",
+      "consentRequired": "Dowam etmek üçin razylyk gerek."
+    }
+  },
+  "footer": {
+    "tagline": "Gelejege tarap ilkinji we iň dogry ädimi biz bilen başlaň.",
+    "columns": {
+      "nav": "Bölümler",
+      "services": "Hyzmatlar",
+      "contact": "Baglanyşyk"
+    },
+    "services": [
+      "Uniwersitet we ugur saýlamak",
+      "Resminamalary taýýarlamak",
+      "Arzalaryň tabşyrylmagy",
+      "Kabul hatyny almak",
+      "Ýazgy boýunça ugrukdyrma"
+    ],
+    "contactLabels": {
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp",
+      "phone": "Telefon",
+      "email": "E-poçta"
+    },
+    "rights": "Ähli hukuklar goralandyr.",
+    "madeWith": "Dizaýn we işläp düzüliş"
+  },
+  "admin": {
+    "login": {
+      "title": "Admin panele giriş",
+      "subtitle": "Haýsy panele girjegiňizi saýlaň.",
+      "sales": "Talyp arzalary",
+      "salesNote": "Kanban tagtasy, ýüztutmalar, Telegram",
+      "analytics": "Seljerme we mazmun",
+      "analyticsNote": "Görkezijiler, myhmanlar, sahypanyň mazmuny",
+      "demoTitle": "Görkezme giriş",
+      "demoText": "Bu ýerde hakyky barlag ýok — rol saýlanýar we gutapjyga (cookie) ýazylýar. Önümçilikde ol hakyky giriş ulgamyna çalşyrylmalydyr.",
+      "back": "Saýta gaýtmak"
+    },
+    "common": {
+      "search": "Gözleg",
+      "searchPlaceholder": "Talybyň ady, telefony ýa-da uniwersiteti boýunça gözläň…",
+      "notifications": "Bildirişler",
+      "profile": "Hasabym",
+      "logout": "Çykmak",
+      "save": "Ýatda saklamak",
+      "saving": "Saklanýar…",
+      "saved": "Ýatda saklandy",
+      "cancel": "Ýatyrmak",
+      "delete": "Pozmak",
+      "edit": "Üýtgetmek",
+      "add": "Goşmak",
+      "today": "Şu gün",
+      "week": "Hepde",
+      "month": "Aý",
+      "quarter": "Çärýek",
+      "loading": "Ýüklenýär…",
+      "empty": "Bu ýerde häzirlikçe maglumat ýok",
+      "confirmDelete": "Hakykatdan hem pozmak isleýärsiňizmi? Bu hereketi yzyna gaýtaryp bolmaýar.",
+      "roleSales": "Talyp arzalarynyň dolandyryjysy",
+      "roleAnalytics": "Seljerme we mazmun dolandyryjysy"
+    },
+    "sales": {
+      "title": "Arzalar paneli",
+      "subtitle": "Talyp ýüztutmalaryny dolandyrmak we kabul tapgyrlaryny yzarlamak",
+      "nav": {
+        "board": "Kanban tagtasy",
+        "leads": "Ähli ýüztutmalar",
+        "calendar": "Möhletler",
+        "telegram": "Telegram bildirişleri",
+        "settings": "Sazlamalar"
+      },
+      "kpi": {
+        "newToday": "Şu günki täze ýüztutmalar",
+        "inProgress": "Iş alnyp barylýan",
+        "acceptedMonth": "Şu aýda alnan kabul haty",
+        "conversion": "Ýüztutmadan ýazga öwrülme",
+        "avgResponse": "Ortaça jogap wagty",
+        "docsPending": "Resminamasy ýetmeýän"
+      },
+      "columns": {
+        "new": "Täze ýüztutma",
+        "consulted": "Maslahat berildi",
+        "documents": "Resminamalar ýygnalýar",
+        "applied": "Arza tabşyryldy",
+        "accepted": "Kabul haty geldi",
+        "enrolled": "Ýazgy tamamlandy",
+        "lost": "Ýitirilen"
+      },
+      "card": {
+        "source": "Çeşme",
+        "program": "Ugry",
+        "targetUni": "Isleýän uniwersiteti",
+        "gradYear": "Gutaran ýyly",
+        "assignee": "Jogapkär",
+        "createdAt": "Gelen wagty",
+        "lastTouch": "Soňky habarlaşyk",
+        "docsLabel": "Resminamalar",
+        "priorityHigh": "Ýokary",
+        "priorityMedium": "Orta",
+        "priorityLow": "Pes",
+        "noteAdd": "Bellik goşmak",
+        "callNow": "Jaň etmek",
+        "openChat": "WhatsApp-da ýazmak"
+      },
+      "dragHint": "Kartany süýşürip, tapgyry üýtgediň",
+      "docsChecklist": {
+        "title": "Resminamalaryň barlag sanawy",
+        "passport": "Pasport",
+        "diploma": "Attestat",
+        "transcript": "Transkript",
+        "photo": "Biometrik surat"
+      },
+      "telegram": {
+        "title": "Telegram bildiriş integrasiýasy",
+        "subtitle": "Her täze ýüztutma kanala şobada iberilýär",
+        "statusConnected": "Birikdirildi",
+        "statusDisconnected": "Birikdirilmedik",
+        "botLabel": "Bot",
+        "chatLabel": "Kanalyň ýa-da toparyň ID belgisi",
+        "testSend": "Synag habaryny ibermek",
+        "testSending": "Iberilýär…",
+        "testSent": "Synag habary iberildi",
+        "events": "Haýsy wakalarda habar iberilsin",
+        "eventOptions": {
+          "newLead": "Täze ýüztutma gelende",
+          "stageChange": "Tapgyr üýtgände",
+          "accepted": "Kabul haty gelende",
+          "lost": "Ýüztutma ýitirilende",
+          "dailyDigest": "Günlük jemleýji hasabat"
+        },
+        "lastMessages": "Soňky iberilen bildirişler",
+        "templateLabel": "Habaryň nusgasy"
+      },
+      "sources": {
+        "instagram": "Instagram",
+        "site": "Saýt formasy",
+        "referral": "Tanyş boýunça",
+        "whatsapp": "WhatsApp",
+        "call": "Göni jaň"
+      }
+    },
+    "analytics": {
+      "title": "Seljerme we mazmun paneli",
+      "subtitle": "Saýtyň görkezijileri we mazmunyň dolandyrylyşy",
+      "nav": {
+        "overview": "Umumy görnüş",
+        "traffic": "Gatnaw",
+        "funnel": "Kabul tapgyrlary",
+        "content": "Mazmun",
+        "cases": "Kabul hatlary",
+        "media": "Suratlar we wideo"
+      },
+      "kpi": {
+        "visitors": "Myhmanlar",
+        "sessions": "Seanslar",
+        "conversion": "Öwrülme derejesi",
+        "avgTime": "Saýtda ortaça geçirilen wagt",
+        "bounce": "Yzyna dolanma derejesi",
+        "leads": "Alnan ýüztutmalar"
+      },
+      "charts": {
+        "trafficTitle": "Gatnawyň dinamikasy",
+        "trafficSubtitle": "Günlük myhmanlar we ýüztutmalar",
+        "sourcesTitle": "Gatnawyň çeşmeleri",
+        "funnelTitle": "Kabul tapgyrlary",
+        "devicesTitle": "Enjamlar boýunça paýlanyş",
+        "langTitle": "Dil boýunça paýlanyş",
+        "liveTitle": "Häzirki wagtda saýtda",
+        "liveUnit": "myhman",
+        "compareLabel": "Öňki döwür bilen deňeşdirme"
+      },
+      "funnelStages": {
+        "visit": "Saýta giriş",
+        "scroll": "Bölümler bilen tanyşmak",
+        "formOpen": "Forma açyldy",
+        "formSubmit": "Forma iberildi",
+        "consulted": "Maslahat geçirildi"
+      },
+      "devices": {
+        "mobile": "Mobil telefon",
+        "desktop": "Kompýuter",
+        "tablet": "Planşet"
+      },
+      "content": {
+        "title": "Saýtyň mazmunyny dolandyrmak",
+        "subtitle": "Bu ýerde girizilen üýtgetmeler saýtda derrew görkezilýär",
+        "langTabs": "Dili saýlaň",
+        "sectionLabel": "Bölüm",
+        "fieldLabel": "Meýdan",
+        "preview": "Öňünden görmek",
+        "publish": "Çap etmek",
+        "publishing": "Çap edilýär…",
+        "published": "Çap edildi",
+        "draft": "Taslama",
+        "unsaved": "Saklanmadyk üýtgetmeler bar",
+        "missingTranslation": "Terjime ýetmeýär",
+        "translationProgress": "Terjimäniň dolulygy"
+      },
+      "cases": {
+        "title": "Kabul hatlaryny dolandyrmak",
+        "addNew": "Täze kabul haty goşmak",
+        "studentName": "Talybyň ady",
+        "university": "Uniwersitet",
+        "programLabel": "Ugry",
+        "yearLabel": "Okuw ýyly",
+        "imageLabel": "Hatyň şekili",
+        "consentLabel": "Talybyň razylygy alyndy",
+        "visible": "Saýtda görkezilýär",
+        "hidden": "Gizlenen",
+        "order": "Tertibi"
+      }
+    }
+  }
+}
