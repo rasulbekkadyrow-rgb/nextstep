@@ -41,8 +41,8 @@ export function Hero({ banner }: { banner?: { src: string; mobile?: string } }) 
               alt=""
               loading="eager"
               fetchPriority="high"
-              /* tekst çepde, şonuň üçin suratyň fokusy saga */
-              className="h-full w-full object-cover object-[72%_center]"
+              /* şapka sagda, tekst çepde */
+              className="h-full w-full object-cover object-[75%_center]"
             />
           </picture>
         </motion.div>

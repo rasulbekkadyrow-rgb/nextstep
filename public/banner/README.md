@@ -47,3 +47,9 @@ ulanyljagyny at bilen dolandyryp bolýar:
 Talyplaryň suraty goýulýan bolsa, olaryň **ýazmaça razylygy**
 alynmalydyr. Razylyk ýok bolsa stok suraty ulanylmalydyr (mysal üçin
 Unsplash, Pexels — täjirçilik ulanyşyna rugsatly lisenziýa bilen).
+
+## Häzirki surat
+
+`talyplar.jpg`: kitaplaryň üstünde şapka, arkada uniwersitet binasy.
+Ulanyjy berdi (Downloads, `upscalemedia-transformed (1).jpeg`, 5888×3312).
+Çeşmesi we lisenziýasy saýtyň eýesi tarapyndan tassyklanmaly.
