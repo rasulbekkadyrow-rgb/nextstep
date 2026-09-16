@@ -42,9 +42,18 @@ export function Hero({ banner }: { banner?: { src: string; mobile?: string } }) 
               loading="eager"
               fetchPriority="high"
               /* şapka sagda, tekst çepde */
-              className="h-full w-full object-cover object-[75%_center]"
+              className="h-full w-full object-cover object-[75%_center] brightness-[0.92] contrast-[1.08] saturate-[1.15]"
             />
           </picture>
+          {/* reňk sazlamasy: markanyň benewşe-gök öwüşgini */}
+          <div
+            className="absolute inset-0 mix-blend-color opacity-30"
+            style={{ background: 'linear-gradient(115deg, rgb(var(--c-brand)) 20%, rgb(var(--c-azure)) 100%)' }}
+          />
+          <div
+            className="absolute inset-0 mix-blend-soft-light opacity-50"
+            style={{ background: 'linear-gradient(200deg, rgb(var(--c-azure) / 0.6), rgb(var(--c-brand) / 0.8))' }}
+          />
         </motion.div>
       ) : (
         <div aria-hidden className="absolute inset-0 -z-20 opacity-30">
