@@ -1,14 +1,16 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { Instagram, Mail } from 'lucide-react';
+import { ArrowRight, Instagram, Mail } from 'lucide-react';
 import { Logo } from '@/components/shared/Logo';
 import { WhatsAppMark } from '@/components/ui/BrandIcons';
+import { Button } from '@/components/ui/Button';
 import { CONTACTS } from '@/lib/contacts';
 
 export function Footer() {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
   const proof = useTranslations('proof');
+  const offer = useTranslations('offer');
   const locale = useLocale();
 
   const services = t.raw('services') as string[];
@@ -49,6 +51,35 @@ export function Footer() {
   return (
     <footer className="on-deep">
       <div className="container py-12 md:py-14">
+        <div className="relative isolate mb-12 overflow-hidden rounded-3xl ring-1 ring-white/10">
+          <picture>
+            <source media="(max-width: 767px)" srcSet="/footer/talyplar@1200.jpg" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/footer/talyplar.jpg"
+              alt=""
+              loading="lazy"
+              className="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center] saturate-[1.2] contrast-[1.05]"
+            />
+          </picture>
+          <div
+            aria-hidden
+            className="absolute inset-0 -z-10 mix-blend-color opacity-35"
+            style={{ background: 'linear-gradient(115deg, rgb(var(--c-brand)) 10%, rgb(var(--c-azure)) 100%)' }}
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 -z-10"
+            style={{ background: 'linear-gradient(90deg, rgb(var(--c-deep) / 0.92) 0%, rgb(var(--c-deep) / 0.55) 45%, rgb(var(--c-deep) / 0.05) 100%)' }}
+          />
+          <div className="flex min-h-[15rem] flex-col items-start justify-center gap-5 p-7 md:min-h-[17rem] md:p-10">
+            <h2 className="max-w-[18ch] text-h2">{offer('title')}</h2>
+            <Button href="#arza" icon={<ArrowRight className="h-4 w-4" />}>
+              {nav('cta')}
+            </Button>
+          </div>
+        </div>
+
         <div className="grid-12 gap-y-10">
           <div className="col-span-4 lg:col-span-4">
             <Logo size="md" />

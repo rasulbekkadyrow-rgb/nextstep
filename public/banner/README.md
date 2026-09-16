@@ -53,3 +53,8 @@ Unsplash, Pexels — täjirçilik ulanyşyna rugsatly lisenziýa bilen).
 `talyplar.jpg`: kitaplaryň üstünde şapka, arkada uniwersitet binasy.
 Ulanyjy berdi (Downloads, `upscalemedia-transformed (1).jpeg`, 5888×3312).
 Çeşmesi we lisenziýasy saýtyň eýesi tarapyndan tassyklanmaly.
+
+## Aşaky bölümiň banneri
+
+`public/footer/talyplar.jpg`: «Malacca graduates», awtory Baim Hanif (Unsplash).
+Lisenziýa: **CC0**. Çeşme: https://commons.wikimedia.org/wiki/File:Malacca_graduates_(Unsplash).jpg
