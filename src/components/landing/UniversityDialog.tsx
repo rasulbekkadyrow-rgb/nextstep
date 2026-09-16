@@ -11,37 +11,7 @@ import { CONTACTS } from '@/lib/contacts';
 import type { UniversityEntry } from '@/lib/universities';
 import { cn } from '@/lib/utils';
 
-/**
- * UNIWERSITETIŇ MAGLUMAT PENJIRESI
- * ==================================================================
- * Lentadaky logonyň üstüne basylanda açylýar.
- *
- * ⚠️ NÄME ÜÇIN BU ÝERDE «FAKT» ÝOK?
- * Penjirede ýyllyk töleg, reýting ýa-da esaslandyrylan ýyly ýaly
- * sanlar GÖRKEZILMEÝÄR. Sebäbi olar hakyky, barlanan maglumat
- * bolmaly — ýasama san müşderini ýalňyş karara iterýär we markanyň
- * ynamyny ýykýar. Şonuň üçin penjire diňe barlanan zady görkezýär:
- * resmi at, şäher, hyzmatdaşlyk ýagdaýy we redaksiýa ýazgysy.
- * Galanyny ulanyjy bir basmakda göni WhatsApp-dan soraýar.
- *
- * Anyk sanlar elýeterli bolanda `note` ýerine olar goşulyp bilner —
- * gurluş taýýar.
- *
- * ⚠️ NÄME ÜÇIN PORTAL?
- * Penjire lentanyň içinden çagyrylýar, lenta bolsa `Reveal`-yň
- * içinde — ol `filter: blur()` ulanýar. CSS-de `filter` (`transform`
- * ýaly) `position: fixed` çagalary üçin TÄZE GAPDAL ÇÄK döredýär:
- * şonda `inset-0` ekrany däl-de şol gutyny tutýar. Netijede perde
- * diňe lentanyň zolagyny örtýärdi we penjire onuň daşyna çykýardy.
- * `createPortal` düwüni göni `body`-ä geçirýär — ähli şeýle çäkler
- * ýitýär.
- *
- * ELÝETERLILIK
- *  · `role="dialog"` + `aria-modal` + `aria-labelledby`.
- *  · Esc ýapýar, daşyna basmak ýapýar.
- *  · Açylanda fokus ýapmak düwmesine geçýär, ýapylanda sahypanyň
- *    skrolly dikeldilýär.
- */
+/** Portal bilen body-ä çykarylýar: Reveal-daky filter fixed-i döwýär. */
 export function UniversityDialog({
   uni,
   note,
@@ -53,7 +23,6 @@ export function UniversityDialog({
 }) {
   const t = useTranslations('universities.detail');
   const closeRef = useRef<HTMLButtonElement>(null);
-  /* Portal diňe brauzerde bar — serwerde `document` ýok. */
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -64,7 +33,6 @@ export function UniversityDialog({
     };
     document.addEventListener('keydown', onKey);
 
-    /* Penjire açykka arkadaky sahypa skroll edilmeýär */
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
@@ -87,8 +55,6 @@ export function UniversityDialog({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
         >
-          {/* Perde: arkadaky sahypa garalýar, bulaşýar we reňkden
-              gaçýar — göz diňe penjiredäki mazmuna düşýär. */}
           <div
             className="fixed inset-0"
             style={{
@@ -100,12 +66,7 @@ export function UniversityDialog({
             aria-hidden
           />
 
-          {/* Aýratyn skroll gatlagy. Pes ekranda (mysal üçin gorizontal
-              telefonda) penjire ekrandan uzyn bolýar — merkezleşdirilen
-              guty bolsa artykmajyny ÝOKARDAN çykarýar we oňa ýetip
-              bolmaýar. `min-h-full` + `overflow-y-auto` jübüti muny
-              çözýär: sygýan bolsa merkezde durýar, sygmaýan bolsa
-              skroll edilýär. */}
+          {/* pes ekranda penjire sygmasa skroll edilýär */}
           <div className="absolute inset-0 overflow-y-auto overscroll-contain">
             <div
               className="flex min-h-full items-center justify-center p-4"
@@ -119,19 +80,14 @@ export function UniversityDialog({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.97 }}
             transition={{ duration: 0.42, ease: [0.16, 1, 0.3, 1] }}
-            className="lg lg-solid relative w-full max-w-md overflow-hidden rounded-4xl p-7 shadow-lift sm:p-8"
+            className="paper relative w-full max-w-md overflow-hidden rounded-4xl p-7 sm:p-8"
           >
-            {/* Markanyň şöhlesi — aýnanyň aşagyndaky reňk */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -right-20 -top-24 h-56 w-56 rounded-full bg-brand/25 blur-3xl"
-            />
 
             <button
               ref={closeRef}
               onClick={onClose}
               aria-label={t('close')}
-              className="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full border border-line/12 text-muted transition-colors hover:border-brand/40 hover:text-brand"
+              className="absolute right-5 top-6 grid h-9 w-9 place-items-center rounded-full border border-line/12 text-muted transition-colors hover:border-brand/40 hover:text-brand"
             >
               <X className="h-4 w-4" aria-hidden />
             </button>
@@ -141,10 +97,8 @@ export function UniversityDialog({
 
               <span
                 className={cn(
-                  'mt-6 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-micro font-semibold uppercase tracking-[0.1em]',
-                  uni.partner
-                    ? 'border-brand/30 bg-brand/10 text-brand'
-                    : 'border-line/15 bg-base/60 text-muted',
+                  'mt-6 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-label font-extrabold uppercase tracking-[0.1em]',
+                  uni.partner ? 'bg-brand-soft text-brand' : 'bg-surface text-muted',
                 )}
               >
                 {uni.partner && <BadgeCheck className="h-3.5 w-3.5" aria-hidden />}
@@ -170,7 +124,7 @@ export function UniversityDialog({
                   href={CONTACTS.whatsapp[0].href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="brand-gradient inline-flex items-center justify-center gap-2.5 rounded-full px-5 py-3.5 text-body-sm font-semibold text-brand-ink transition-transform duration-300 ease-out-expo hover:scale-[1.02]"
+                  className="inline-flex items-center justify-center gap-2.5 rounded-full bg-brand px-5 py-3.5 text-body-sm font-bold text-brand-ink shadow-brand transition-colors duration-300 hover:bg-brand-deep"
                 >
                   <WhatsAppMark className="h-4 w-4" />
                   {t('ask')}
@@ -178,7 +132,7 @@ export function UniversityDialog({
                 <a
                   href="#arza"
                   onClick={onClose}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-line/15 px-5 py-3.5 text-body-sm font-semibold transition-colors hover:border-brand/40 hover:text-brand"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-line/15 px-5 py-3.5 text-body-sm font-bold transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   {t('apply')}
                   <ArrowRight className="h-4 w-4" aria-hidden />

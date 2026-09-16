@@ -54,8 +54,8 @@ const DEMO_FIELDS: ContentField[] = [
   {
     id: 'process.scopeNote', section: 'Iş tertibi', label: 'Hyzmatyň gerimi barada bellik', type: 'textarea',
     values: {
-      tm: 'Esasy hyzmatymyz — uniwersitet saýlamak, resminamalary taýýarlamak we kabul hatyny almak.',
-      ru: 'Наша основная услуга — выбор университета, подготовка документов и получение письма о зачислении.',
+      tm: 'Esasy hyzmatymyz: uniwersitet saýlamak, resminamalary taýýarlamak we kabul hatyny almak.',
+      ru: 'Наша основная услуга: выбор университета, подготовка документов и получение письма о зачислении.',
       tr: '',
     },
   },

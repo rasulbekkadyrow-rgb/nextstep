@@ -2,202 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ==================================================================
-   NEXT STEP CONSULTING — TEMA GATLAGY
-   ------------------------------------------------------------------
-   REŇKLER MARKANYŇ ÖZ LOGOSYNDAN ÖLÇENILDI (@nextstep.consultancyy):
-
-     · Benewşe  #8400FC  (hue 271°) — ýokarky-çep şekil
-     · Gök      #0CA8F0  (hue 199°) — aşaky-sag şekil
-     · Postlar  #202060 töweregi     — çuň indigo fon
-
-   LOGODA GRADIENT ÝOK: nyşan iki DÜZ reňkli şekilden ybarat
-   (`components/shared/Logo.tsx`). Emma nyşany ýokardan-aşak
-   okanyňda benewşeden göge geçiş duýulýar — saýtdaky gradient
-   we fon animasiýasy şol duýgyny dowam etdirýär.
-
-   KONTRAST: gök (#0CA8F0) ak fonda 2,7:1 berýär — ýazgy üçin
-   ýaramaýar, diňe doldurgy. Benewşe 6,2:1 — ýazgy üçin dogry.
-   ================================================================== */
-
 :root {
-  /* --- ESASY TEMA: ÝAGTY ---
-     FON DÜÝBÜNDEN AK DÄL. Ak fonda ak kartalar, ak aýna we ak
-     düwmeler biri-birine garyşýar — gyralar ýitýär we ýazgy «fona
-     ýuwdulýan» ýaly duýulýar. Şonuň üçin fona markanyň benewşesinden
-     ýeňil öwüşgin goşuldy (hue 260°), kartalaryň öz reňki bolsa DÜP-AK
-     galdyryldy. Netijede her ak ýüz fondan aýdyň saýlanýar. */
-  --c-base: 244 242 253;
-  --c-surface: 255 255 255;
-  --c-elevated: 255 255 255;
+  --c-base: 255 255 255;      
+  --c-surface: 246 247 251;   
+  --c-elevated: 255 255 255;  
   --c-line: 20 18 43;
 
-  --c-ink: 20 18 43;
-  --c-muted: 84 80 118;
-  --c-faint: 132 128 166;
+  --c-ink: 20 18 43;      
+  --c-muted: 86 84 116;   /* 7.1:1 */
+  --c-faint: 134 131 164; /* 3.6:1, diňe uly tekst */
 
-  --c-brand: 132 0 252;
-  --c-brand-deep: 92 0 184;
-  --c-brand-soft: 243 236 255;
-  --c-brand-ink: 255 255 255;
+  --c-brand: 132 0 252;        /* #8400FC */
+  --c-brand-deep: 92 0 184;    
+  --c-brand-soft: 245 238 255; 
+  --c-brand-ink: 255 255 255;  
+
+  /* #0CA8F0, ak fonda 2.7:1, tekst üçin däl */
   --c-azure: 12 168 240;
-  /* Gök #0CA8F0 ak fonda 2,7:1 berýär — ýazgy üçin ýaramaýar. Şonuň
-     üçin ÝAZGY üçin onuň garaldylan görnüşi: 4,6:1. Doldurgy we
-     gradient üçin ýokarkysy, harp üçin şu ulanylýar. */
+  /* tekst üçin, 4.6:1 */
   --c-azure-ink: 7 116 168;
+
+  --c-deep: 24 14 56;
+  --c-deep-soft: 38 24 82;
+  --c-deep-ink: 240 238 250;
+  --c-deep-muted: 178 172 210;
 
   --c-ok: 13 148 104;
   --c-warn: 176 116 8;
+  --c-danger: 200 42 62;
   --c-gold: 176 132 58;
   --c-slate: 118 114 148;
 
   --line-alpha: 0.10;
 
-  /* Modal penjiräniň arkasyndaky perde. Tema baglylykda üýtgeýän
-     `--c-ink` ulanyp bolmaýar: garaňky temada ol AK, ýagny perde
-     ýagtylyk berýärdi we arkadaky mazmun gizlenmän, gaýtam ýalpyldap
-     durýardy. Perde hemişe GARAŇKY bolmaly. */
   --c-scrim: 16 14 34;
 
-  /* --- LIQUID GLASS gatlagynyň parametrleri ---
-     AK FONDA AÝNA NÄDIP GÖRÜNÝÄR?
-     Ak fonda bulaşyklyk hiç zat görkezmeýär — ak ýene ak bolýar.
-     Aýnany görkezýän zat onuň GYRASY: ýokarda ýagtylygyň şöhlesi,
-     aşakda materialyň öz kölegesi, daşynda bolsa ol «ýüzýän» ýaly
-     duýdurýan ýumşak kölege. Şonuň üçin ýagty temada tint pes,
-     gyranyň bahalary bolsa ýokary goýuldy. */
-  --glass-tint: 255 255 255;   /* aýnanyň öz reňki */
-  --glass-alpha: 0.46;         /* doýgunlygy — az, sebäbi gyra göterýär */
-  --glass-blur: 22px;
-  --glass-spec: 255 255 255;   /* spekulýar (ýalpyldy) reňki */
-  --glass-spec-a: 0.92;        /* ýokarky gyranyň ýagtylygy */
-  --glass-edge-a: 0.34;        /* içki halkanyň güýji */
-  --glass-shade: 20 18 43;     /* aşaky içki kölege — GALYŇLYK duýgusy */
-  --glass-shade-a: 0.13;
-  --glass-rim-a: 0.11;         /* ak fonda materialyň serhedi */
-  --glass-cast: 0.34;          /* daşky kölegäniň güýji */
-
-  /* Logonyň asyl reňkleri — interfeýs tokenlerinden aýry */
   --c-logo-violet: #8400FC;
   --c-logo-azure: #0CA8F0;
 
-  --font-display: 'Unbounded', system-ui, sans-serif;
-  --font-sans: 'Golos Text', system-ui, sans-serif;
+  --font-display: 'Geologica', system-ui, sans-serif;
+  --font-sans: 'Onest', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   color-scheme: light;
 }
 
-/* --- IKINJI TEMA: GARAŇKY («Postlaryň indigo fony») --- */
-[data-theme='dark'] {
-  --c-base: 13 11 26;
-  --c-surface: 22 19 41;
-  --c-elevated: 31 27 56;
-  --c-line: 255 255 255;
-
-  --c-ink: 237 235 248;
-  --c-muted: 164 160 194;
-  --c-faint: 120 116 152;
-
-  --c-brand: 169 133 255;
-  --c-brand-deep: 190 162 255;
-  --c-brand-soft: 44 30 78;
-  --c-brand-ink: 17 10 34;
-  --c-azure: 90 196 255;
-  /* Garaňky fonda gök onsuz hem ýeterlik kontrast berýär */
-  --c-azure-ink: 90 196 255;
-
-  --c-ok: 52 199 146;
-  --c-warn: 232 172 56;
-  --c-gold: 227 183 120;
-  --c-slate: 140 136 172;
-
-  --line-alpha: 0.12;
-  --c-scrim: 2 1 8;
-
-  /* Garaňky aýna: az doýgun, spekulýar has ýuwaş. Bu ýerde fonuň özi
-     garaňky, şonuň üçin gyranyň ýagtysy azajyk hem ýeterlik. */
-  --glass-alpha: 0.07;
-  --glass-blur: 22px;
-  --glass-spec-a: 0.30;
-  --glass-edge-a: 0.12;
-  --glass-shade: 0 0 0;
-  --glass-shade-a: 0.30;
-  --glass-rim-a: 0.02;
-  --glass-cast: 0.62;
-
-  --c-logo-violet: #9B33FF;
-  --c-logo-azure: #2FBCFF;
-
-  color-scheme: dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --c-base: 13 11 26;
-    --c-surface: 22 19 41;
-    --c-elevated: 31 27 56;
-    --c-line: 255 255 255;
-    --c-ink: 237 235 248;
-    --c-muted: 164 160 194;
-    --c-faint: 120 116 152;
-    --c-brand: 169 133 255;
-    --c-brand-deep: 190 162 255;
-    --c-brand-soft: 44 30 78;
-    --c-brand-ink: 17 10 34;
-    --c-azure: 90 196 255;
-    --c-azure-ink: 90 196 255;
-    --c-ok: 52 199 146;
-    --c-warn: 232 172 56;
-    --c-gold: 227 183 120;
-    --c-slate: 140 136 172;
-    --line-alpha: 0.12;
-    --c-scrim: 2 1 8;
-    --glass-alpha: 0.07;
-    --glass-blur: 22px;
-    --glass-spec-a: 0.30;
-    --glass-edge-a: 0.12;
-    --glass-shade: 0 0 0;
-    --glass-shade-a: 0.30;
-    --glass-rim-a: 0.02;
-    --glass-cast: 0.62;
-    --c-logo-violet: #9B33FF;
-    --c-logo-azure: #2FBCFF;
-    color-scheme: dark;
-  }
-}
-
 @layer base {
   * { border-color: rgb(var(--c-line) / var(--line-alpha)); }
 
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
 
   body {
     background-color: rgb(var(--c-base));
     color: rgb(var(--c-ink));
     font-family: var(--font-sans);
-    /* Esasy ýazgynyň agramy 400 däl-de 450 — sahypa has «doly»
-       görünýär we Unbounded sözbaşylary bilen deňagramlaşýar. */
-    font-weight: 450;
+    font-weight: 400;
     font-feature-settings: 'liga' 1, 'calt' 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Unbounded — giň, geometrik display şrift. Uly ölçegde harp
-     aralygy dar bolmaly, ýogsam sözbaşy dargaýar. */
+  /* line-height 1.1-den pes bolmaly: Ý, Ň, Й belgileri degişýär */
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
-  h1 { font-weight: 900; }
 
   p { text-wrap: pretty; }
 
   .tnum { font-variant-numeric: tabular-nums; }
 
-  ::selection { background: rgb(var(--c-brand) / 0.22); }
+  ::selection { background: rgb(var(--c-brand) / 0.18); }
 
   :focus-visible {
     outline: 2px solid rgb(var(--c-brand));
@@ -217,259 +98,84 @@
 
 @layer components {
 
-  /* ================================================================
-     LIQUID GLASS
-     ----------------------------------------------------------------
-     Apple-yň «suwuk aýna» materialynyň dört gatlagy bir ýerde:
-
-       1. SÜZGÜÇ    — arkadaky şekil bulaşdyrylýar we doýgunlaşdyrylýar
-       2. REŇK      — aýnanyň öz ýeňil öwüşgini
-       3. GYRA      — içki halka + ýokarky ýagtylyk (edge lensing)
-       4. SPEKULÝAR — kursoryň yzyndan gidýän ýalpyldy
-
-     Näme üçin gyra beýle möhüm? Sebäbi aýnany aýna edýän zat
-     bulaşyklyk däl — gyrasyndaky ýagtylygyň döwülmegi. Diňe
-     `backdrop-filter: blur()` goýulsa, ol «hapa aýna» bolup görünýär.
-     ================================================================ */
-  .lg {
-    position: relative;
-    isolation: isolate;
-    background-color: rgb(var(--glass-tint) / var(--glass-alpha));
-    /* `contrast` we `saturate` aşakdaky reňki güýçlendirýär — ak fonda
-       hem materialyň içi daşyndan tapawutlanýar. */
-    backdrop-filter: blur(var(--glass-blur)) saturate(190%) contrast(1.06) brightness(1.05);
-    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(190%) contrast(1.06) brightness(1.05);
+  .card {
+    background-color: rgb(var(--c-elevated));
+    border: 1px solid rgb(var(--c-line) / 0.08);
     box-shadow:
-      /* 1. Golaýdaky gysga kölege — material ýüzüň ÜSTÜNDE dur */
-      0 1px 2px 0 rgb(var(--c-ink) / calc(var(--glass-cast) * 0.28)),
-      /* 2. Orta kölege — galyňlygyny görkezýär */
-      0 10px 22px -10px rgb(var(--c-ink) / calc(var(--glass-cast) * 0.62)),
-      /* 3. Uzak ýumşak kölege — «ýüzýän» duýgy */
-      0 28px 56px -28px rgb(var(--c-ink) / var(--glass-cast)),
-      /* 4. Ýokarky gyranyň ýagtylygy — ýagtylyk çeşmesi ýokarda */
-      inset 0 1.5px 0 0 rgb(var(--glass-spec) / var(--glass-spec-a)),
-      /* 5. Aşaky içki kölege — LINZANYŇ GALYŇLYGY. Ak fonda aýnany
-            aýna edýän esasy zat şu setir. */
-      inset 0 -2px 3px -1px rgb(var(--glass-shade) / var(--glass-shade-a)),
-      /* 6. Içki ýagty halka — gyradan geçýän ýagtylyk */
-      inset 0 0 0 1px rgb(var(--glass-spec) / var(--glass-edge-a)),
-      /* 7. Gyra ýygnanýan ýumşak şöhle (edge lensing) */
-      inset 0 0 20px -8px rgb(var(--glass-spec) / calc(var(--glass-spec-a) * 0.55));
+      0 1px 2px rgb(var(--c-ink) / 0.04),
+      0 12px 32px -14px rgb(var(--c-ink) / 0.14);
   }
 
-  /* Spekulýar: kursoryň ýerleşişine görä süýşýän ýalpyldy.
-     `--mx` we `--my` JavaScript bilen goýulýar. */
-  .lg::before {
-    content: '';
-    position: absolute; inset: 0; z-index: -1;
-    border-radius: inherit;
-    pointer-events: none;
-    background: radial-gradient(
-      220px circle at var(--mx, 50%) var(--my, 0%),
-      rgb(var(--glass-spec) / 0.40),
-      transparent 62%);
-    opacity: 0;
-    transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  .card-hover {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .lg:hover::before,
-  .lg:focus-within::before { opacity: 1; }
-
-  /* Gyranyň reňkli döwülmesi (chromatic edge).
-     Hakyky aýnanyň gyrasy ýagtylygy reňklere böleýär — şu ýerde ol
-     markanyň benewşesi we gögi bilen aňladylýar. */
-  .lg::after {
-    content: '';
-    position: absolute; inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    pointer-events: none;
-    /* `transparent` ýerine ink-iň gowşak bahasy goýuldy: ak fonda
-       düýbünden aýdyň gyra ýitýärdi, indi material serhetli. */
-    background: conic-gradient(from 140deg,
-      rgb(var(--glass-spec) / 0.90),
-      rgb(var(--c-azure) / 0.55) 16%,
-      rgb(var(--c-ink) / var(--glass-rim-a)) 34%,
-      rgb(var(--c-ink) / var(--glass-rim-a)) 58%,
-      rgb(var(--c-brand) / 0.55) 78%,
-      rgb(var(--glass-spec) / 0.85));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-  }
-
-  /* Basylanda material «gysylýar» — Apple-yň esasy duýgusy.
-     Spring egrisi: biraz aşa gidip yzyna gelýär. */
-  .lg-press { transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1); }
-  .lg-press:active { transform: scale(0.972); }
-
-  /* ================================================================
-     AÝLANÝAN REŇKLI GYRA (rim)
-     ----------------------------------------------------------------
-     Kartanyň gyrasyndan reňkli şöhle haýal aýlanýar — material
-     «janly» duýulýar. Reňki `--rim` arkaly her kartada başgaça.
-
-     `--rim-a` burçy CSS-de animasiýa edilýär. Adaty ýagdaýda
-     üýtgeýjileri animasiýa edip bolmaýar, şonuň üçin ol `@property`
-     bilen burç hökmünde hasaba alynýar. Goldamaýan brauzerde
-     animasiýa işlemeýär, gyra bolsa durnukly reňkde galýar —
-     ýagny hiç zat döwülmeýär.
-     ================================================================ */
-  .rim {
-    position: relative;
-  }
-  .rim::after {
-    content: '';
-    position: absolute; inset: 0;
-    border-radius: inherit;
-    padding: 1.5px;
-    pointer-events: none;
-    background: conic-gradient(from var(--rim-a, 0deg),
-      transparent 0deg,
-      rgb(var(--rim, var(--c-brand)) / 0.9) 42deg,
-      rgb(var(--c-azure) / 0.55) 84deg,
-      transparent 150deg,
-      transparent 360deg);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    /* ⚠️ ANIMASIÝA DEŇESIP DUR. Öň ol hemişe işleýärdi: `opacity: 0`
-       animasiýany SAKLAMAÝAR — brauzer görünmeýän gradienti hem her
-       kadrda gaýtadan çyzýar. Sahypada 36 sany şeýle element bardy,
-       netijede skroll agyrlaşýardy. Indi ol diňe gerek pursatynda
-       goýberilýär. */
-    animation: rim-turn 5s linear infinite;
-    animation-play-state: paused;
-  }
-  .rim:hover::after,
-  .rim:focus-visible::after,
-  .rim[data-rim='on']::after {
-    opacity: 1;
-    animation-play-state: running;
-  }
-
-  /* ================================================================
-     AÝNANYŇ ARZAN GÖRNÜŞI — HEREKET EDÝÄN ELEMENTLER ÜÇIN
-     ----------------------------------------------------------------
-     `backdrop-filter` iň gymmat CSS häsiýetleriniň biri: element
-     her süýşende onuň AŞAGYNDAKY şekil gaýtadan bulaşdyrylmaly
-     bolýar. Lentada 32 sany tagta hemişe hereket edýär — olaryň
-     hemmesi hakyky aýna bolsa, sahypa skrollda doňýar.
-
-     Şonuň üçin bu ýerde bulaşyk ÝOK, ýöne aýnany aýna edýän galan
-     zatlaryň hemmesi bar: ýokarky gyranyň ýagtylygy, aşaky içki
-     kölege, içki halka we daşky kölege. Hereket edýän zadyň
-     aşagyndaky şekil onsuz hem üýtgäp durýar — bulaşygyň ýoklugy
-     göze ilmeýär.
-     ================================================================ */
-  .lg-flat {
-    position: relative;
-    isolation: isolate;
-    background-color: rgb(var(--c-surface) / 0.90);
+  .card-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgb(var(--c-brand) / 0.28);
     box-shadow:
-      0 1px 2px 0 rgb(var(--c-ink) / calc(var(--glass-cast) * 0.28)),
-      0 10px 22px -10px rgb(var(--c-ink) / calc(var(--glass-cast) * 0.62)),
-      inset 0 1.5px 0 0 rgb(var(--glass-spec) / calc(var(--glass-spec-a) * 0.8)),
-      inset 0 -2px 3px -1px rgb(var(--glass-shade) / var(--glass-shade-a)),
-      inset 0 0 0 1px rgb(var(--glass-spec) / var(--glass-edge-a));
-  }
-  [data-theme='dark'] .lg-flat { background-color: rgb(var(--c-elevated) / 0.72); }
-
-  /* Ýokarky panel üçin has ýuka görnüşi */
-  .lg-thin { --glass-blur: 18px; --glass-alpha: 0.50; }
-  [data-theme='dark'] .lg-thin { --glass-alpha: 0.10; }
-
-  /* GALYŇ AÝNA — okalmaly ýerler üçin (modal penjire).
-     Adaty `.lg` bary-ýogy 7–50% doýgunlykda: bezeg üçin ajaýyp, ýöne
-     onuň içindäki ýazgyny okamak kyn — arkadaky mazmun geçip durýar.
-     Modalda mazmun ESASY zat, şonuň üçin material diýen ýaly dury
-     däl. Garaňky temada tint hem çalşylýar: ak tint garaňky fonda
-     çal duman berýärdi. */
-  .lg-solid { --glass-blur: 30px; --glass-alpha: 0.94; }
-  [data-theme='dark'] .lg-solid { --glass-tint: 31 27 56; --glass-alpha: 0.95; }
-
-  /* HAKYKY DÖWÜLME (refraction) — goşmaça gowulandyrma.
-     `backdrop-filter: url()` diňe Chromium-da işleýär. Goldanmaýan
-     brauzerde bu setir doly taşlanýar we ýokardaky `.lg` görnüşi
-     galýar — ýagny sahypa döwülmän, ýöne doly işläp galýar. */
-  @supports (backdrop-filter: url(#f)) {
-    .lg-refract {
-      backdrop-filter: url(#liquid-refract) blur(var(--glass-blur)) saturate(185%);
-    }
+      0 2px 4px rgb(var(--c-ink) / 0.05),
+      0 28px 56px -22px rgb(var(--c-ink) / 0.26);
   }
 
-  /* ================================================================
-     MARKANYŇ GRADIENTI — logonyň reňk geçişiniň dowamy.
-     Logonyň özünde gradient ÝOK.
-     ================================================================ */
+  .eyebrow {
+    @apply inline-flex items-center text-label font-bold uppercase tracking-[0.12em] text-brand;
+  }
+  .on-deep .eyebrow { color: rgb(var(--c-azure)); }
+
   .brand-gradient {
     background-image: linear-gradient(118deg,
       rgb(var(--c-brand)) 0%, rgb(var(--c-brand)) 38%, rgb(var(--c-azure)) 100%);
   }
 
-  .brand-gradient-text {
-    background-image: linear-gradient(118deg,
-      rgb(var(--c-brand)) 0%, rgb(var(--c-brand)) 34%, rgb(var(--c-azure)) 96%);
-    -webkit-background-clip: text; background-clip: text; color: transparent;
+  .on-deep {
+    background-color: rgb(var(--c-deep));
+    color: rgb(var(--c-deep-ink));
   }
-
-  .eyebrow {
-    @apply inline-flex items-center gap-2 text-micro font-bold uppercase tracking-[0.18em] text-muted;
-  }
-
-  .paper {
-    background: rgb(var(--c-surface));
-    border: 1px solid rgb(var(--c-line) / var(--line-alpha));
-    box-shadow: 0 1px 2px rgb(var(--c-ink) / 0.04), 0 18px 36px -28px rgb(var(--c-ink) / 0.22);
-  }
-
-  .hairline-grad { position: relative; }
-  .hairline-grad::before {
-    content: '';
-    position: absolute; inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(140deg,
-      rgb(var(--c-brand) / 0.6), rgb(var(--c-azure) / 0.35) 45%, transparent 75%);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor; mask-composite: exclude;
-    pointer-events: none;
-  }
-
-  .seal {
-    border: 2px solid rgb(var(--c-brand) / 0.55);
-    color: rgb(var(--c-brand));
-    letter-spacing: 0.12em;
-    transform: rotate(-8deg);
-  }
+  .on-deep h1, .on-deep h2, .on-deep h3, .on-deep h4 { color: rgb(var(--c-deep-ink)); }
+  .on-deep .text-muted { color: rgb(var(--c-deep-muted)) !important; }
+  .on-deep .text-faint { color: rgb(var(--c-deep-muted) / 0.72) !important; }
 
   .grid-12 { @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-5 md:gap-6; }
+
+  .paper {
+    background: rgb(var(--c-elevated));
+    border: 1px solid rgb(var(--c-line) / 0.08);
+    box-shadow:
+      0 1px 2px rgb(var(--c-ink) / 0.04),
+      0 30px 60px -32px rgb(var(--c-ink) / 0.26);
+  }
+
+  /* .lg diňe admin giriş sahypasynda ulanylýar */
+  .lg {
+    position: relative;
+    isolation: isolate;
+    background-color: rgb(255 255 255 / 0.95);
+    backdrop-filter: blur(28px) saturate(150%);
+    -webkit-backdrop-filter: blur(28px) saturate(150%);
+    box-shadow:
+      0 1px 2px 0 rgb(var(--c-ink) / 0.06),
+      0 10px 22px -10px rgb(var(--c-ink) / 0.14),
+      0 28px 56px -28px rgb(var(--c-ink) / 0.22),
+      inset 0 1.5px 0 0 rgb(255 255 255 / 0.9),
+      inset 0 -2px 3px -1px rgb(var(--c-ink) / 0.10),
+      inset 0 0 0 1px rgb(255 255 255 / 0.34);
+  }
+
+  .lg-press { transition: transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .lg-press:active { transform: scale(0.972); }
+
+  .lg-thin {
+    background-color: rgb(255 255 255 / 0.72);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+  }
 }
 
-/* ==================================================================
-   FON: BENEWŞE BLUR ANIMASIÝASY
-   ------------------------------------------------------------------
-   Uly bulaşyk tegelekler haýal aýlanýar we şekilini üýtgedýär.
-   Şular Liquid Glass gatlagynyň AŞAGYNDA hereket edende, aýnanyň
-   içindäki reňk hem üýtgeýär — material «janly» duýulýar.
+/* UniversityMarquee inline style bilen ulanýar, tailwind öz-özünden döretmeýär */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-   Diňe `transform` we `border-radius` animasiýa edilýär, şonuň üçin
-   ol grafiki prosessorda (GPU) işleýär we sahypany haýalladanok.
-   ================================================================== */
-@property --rim-a {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-@keyframes rim-turn { to { --rim-a: 360deg; } }
-
-/* ⚠️ DIŇE `transform` ANIMASIÝA EDILÝÄR.
-   Öň bu ýerde `border-radius` hem üýtgeýärdi. Şekiliň üstünde
-   90 piksellik blur bar — burçlaryň üýtgemegi şol bulaşygy her
-   kadrda DÜÝBÜNDEN gaýtadan hasaplamaga mejbur edýärdi. Sahypada
-   15 sany şeýle şekil bar, netijesi — skrollda doňma.
-   `transform` bolsa grafiki prosessorda, gaýtadan çyzmak ýok. */
 @keyframes blob-a {
   0%, 100% { transform: translate3d(0,0,0) scale(1); }
   33%      { transform: translate3d(6%,-8%,0) scale(1.14); }

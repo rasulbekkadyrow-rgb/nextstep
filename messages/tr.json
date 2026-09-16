@@ -4,9 +4,9 @@
     "name": "Türkçe",
     "shortName": "TR",
     "dir": "ltr",
-    "title": "Next Step Consulting — Türkiye'deki üniversitelere öğrenci kabul danışmanlığı",
+    "title": "Next Step Consulting | Türkiye'deki üniversitelere kabul danışmanlığı",
     "description": "Bölüm ve üniversite seçiminden belge hazırlığına ve kabul mektubunun alınmasına kadar tüm aşamaları biz yürütüyoruz. Türkmence, Rusça ve Türkçe hizmet.",
-    "ogAlt": "Next Step Consulting — Türkiye'de eğitim danışmanlığı"
+    "ogAlt": "Next Step Consulting: Türkiye'de eğitim danışmanlığı"
   },
   "nav": {
     "brand": "Next Step",
@@ -21,8 +21,6 @@
     "cta": "Ücretsiz danışmanlık",
     "menuOpen": "Menüyü aç",
     "menuClose": "Menüyü kapat",
-    "themeLight": "Açık tema",
-    "themeDark": "Koyu tema",
     "languageLabel": "Dil"
   },
   "hero": {
@@ -35,14 +33,19 @@
     "ctaPrimary": "Ücretsiz danışmanlık al",
     "ctaSecondary": "Üniversiteleri gör",
     "ctaHint": "WhatsApp üzerinden kısa sürede yanıt veriyoruz",
-    "scrollHint": "Aşağı kaydırın"
+    "scrollHint": "Aşağı kaydırın",
+    "assurances": [
+      "İlk danışmanlık ücretsiz",
+      "Ödeme yalnızca üniversite seçildikten sonra",
+      "WhatsApp üzerinden yanıt"
+    ]
   },
   "quickActions": {
     "eyebrow": "Nereden başlamalı?",
     "items": [
       {
         "icon": "rocket",
-        "title": "Beklemeyin — başlayalım",
+        "title": "Beklemeyin, başlayalım",
         "text": "Üniversitenizi seçin, başvuruyu biz hazırlayıp yapalım.",
         "cta": "Başla",
         "href": "#arza"
@@ -64,7 +67,7 @@
       {
         "icon": "message",
         "title": "WhatsApp desteği",
-        "text": "Sorunuz varsa doğrudan yazın — resmiyete gerek yok.",
+        "text": "Sorunuz varsa doğrudan yazın. Resmiyete gerek yok.",
         "cta": "Yaz",
         "href": "https://wa.me/905396020799"
       }
@@ -73,10 +76,9 @@
   "problem": {
     "eyebrow": "Sorun ve çözüm",
     "title": "Tanıdık geldi mi? O hâlde ilk adım da belli demektir.",
-    "subtitle": "Kartlardaki anahtarı değiştirin: solda tek başına denendiğinde olan, sağda bizimle çalışıldığında olan durum.",
+    "subtitle": "Her kartta iki taraf var: üstte bizimle nasıl ilerlediği, altta ise tek başına denendiğinde olanlar.",
     "switchBefore": "Tek başına",
     "switchAfter": "Bizimle",
-    "switchAria": "Durumu değiştir: tek başına / bizimle",
     "items": [
       {
         "icon": "compass",
@@ -86,14 +88,14 @@
         },
         "after": {
           "title": "Size uygun net bir liste",
-          "text": "Bütçenize, dil seviyenize ve istediğiniz bölüme göre 3–5 somut seçenek hazırlanır. Her birinin ücreti, koşulu ve şansı yazılı olarak belirtilir."
+          "text": "Bütçenize, dil seviyenize ve istediğiniz bölüme göre 3-5 somut seçenek hazırlanır. Her birinin ücreti, koşulu ve şansı yazılı olarak belirtilir."
         }
       },
       {
         "icon": "file-x",
         "before": {
           "title": "Belgeler geri döner",
-          "text": "Çeviride bir hata, eksik bir sayfa ya da yanlış düzenlenmiş bir diploma — başvuru kabul edilmez ve zaman boşa gider."
+          "text": "Çeviride bir hata, eksik bir sayfa ya da yanlış düzenlenmiş bir diploma yüzünden başvuru kabul edilmez ve zaman boşa gider."
         },
         "after": {
           "title": "Kontrol edilmiş ve eksiksiz belge dosyası",
@@ -108,7 +110,7 @@
         },
         "after": {
           "title": "Süreler önceden planlanıyor",
-          "text": "Tüm üniversitelerin süreleri tek bir takvimde birleştirilir. Her adımdan önce size hatırlatma gönderilir — gecikmek mümkün değil."
+          "text": "Tüm üniversitelerin süreleri tek bir takvimde. Her adımdan önce size hatırlatma gönderiyoruz, böylece hiçbir tarihi kaçırmazsınız."
         }
       },
       {
@@ -126,7 +128,7 @@
   },
   "process": {
     "eyebrow": "Nasıl çalışıyoruz",
-    "title": "Danışmanlıktan kabul mektubuna — dört adım",
+    "title": "Danışmanlıktan kabul mektubuna dört adım",
     "subtitle": "Her adımın kendi süresi ve elinize geçen somut bir çıktısı var. Hangi aşamada olduğunuzu her zaman biliyorsunuz.",
     "durationLabel": "Süre",
     "deliverableLabel": "Elinize geçen çıktı",
@@ -136,7 +138,7 @@
         "title": "Ücretsiz danışmanlık ve bölüm seçimi",
         "duration": "1 gün",
         "text": "Notlarınızı, dil seviyenizi, bütçenizi ve istediğiniz bölümü inceliyoruz. Buna göre size gerçekten uygun üniversitelerin listesini hazırlıyoruz.",
-        "deliverable": "Ücretleri belirtilmiş 3–5 üniversitelik liste",
+        "deliverable": "Ücretleri belirtilmiş 3-5 üniversitelik liste",
         "bullets": [
           "Diploma notlarının analizi",
           "Bölüm ve meslek danışmanlığı",
@@ -146,7 +148,7 @@
       {
         "index": "02",
         "title": "Belgelerin toplanması ve kontrolü",
-        "duration": "3–7 gün",
+        "duration": "3-7 gün",
         "text": "Gerekli belgelerin listesini veriyor ve her birini kontrol ediyoruz. Eksik varsa, üniversiteye gönderilmeden önce tamamlanıyor.",
         "deliverable": "Kontrolden geçmiş eksiksiz belge dosyası",
         "bullets": [
@@ -158,8 +160,8 @@
       {
         "index": "03",
         "title": "Başvuruların üniversitelere yapılması",
-        "duration": "1–2 hafta",
-        "text": "Başvurular aynı anda birkaç üniversiteye yapılır — böylece seçim olanağınız artar. Her başvurunun durumu takip edilir.",
+        "duration": "1-2 hafta",
+        "text": "Başvuruları aynı anda birkaç üniversiteye yapıyoruz, böylece seçeneğiniz artıyor. Her başvurunun durumunu takip ediyoruz.",
         "deliverable": "Yapılan başvuruların raporu ve takip numaraları",
         "bullets": [
           "Birden fazla üniversiteye başvuru",
@@ -170,7 +172,7 @@
       {
         "index": "04",
         "title": "Kabul mektubu ve kayıt",
-        "duration": "2–4 hafta",
+        "duration": "2-4 hafta",
         "text": "Kabul mektubu geldiği anda size iletilir. Teklifler karşılaştırılır, en uygunu seçilir ve kayıt aşaması tamamlanır.",
         "deliverable": "Resmî kabul mektubu (Letter of Acceptance)",
         "bullets": [
@@ -180,7 +182,8 @@
         ]
       }
     ],
-    "scopeNote": "Not: temel hizmetimiz üniversite seçimi, belge hazırlığı ve kabul mektubunun alınmasıdır. Vize, konaklama ve uçuş konularında yönlendirici danışmanlık veriyoruz."
+    "scopeNote": "Not: temel hizmetimiz üniversite seçimi, belge hazırlığı ve kabul mektubunun alınmasıdır. Vize, konaklama ve uçuş konularında yönlendirici danışmanlık veriyoruz.",
+    "moreLabel": "Ayrıntılar"
   },
   "universities": {
     "eyebrow": "Üniversiteler",
@@ -215,9 +218,9 @@
         "note": "Tıp ve diş hekimliği"
       }
     ],
-    "marqueeNote": "Mor işaretliler — öğrencilerimizin kabul aldığı üniversiteler.",
+    "marqueeNote": "Mor işaretliler, öğrencilerimizin kabul aldığı üniversitelerdir.",
     "detail": {
-      "hint": "Üniversiteye tıklayın — ayrıntılı bilgi açılır",
+      "hint": "Ayrıntılar için üniversiteye tıklayın",
       "partner": "Başvuru hazırladığımız üniversite",
       "other": "Listedeki üniversite",
       "generic": "Bu üniversite için de danışmanlık veriyoruz. Yıllık ücret, bölüm listesi ve başvuru tarihleri için bize yazın.",
@@ -229,7 +232,7 @@
   },
   "proof": {
     "eyebrow": "Sonuçlar",
-    "title": "Kabul mektupları — en iyi kanıt",
+    "title": "Öğrencilerimizin kabul mektupları",
     "subtitle": "Aşağıdakiler öğrencilerimizin gerçek kabul mektuplarıdır. Kişisel verileri korumak için isimler kısaltılmıştır.",
     "lettersLabel": "Alınan kabul mektupları",
     "letterCard": {
@@ -319,8 +322,8 @@
   },
   "offer": {
     "eyebrow": "Teklif",
-    "title": "İlk danışmanlık — ücretsiz",
-    "subtitle": "Notlarınızı ve istediğiniz bölümü söyleyin — size uygun üniversitelerin listesini ve net ücret tutarlarını hazırlayalım. Bu görüşme için ücret alınmaz.",
+    "title": "İlk danışmanlık ücretsiz",
+    "subtitle": "Notlarınızı ve istediğiniz bölümü söyleyin. Size uygun üniversitelerin listesini ve net ücretleri hazırlayalım. Bu görüşme için ücret alınmaz.",
     "priceLabel": "İlk danışmanlık",
     "priceValue": "Ücretsiz",
     "priceNote": "Hizmet bedeli, seçilen üniversiteye ve başvuru sayısına göre önceden ve yazılı olarak bildirilir. Gizli ödeme yoktur.",
@@ -332,14 +335,12 @@
       "Başvuru sürelerine göre takvim"
     ],
     "guaranteeTitle": "Ödeme yalnızca sonuca göre",
-    "guaranteeText": "Danışmanlık ve üniversite seçimi ücretsizdir. Hizmet bedeli ise yalnızca siz belirli bir üniversiteyi seçtikten sonra, anlaşma esasına göre belirlenir.",
-    "slotsLeft": "Bu sezon kalan kontenjan:",
-    "slotsValue": "12"
+    "guaranteeText": "Danışmanlık ve üniversite seçimi ücretsizdir. Hizmet bedeli ise yalnızca siz belirli bir üniversiteyi seçtikten sonra, anlaşma esasına göre belirlenir."
   },
   "faq": {
     "eyebrow": "Sıkça sorulan sorular",
     "title": "Netleştirilmesi gerekenler",
-    "subtitle": "Cevabını bulamadığınız bir soru varsa aşağıdaki formdan veya WhatsApp üzerinden yazın — kısa sürede yanıtlıyoruz.",
+    "subtitle": "Cevabını bulamadınız mı? Aşağıdaki formdan veya WhatsApp üzerinden yazın, kısa sürede dönüş yapalım.",
     "items": [
       {
         "q": "Türkçe bilmiyorsam okuyabilir miyim?",
@@ -347,7 +348,7 @@
       },
       {
         "q": "Hangi belgeler gerekiyor?",
-        "a": "Temel liste: pasaport, lise diploması, not belgesi (transkript) ve biyometrik fotoğraf. Üniversiteye ve bölüme göre ek belge istenebilir — bunu danışmanlık aşamasında net olarak söyler ve listeyi yazılı veririz."
+        "a": "Temel liste: pasaport, lise diploması, not belgesi (transkript) ve biyometrik fotoğraf. Üniversiteye ve bölüme göre ek belge istenebilir. Bunu danışmanlık sırasında net olarak söyler, listeyi yazılı veririz."
       },
       {
         "q": "Diplomam henüz elimde yok. Başvurabilir miyim?",
@@ -359,7 +360,7 @@
       },
       {
         "q": "Kabul mektubu ne kadar sürede geliyor?",
-        "a": "Belgeler eksiksiz ve doğruysa, genellikle başvurudan sonra 2–4 hafta içinde geliyor. Sezonun yoğun döneminde bu süre biraz uzayabilir. Durum hakkında size her hafta bilgi veriyoruz."
+        "a": "Belgeler eksiksiz ve doğruysa, genellikle başvurudan sonra 2-4 hafta içinde geliyor. Sezonun yoğun döneminde bu süre biraz uzayabilir. Durum hakkında size her hafta bilgi veriyoruz."
       },
       {
         "q": "Vize, konaklama ve uçuş işlerini de yapıyor musunuz?",
@@ -370,7 +371,7 @@
   "form": {
     "eyebrow": "İletişim",
     "title": "İlk adımı birlikte atalım",
-    "subtitle": "Aşağıdaki alanları doldurun — kısa sürede iletişime geçip size uygun üniversitelerin listesini hazırlayalım.",
+    "subtitle": "Aşağıdaki alanları doldurun. Kısa sürede size dönüp uygun üniversitelerin listesini hazırlayalım.",
     "fields": {
       "name": {
         "label": "Öğrencinin adı ve soyadı",
@@ -433,7 +434,8 @@
       "phoneInvalid": "Telefon numarası geçerli biçimde yazılmamış.",
       "gradYearRequired": "Mezuniyet yılınızı belirtin.",
       "consentRequired": "Devam etmek için onay gerekiyor."
-    }
+    },
+    "moreToggle": "Ek bilgi ekle (isteğe bağlı)"
   },
   "footer": {
     "tagline": "Geleceğe doğru ilk ve en doğru adımı bizimle atın.",
@@ -461,7 +463,7 @@
   "admin": {
     "login": {
       "title": "Yönetim paneline giriş",
-      "subtitle": "İş e-postanızı yazın — tek kullanımlık bir kod gönderelim.",
+      "subtitle": "İş e-postanızı yazın, size tek kullanımlık bir kod gönderelim.",
       "emailLabel": "E-posta adresiniz",
       "emailPlaceholder": "mekan@gmail.com",
       "continue": "Kod gönder",
@@ -471,10 +473,10 @@
       "codeLabel": "Giriş kodu",
       "verify": "Giriş yap",
       "resend": "Kodu yeniden gönder",
-      "resendIn": "Yeniden gönder — {seconds} sn.",
+      "resendIn": "{seconds} sn. sonra yeniden gönder",
       "changeEmail": "Adresi değiştir",
       "noMailTitle": "E-posta gelmedi mi?",
-      "noMailText": "Spam ve «Promosyonlar» klasörlerine bakın. Adres yanlış yazıldıysa veya yönetici listesinde yoksa e-posta gönderilmez — bu durumda panel sahibiyle iletişime geçin.",
+      "noMailText": "Spam ve «Promosyonlar» klasörlerine bakın. Adres yanlış yazıldıysa veya yönetici listesinde yoksa e-posta gönderilmez. Bu durumda panel sahibiyle iletişime geçin.",
       "back": "Siteye dön",
       "errors": {
         "invalidEmail": "Adres hatalı görünüyor. Kontrol edip tekrar deneyin.",
@@ -483,10 +485,10 @@
         "locked": "Deneme hakkı doldu. Yeni kod isteyin.",
         "notAllowed": "Bu adres yönetici listesinde yok.",
         "tooMany": "Çok fazla deneme yapıldı. Biraz bekleyip tekrar deneyin.",
-        "cooldown": "Yeni kod henüz gönderilemez — sayaç bitene kadar bekleyin.",
+        "cooldown": "Yeni kod henüz gönderilemez. Sayaç bitene kadar bekleyin.",
         "mailFailed": "E-posta gönderilemedi. Sunucunun posta ayarları kontrol edilmeli.",
         "network": "Bağlantı yok. İnterneti kontrol edip tekrar deneyin.",
-        "storage": "Sunucu deposu yapılandırılmamış — kod kaydedilemedi. Proje yöneticisine başvurun."
+        "storage": "Sunucu deposu yapılandırılmamış, kod kaydedilemedi. Proje yöneticisine başvurun."
       },
       "notices": {
         "consoleTitle": "Posta henüz ayarlanmadı",
@@ -517,7 +519,7 @@
       "confirmDelete": "Gerçekten silmek istiyor musunuz? Bu işlem geri alınamaz.",
       "roleSales": "Öğrenci başvuruları yöneticisi",
       "roleAnalytics": "Analitik ve içerik yöneticisi",
-      "roleOwner": "Sahip — tam yetki"
+      "roleOwner": "Sahip (tam yetki)"
     },
     "team": {
       "title": "Ekip ve yetkiler",
@@ -525,15 +527,15 @@
       "listTitle": "Yöneticiler",
       "listSubtitle": "Listedeki her adrese giriş kodu gönderilebilir",
       "addTitle": "Yeni yönetici",
-      "addSubtitle": "Sadece adres yeterli — şifre oluşturmaya gerek yok",
+      "addSubtitle": "Sadece adres yeterli, şifre gerekmez",
       "emailLabel": "E-posta",
       "nameLabel": "Ad (isteğe bağlı)",
       "namePlaceholder": "Meret Atayev",
       "roleLabel": "Rol",
       "addButton": "Ekibe ekle",
-      "addedHint": "{email} eklendi. Artık giriş sayfasında adresini yazması yeterli — kod kendisine gelir.",
+      "addedHint": "{email} eklendi. Artık giriş sayfasında adresini yazması yeterli, kod kendisine gelir.",
       "you": "siz",
-      "protectedHint": "Sunucu ayarlarından gelir — panelden silinmez",
+      "protectedHint": "Sunucu ayarlarından gelir, panelden silinmez",
       "pause": "Erişimi geçici olarak kapat",
       "resume": "Yeniden aç",
       "remove": "Listeden çıkar",
@@ -543,7 +545,7 @@
       "roles": {
         "sales": "Başvuru yöneticisi",
         "analytics": "Analiz ve içerik",
-        "owner": "Sahip — tam yetki"
+        "owner": "Sahip (tam yetki)"
       },
       "roleNotes": {
         "sales": "Kanban panosu, öğrencilerin telefonları ve belgeleri.",
@@ -554,9 +556,9 @@
         "exists": "Bu adres listede zaten var.",
         "invalid": "İşlem tamamlanmadı. Bilgileri kontrol edin.",
         "network": "Bağlantı yok. Tekrar deneyin.",
-        "lastOwner": "Son sahibin erişimi kapatılamaz veya rolü değiştirilemez — aksi hâlde sistemi yönetecek kimse kalmaz.",
+        "lastOwner": "Son sahibin erişimi kapatılamaz veya rolü değiştirilemez. Aksi hâlde sistemi yönetecek kimse kalmaz.",
         "self": "Kendi rolünüzü veya erişiminizi kendiniz değiştiremezsiniz.",
-        "protected": "Bu kayıt sunucu ayarlarından gelir — .env dosyasından kaldırılmalı."
+        "protected": "Bu kayıt sunucu ayarlarından gelir. .env dosyasından kaldırılmalı."
       }
     },
     "sales": {

@@ -5,11 +5,6 @@ import { Logo } from '@/components/shared/Logo';
 import { WhatsAppMark } from '@/components/ui/BrandIcons';
 import { CONTACTS } from '@/lib/contacts';
 
-/**
- * AŞAKY BÖLÜM (Footer)
- * Baglanyşyk maglumatlary we bölümleriň gaýtalanan sanawy.
- * Instagram hasaby esasy habarlaşyk kanaly hökmünde ileri tutulýar.
- */
 export function Footer() {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
@@ -19,7 +14,7 @@ export function Footer() {
   const services = t.raw('services') as string[];
   const year = new Date().getFullYear();
 
-  /* «Netijeler» bölümi hakyky kabul hatlary bolmasa görkezilmeýär */
+  // hat ýok bolsa «Netijeler» bölümi hem ýok
   const hasProof = (proof.raw('letters') as unknown[]).length > 0;
 
   const links = [
@@ -30,9 +25,6 @@ export function Footer() {
     { href: '#soraglar', label: nav('links.faq') },
   ];
 
-  /* Baglanyşyk maglumatlary `lib/contacts.ts`-den gelýär — Hero bilen
-     bir çeşme. Öň bu ýerde bahalar göni ýazylgydy we e-poçta hakyky
-     däldi (`info@nextstep.tm`), indi profildäki Gmail salgysy dur. */
   const contacts = [
     {
       icon: Instagram, label: t('contactLabels.instagram'),
@@ -44,7 +36,6 @@ export function Footer() {
       icon: WhatsAppMark, label: t('contactLabels.whatsapp'),
       value: w.display,
       href: w.href,
-      /* Doldurgyly nyşan çyzyklylardan agyr görünýär — bir basgançak kiçi */
       iconClass: 'h-3.5 w-3.5',
     })),
     {
@@ -56,24 +47,27 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-line/10 bg-surface/40">
-      <div className="container py-16">
+    <footer className="on-deep">
+      <div className="container py-12 md:py-14">
         <div className="grid-12 gap-y-10">
-          {/* Marka we şygar */}
           <div className="col-span-4 lg:col-span-4">
             <Logo size="md" />
-            <p className="mt-4 max-w-[34ch] text-body-sm leading-relaxed text-muted">{t('tagline')}</p>
+            <p className="mt-5 max-w-[34ch] text-body-sm leading-relaxed text-deep-muted">
+              {t('tagline')}
+            </p>
           </div>
 
-          {/* Bölümler */}
           <nav className="col-span-2 lg:col-span-2">
-            <h2 className="text-micro font-semibold uppercase tracking-[0.14em] text-faint">
+            <h2 className="text-label font-extrabold uppercase tracking-[0.14em] text-azure">
               {t('columns.nav')}
             </h2>
-            <ul className="mt-4 space-y-2.5">
+            <ul className="mt-5 space-y-3">
               {links.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-body-sm text-muted transition-colors hover:text-brand">
+                  <a
+                    href={link.href}
+                    className="text-body-sm text-deep-muted transition-colors hover:text-white"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -81,28 +75,25 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Hyzmatlar */}
           <div className="col-span-2 lg:col-span-3">
-            <h2 className="text-micro font-semibold uppercase tracking-[0.14em] text-faint">
+            <h2 className="text-label font-extrabold uppercase tracking-[0.14em] text-azure">
               {t('columns.services')}
             </h2>
-            <ul className="mt-4 space-y-2.5">
+            <ul className="mt-5 space-y-3">
               {services.map((service) => (
-                <li key={service} className="text-body-sm text-muted">{service}</li>
+                <li key={service} className="text-body-sm text-deep-muted">{service}</li>
               ))}
             </ul>
           </div>
 
-          {/* Baglanyşyk */}
           <div className="col-span-4 lg:col-span-3">
-            <h2 className="text-micro font-semibold uppercase tracking-[0.14em] text-faint">
+            <h2 className="text-label font-extrabold uppercase tracking-[0.14em] text-azure">
               {t('columns.contact')}
             </h2>
-            <ul className="mt-4 space-y-3">
-              {/* Açar `value` boýunça: iki WhatsApp setiriniň ady birmeňzeş */}
+            <ul className="mt-5 space-y-3.5">
               {contacts.map(({ icon: Icon, label, value, href, iconClass }) => (
                 <li key={value} className="flex items-center gap-3">
-                  <span className="grid h-4 w-4 shrink-0 place-items-center text-faint">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-white/[0.07] text-azure">
                     <Icon className={iconClass} aria-hidden />
                   </span>
                   {href ? (
@@ -110,13 +101,13 @@ export function Footer() {
                       href={href}
                       target={href.startsWith('http') ? '_blank' : undefined}
                       rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="text-body-sm text-muted transition-colors hover:text-brand"
+                      className="text-body-sm font-semibold text-deep-muted transition-colors hover:text-white"
                     >
                       <span className="sr-only">{label}: </span>
                       {value}
                     </a>
                   ) : (
-                    <span className="text-body-sm text-muted">{value}</span>
+                    <span className="text-body-sm text-deep-muted">{value}</span>
                   )}
                 </li>
               ))}
@@ -124,13 +115,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-line/10 pt-7 sm:flex-row">
-          <p className="text-body-sm text-faint">
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/[0.09] pt-7 sm:flex-row">
+          <p className="text-body-sm text-deep-muted/80">
             © {year} Next Step Consulting. {t('rights')}
           </p>
           <Link
             href={`/${locale}/admin/satuw`}
-            className="text-body-sm text-faint transition-colors hover:text-brand"
+            className="text-body-sm text-deep-muted/80 transition-colors hover:text-white"
           >
             Admin
           </Link>

@@ -1,21 +1,5 @@
 import { cn } from '@/lib/utils';
 
-/**
- * MARKA NYŞANLARY
- * ==================================================================
- * `lucide-react` interfeýs nyşanlarynyň toplumy — onda WhatsApp ýaly
- * haryt nyşanlary ýok (olar kitaphanadan aýryldy). Şonuň üçin bu
- * ýeke-täk nyşan resmi wektorynda saklanýar.
- *
- * ⚠️ STIL TAPAWUDY WE ONUŇ DÜZEDILIŞI
- * Lucide nyşanlary ÇYZYKLY (stroke, 2px), bu bolsa DOLDURGYLY (fill).
- * Bir hatarda goýlanda doldurgyly şekil optiki taýdan has agyr
- * görünýär. Deňagramlylyk üçin ol hemişe çyzykly goňşularyndan bir
- * basgançak KIÇI berilýär (mysal üçin 14px : 16px).
- *
- * Reňki `currentColor`-dan alýar — ýagny gapdalyndaky ýazgy bilen
- * bir hili üýtgeýär.
- */
 export function WhatsAppMark({
   className,
   ...rest

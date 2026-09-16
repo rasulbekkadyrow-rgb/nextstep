@@ -3,16 +3,6 @@
 import { useRef } from 'react';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
 
-/**
- * REVEAL — bölümleriň skrollda peýda bolmagy
- * ------------------------------------------------------------------
- * Ýeke-täk animasiýa düzgüni: 18px aşakdan, ýeňil blur bilen.
- * Ähli sahypada şu bir düzgün ulanylýar — şonuň üçin hereket
- * «bulaşyk» däl-de, tertipli we premium duýulýar.
- *
- * `once: true` — animasiýa diňe bir gezek işleýär. Ýokary-aşak
- * skroll edilende gaýtalanmagy ulanyjyny biynjalyk edýär.
- */
 export function Reveal({
   children,
   delay = 0,

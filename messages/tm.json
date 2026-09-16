@@ -4,9 +4,9 @@
     "name": "Türkmen dili",
     "shortName": "TM",
     "dir": "ltr",
-    "title": "Next Step Consulting — Türkiýäniň uniwersitetlerine talyp kabul ediş maslahaty",
-    "description": "Ugur we uniwersitet saýlamakdan resminamalary taýýarlamaga we kabul hatyny almaga çenli — ähli tapgyry biz alyp barýarys. Türkmen, rus we türk dillerinde hyzmat.",
-    "ogAlt": "Next Step Consulting — Türkiýede okamak üçin maslahat beriş gullugy"
+    "title": "Next Step Consulting | Türkiýäniň uniwersitetlerine okuwa girmek",
+    "description": "Ugur we uniwersitet saýlamak, resminamalary taýýarlamak we kabul hatyny almak. Ähli tapgyry biz alyp barýarys. Türkmen, rus we türk dillerinde.",
+    "ogAlt": "Next Step Consulting: Türkiýede okamak boýunça maslahat"
   },
   "nav": {
     "brand": "Next Step",
@@ -21,8 +21,6 @@
     "cta": "Mugt maslahat al",
     "menuOpen": "Menýuny aç",
     "menuClose": "Menýuny ýap",
-    "themeLight": "Ýagty tema",
-    "themeDark": "Garaňky tema",
     "languageLabel": "Dil"
   },
   "hero": {
@@ -31,18 +29,23 @@
     "titleLead": "Türkiýäniň uniwersitetine",
     "titleAccent": "kabul hatyny",
     "titleTail": "almagyň dogry ýoly",
-    "subtitle": "Ugur we uniwersitet saýlamakdan başlap, resminamalary taýýarlamaga we arzany tabşyrmaga çenli ähli tapgyry biz alyp barýarys. Siz diňe okuwa taýýarlanyň — galan işi biz çözeris.",
+    "subtitle": "Ugur we uniwersitet saýlamakdan başlap, resminamalary taýýarlamaga we arzany tabşyrmaga çenli ähli tapgyry biz alyp barýarys. Siz diňe okuwa taýýarlanyň, galan işi biz çözeris.",
     "ctaPrimary": "Mugt maslahat al",
     "ctaSecondary": "Uniwersitetleri gör",
     "ctaHint": "WhatsApp arkaly gysga wagtda jogap berýäris",
-    "scrollHint": "Aşak süýşüriň"
+    "scrollHint": "Aşak süýşüriň",
+    "assurances": [
+      "Ilkinji maslahat mugt",
+      "Töleg diňe uniwersitet saýlanandan soň",
+      "Jogap WhatsApp-da"
+    ]
   },
   "quickActions": {
     "eyebrow": "Nireden başlaly?",
     "items": [
       {
         "icon": "rocket",
-        "title": "Garaşmak ýok — başlalyň",
+        "title": "Garaşmaň, başlalyň",
         "text": "Uniwersiteti saýlaň, arzany biz taýýarlap tabşyrarys.",
         "cta": "Başla",
         "href": "#arza"
@@ -64,7 +67,7 @@
       {
         "icon": "message",
         "title": "WhatsApp goldawy",
-        "text": "Soragyňyz bolsa, göni ýazyň — resmiýetsiz jogap berýäris.",
+        "text": "Soragyňyz bolsa, göni ýazyň. Resmiýetsiz jogap berýäris.",
         "cta": "Ýaz",
         "href": "https://wa.me/905396020799"
       }
@@ -73,10 +76,9 @@
   "problem": {
     "eyebrow": "Kynçylyk we çözgüt",
     "title": "Tanyş ýagdaýmy? Onda ilkinji ädim eýýäm bellidir.",
-    "subtitle": "Kartadaky çeňňegi süýşüriň: çepde — özbaşdak synanyşanyňda bolýan ýagdaý, sagda — biz bilen işlenende bolýan ýagdaý.",
+    "subtitle": "Her kartada ýokarda biz bilen işlenende nähili bolýandygy, aşakda bolsa özbaşdak synanyşanyňda näme bolýandygy ýazylgy.",
     "switchBefore": "Özbaşdak",
     "switchAfter": "Biz bilen",
-    "switchAria": "Ýagdaýy çalyşmak: özbaşdak / biz bilen",
     "items": [
       {
         "icon": "compass",
@@ -86,14 +88,14 @@
         },
         "after": {
           "title": "Size laýyk gelýän anyk sanaw",
-          "text": "Bahaňyza, dil derejäňize we isleýän ugruňyza görä 3–5 sany anyk teklip taýýarlanýar. Her biriniň tölegi, şerti we mümkinçiligi ýazmaça görkezilýär."
+          "text": "Bahaňyza, dil derejäňize we isleýän ugruňyza görä 3-5 sany anyk teklip taýýarlanýar. Her biriniň tölegi, şerti we mümkinçiligi ýazmaça görkezilýär."
         }
       },
       {
         "icon": "file-x",
         "before": {
           "title": "Resminamalar yzyna gaýtarylýar",
-          "text": "Terjimede ýalňyşlyk, ýetmeýän sahypa ýa-da nädogry görnüşde taýýarlanan attestat — arza kabul edilmän yzyna gelýär we wagt ýitýär."
+          "text": "Terjimede ýalňyşlyk, ýetmeýän sahypa ýa-da nädogry taýýarlanan attestat bolsa, arza kabul edilmän yzyna gelýär we wagt ýitýär."
         },
         "after": {
           "title": "Barlanan we doly resminama bukjasy",
@@ -108,7 +110,7 @@
         },
         "after": {
           "title": "Möhletler öňünden meýilleşdirilýär",
-          "text": "Ähli uniwersitetiň möhletleri bir senenamada birleşdirilýär. Her ädimden öň size ýatlatma iberilýär — gijä galmak mümkin däl."
+          "text": "Ähli uniwersitetiň möhletleri bir senenamada. Her ädimden öň size ýatlatma iberýäris, şonuň üçin gijä galmarsyňyz."
         }
       },
       {
@@ -126,7 +128,7 @@
   },
   "process": {
     "eyebrow": "Iş tertibi",
-    "title": "Maslahatdan kabul hatyna — dört ädim",
+    "title": "Maslahatdan kabul hatyna çenli dört ädim",
     "subtitle": "Her ädimiň öz möhleti we eliňize gowşýan anyk netijesi bar. Siz haýsy tapgyrdadygyňyzy hemişe bilýärsiňiz.",
     "durationLabel": "Möhlet",
     "deliverableLabel": "Eliňize gowşýan netije",
@@ -136,7 +138,7 @@
         "title": "Mugt maslahat we ugur saýlamak",
         "duration": "1 gün",
         "text": "Bahalaryňyzy, dil derejäňizi, býujetiňizi we isleýän ugruňyzy öwrenýäris. Şoňa görä size hakykatdan laýyk gelýän uniwersitetleriň sanawyny taýýarlaýarys.",
-        "deliverable": "Tölegleri görkezilen 3–5 uniwersitetiň sanawy",
+        "deliverable": "Tölegleri görkezilen 3-5 uniwersitetiň sanawy",
         "bullets": [
           "Attestatyň bahalarynyň seljermesi",
           "Ugur we hünär boýunça maslahat",
@@ -146,7 +148,7 @@
       {
         "index": "02",
         "title": "Resminamalary ýygnamak we barlamak",
-        "duration": "3–7 gün",
+        "duration": "3-7 gün",
         "text": "Zerur resminamalaryň sanawyny berýäris we her birini barlaýarys. Kemçilik bar bolsa, uniwersitete ugradylmazdan öň düzedilýär.",
         "deliverable": "Barlagdan geçen doly resminama bukjasy",
         "bullets": [
@@ -158,8 +160,8 @@
       {
         "index": "03",
         "title": "Arzalaryň uniwersitetlere tabşyrylmagy",
-        "duration": "1–2 hepde",
-        "text": "Arzalar birnäçe uniwersitete birbada tabşyrylýar — şeýlelikde saýlaw mümkinçiligiňiz artýar. Her arzanyň ýagdaýy yzarlanýar.",
+        "duration": "1-2 hepde",
+        "text": "Arzalary birnäçe uniwersitete birbada tabşyrýarys, şeýlelikde saýlawyňyz köpelýär. Her arzanyň ýagdaýyny yzarlaýarys.",
         "deliverable": "Tabşyrylan arzalaryň hasabaty we yzarlaýyş belgileri",
         "bullets": [
           "Birnäçe uniwersitete arza",
@@ -170,7 +172,7 @@
       {
         "index": "04",
         "title": "Kabul haty we ýazgy",
-        "duration": "2–4 hepde",
+        "duration": "2-4 hepde",
         "text": "Kabul haty gelen badyna size berilýär. Teklipler deňeşdirilip, iň amatlysy saýlanýar we ýazgy tapgyry tamamlanýar.",
         "deliverable": "Resmi kabul haty (Letter of Acceptance)",
         "bullets": [
@@ -180,7 +182,8 @@
         ]
       }
     ],
-    "scopeNote": "Bellik: biziň esasy hyzmatymyz — uniwersitet saýlamak, resminamalary taýýarlamak we kabul hatyny almak. Wiza, ýaşaýyş jaýy we uçuş meseleleri boýunça size ugrukdyryjy maslahat berýäris."
+    "scopeNote": "Bellik: esasy hyzmatymyz uniwersitet saýlamak, resminamalary taýýarlamak we kabul hatyny almak. Wiza, ýaşaýyş jaýy we uçuş boýunça diňe ugrukdyryjy maslahat berýäris.",
+    "moreLabel": "Jikme-jik"
   },
   "universities": {
     "eyebrow": "Hyzmatdaş uniwersitetler",
@@ -215,9 +218,9 @@
         "note": "Lukmançylyk we diş lukmançylygy"
       }
     ],
-    "marqueeNote": "Nyşany benewşe bellenenler — talyplarymyzyň kabul edilen uniwersitetleri.",
+    "marqueeNote": "Benewşe bellenenler: talyplarymyzyň eýýäm okuwa giren uniwersitetleri.",
     "detail": {
-      "hint": "Uniwersitetiň üstüne basyň — jikme-jik maglumat açylýar",
+      "hint": "Jikme-jik maglumat üçin uniwersitetiň üstüne basyň",
       "partner": "Arza taýýarlaýan uniwersitetimiz",
       "other": "Sanawdaky uniwersitet",
       "generic": "Bu uniwersitet boýunça hem maslahat berýäris. Ýyllyk töleg, ugurlaryň sanawy we arza möhletleri barada anyk maglumat üçin bize ýazyň.",
@@ -229,8 +232,8 @@
   },
   "proof": {
     "eyebrow": "Netijeler",
-    "title": "Kabul hatlary — iň gowy subutnama",
-    "subtitle": "Aşakdakylar — biziň talyplarymyzyň hakyky kabul hatlary. Şahsy maglumatlary goramak üçin at gysgaldylyp berilýär.",
+    "title": "Talyplarymyzyň kabul hatlary",
+    "subtitle": "Bu hatlaryň hemmesi hakyky. Şahsy maglumatlary goramak üçin atlar gysgaldyldy.",
     "lettersLabel": "Alnan kabul hatlary",
     "letterCard": {
       "accepted": "Kabul edildi",
@@ -319,8 +322,8 @@
   },
   "offer": {
     "eyebrow": "Teklip",
-    "title": "Ilkinji maslahat — tölegsiz",
-    "subtitle": "Bahalaryňyzy we isleýän ugruňyzy aýdyň — size laýyk gelýän uniwersitetleriň sanawyny we takyk töleg möçberlerini taýýarlap bereris. Bu maslahat üçin töleg alynmaýar.",
+    "title": "Ilkinji maslahat tölegsiz",
+    "subtitle": "Bahalaryňyzy we isleýän ugruňyzy aýdyň. Size laýyk uniwersitetleriň sanawyny we takyk töleg möçberlerini taýýarlarys. Bu maslahat üçin töleg alynmaýar.",
     "priceLabel": "Ilkinji maslahat",
     "priceValue": "Tölegsiz",
     "priceNote": "Hyzmatyň bahasy saýlanan uniwersitete we arzalaryň sanyna görä öňünden, ýazmaça görnüşde aýdylýar. Gizlin töleg ýok.",
@@ -332,14 +335,12 @@
       "Arza tabşyrmagyň möhletleri boýunça senenama"
     ],
     "guaranteeTitle": "Töleg diňe netije boýunça",
-    "guaranteeText": "Maslahat we uniwersitetleriň saýlanmagy tölegsizdir. Hyzmatyň bahasy bolsa diňe siz anyk uniwersiteti saýlanyňyzdan soň, ylalaşyk esasynda kesgitlenýär.",
-    "slotsLeft": "Şu möwsüm üçin galan orun:",
-    "slotsValue": "12"
+    "guaranteeText": "Maslahat we uniwersitetleriň saýlanmagy tölegsizdir. Hyzmatyň bahasy bolsa diňe siz anyk uniwersiteti saýlanyňyzdan soň, ylalaşyk esasynda kesgitlenýär."
   },
   "faq": {
     "eyebrow": "Ýygy-ýygydan berilýän soraglar",
     "title": "Aýdyňlaşdyrmaly zatlar",
-    "subtitle": "Jogabyny tapmadyk soragyňyz bolsa, aşakdaky formada ýazyň ýa-da WhatsApp arkaly ýazyň — gysga wagtda jogap berýäris.",
+    "subtitle": "Jogap tapmadyňyzmy? Aşakdaky forma ýa-da WhatsApp arkaly ýazyň, gysga wagtda jogap bereris.",
     "items": [
       {
         "q": "Türk dilini bilmesem, okap bilerinmi?",
@@ -347,7 +348,7 @@
       },
       {
         "q": "Haýsy resminamalar gerek?",
-        "a": "Esasy sanaw: pasport, orta mekdebiň attestaty, baha sahypasy (transkript) we biometrik surat. Uniwersitete we ugra görä goşmaça resminama talap edilip bilner — ony maslahat tapgyrynda anyk aýdýarys we sanawy size ýazmaça berýäris."
+        "a": "Esasy sanaw: pasport, orta mekdebiň attestaty, baha sahypasy (transkript) we biometrik surat. Uniwersitete we ugra görä goşmaça resminama gerek bolup biler. Ony maslahatda anyk aýdýarys we sanawy ýazmaça berýäris."
       },
       {
         "q": "Attestatym entek elimde ýok. Arza berip bilerinmi?",
@@ -359,18 +360,18 @@
       },
       {
         "q": "Kabul haty näçe wagtda gelýär?",
-        "a": "Resminamalar doly we dogry bolsa, adatça arza tabşyrylandan soň 2–4 hepdäniň dowamynda gelýär. Möwsümiň gyzgalaňly wagtynda bu möhlet biraz uzalyp bilýär. Her hepde ýagdaý barada size habar berilýär."
+        "a": "Resminamalar doly we dogry bolsa, adatça arza tabşyrylandan soň 2-4 hepdäniň dowamynda gelýär. Möwsümiň gyzgalaňly wagtynda bu möhlet biraz uzalyp bilýär. Her hepde ýagdaý barada size habar berilýär."
       },
       {
         "q": "Wiza, ýaşaýyş jaýy we uçuş meselelerini hem çözýärsiňizmi?",
-        "a": "Biziň esasy hyzmatymyz — uniwersiteti saýlamak, resminamalary taýýarlamak we kabul hatyny almak. Wiza, umumy ýaşaýyş jaýy we uçuş meseleleri boýunça size ugrukdyryjy maslahat we zerur resminamalaryň sanawyny berýäris, emma bu tapgyrlar aýratyn ylalaşyk esasynda alnyp barylýar."
+        "a": "Esasy hyzmatymyz uniwersitet saýlamak, resminamalary taýýarlamak we kabul hatyny almak. Wiza, umumy ýaşaýyş jaýy we uçuş boýunça ugrukdyryjy maslahat we gerekli resminamalaryň sanawyny berýäris, emma bu tapgyrlar aýratyn ylalaşyk bilen alnyp barylýar."
       }
     ]
   },
   "form": {
     "eyebrow": "Baglanyşyk",
     "title": "Ilkinji ädimi bilelikde ädeliň",
-    "subtitle": "Aşakdaky meýdanlary dolduryň — gysga wagtyň içinde habarlaşyp, size laýyk uniwersitetleriň sanawyny taýýarlarys.",
+    "subtitle": "Meýdanlary dolduryň. Gysga wagtda habarlaşyp, size laýyk uniwersitetleriň sanawyny taýýarlarys.",
     "fields": {
       "name": {
         "label": "Talybyň ady we familiýasy",
@@ -433,7 +434,8 @@
       "phoneInvalid": "Telefon belgisi dogry görnüşde ýazylmadyk.",
       "gradYearRequired": "Mekdebi gutarýan ýylyňyzy görkeziň.",
       "consentRequired": "Dowam etmek üçin razylyk gerek."
-    }
+    },
+    "moreToggle": "Goşmaça maglumat goşmak (hökmany däl)"
   },
   "footer": {
     "tagline": "Gelejege tarap ilkinji we iň dogry ädimi biz bilen başlaň.",
@@ -461,7 +463,7 @@
   "admin": {
     "login": {
       "title": "Admin panele giriş",
-      "subtitle": "Iş e-poçtaňyzy ýazyň — girmek üçin bir gezeklik kod ibereris.",
+      "subtitle": "Iş e-poçtaňyzy ýazyň, girmek üçin bir gezeklik kod ibereris.",
       "emailLabel": "E-poçta salgyňyz",
       "emailPlaceholder": "mekan@gmail.com",
       "continue": "Kod ibermek",
@@ -471,10 +473,10 @@
       "codeLabel": "Giriş kody",
       "verify": "Girmek",
       "resend": "Kody täzeden ibermek",
-      "resendIn": "Täzeden ibermek — {seconds} sek.",
+      "resendIn": "Täzeden ibermek: {seconds} sek.",
       "changeEmail": "Salgyny üýtgetmek",
       "noMailTitle": "Hat gelmedimi?",
-      "noMailText": "Spam we «Promotions» bukjalaryna serediň. Salgy nädogry ýazylan ýa-da dolandyryjylaryň sanawynda ýok bolsa, hat iberilmeýär — şeýle ýagdaýda paneliň eýesi bilen habarlaşyň.",
+      "noMailText": "Spam we «Promotions» bukjalaryna serediň. Salgy nädogry ýazylan ýa-da dolandyryjylaryň sanawynda ýok bolsa, hat iberilmeýär. Şeýle ýagdaýda paneliň eýesi bilen habarlaşyň.",
       "back": "Saýta gaýtmak",
       "errors": {
         "invalidEmail": "Salgy nädogry ýazyldy öýdülýär. Barlap, ýene synanyşyň.",
@@ -483,10 +485,10 @@
         "locked": "Synanyşyklaryň sany doldy. Täze kod soraň.",
         "notAllowed": "Bu salgy dolandyryjylaryň sanawynda ýok.",
         "tooMany": "Örän köp synanyşyk boldy. Biraz garaşyp, ýene synanyşyň.",
-        "cooldown": "Täze kod entek iberilenok — sanaýjy gutarýança garaşyň.",
+        "cooldown": "Täze kody entek iberip bolmaýar. Sanaýjy gutarýança garaşyň.",
         "mailFailed": "Hat iberilmedi. Serweriň poçta sazlamalary barlanmaly.",
         "network": "Birikme ýok. Internedi barlap, ýene synanyşyň.",
-        "storage": "Serweriň maglumat gory sazlanmadyk — kod saklanyp bilmedi. Taslamany dolandyryjy bilen habarlaşyň."
+        "storage": "Serweriň maglumat gory sazlanmandyr, kod saklanmady. Taslamanyň dolandyryjysy bilen habarlaşyň."
       },
       "notices": {
         "consoleTitle": "Poçta entek sazlanmadyk",
@@ -517,7 +519,7 @@
       "confirmDelete": "Hakykatdan hem pozmak isleýärsiňizmi? Bu hereketi yzyna gaýtaryp bolmaýar.",
       "roleSales": "Talyp arzalarynyň dolandyryjysy",
       "roleAnalytics": "Seljerme we mazmun dolandyryjysy",
-      "roleOwner": "Eýe — doly rugsat"
+      "roleOwner": "Eýe (doly rugsat)"
     },
     "team": {
       "title": "Topar we rugsatlar",
@@ -525,15 +527,15 @@
       "listTitle": "Dolandyryjylar",
       "listSubtitle": "Sanawdaky her salga giriş kody iberilip bilinýär",
       "addTitle": "Täze dolandyryjy",
-      "addSubtitle": "Diňe salgyny ýazyň — parol döretmek gerek däl",
+      "addSubtitle": "Diňe salgyny ýazyň, parol gerek däl",
       "emailLabel": "E-poçta",
       "nameLabel": "Ady (islege görä)",
       "namePlaceholder": "Meret Ataýew",
       "roleLabel": "Rol",
       "addButton": "Topara goşmak",
-      "addedHint": "{email} goşuldy. Indi oňa giriş sahypasynda salgysyny ýazmak ýeterlik — kod özüne gelýär.",
+      "addedHint": "{email} goşuldy. Indi giriş sahypasynda salgysyny ýazmagy ýeterlik, kod özüne geler.",
       "you": "siz",
-      "protectedHint": "Serweriň sazlamasyndan gelýär — panelden pozulmaýar",
+      "protectedHint": "Serweriň sazlamasyndan gelýär, panelden pozulmaýar",
       "pause": "Wagtlaýyn ýapmak",
       "resume": "Ýene açmak",
       "remove": "Sanawdan aýyrmak",
@@ -543,7 +545,7 @@
       "roles": {
         "sales": "Arzalar dolandyryjysy",
         "analytics": "Seljerme we mazmun",
-        "owner": "Eýe — doly rugsat"
+        "owner": "Eýe (doly rugsat)"
       },
       "roleNotes": {
         "sales": "Kanban tagtasy, talyplaryň telefon belgileri we resminamalary.",
@@ -554,9 +556,9 @@
         "exists": "Bu salgy eýýäm sanawda bar.",
         "invalid": "Amal ýerine ýetirilmedi. Maglumatlary barlaň.",
         "network": "Birikme ýok. Ýene synanyşyň.",
-        "lastOwner": "Iň soňky eýäni ýapyp ýa-da rolyny üýtgedip bolmaýar — ýogsam ulgamy dolandyrjak adam galmaýar.",
+        "lastOwner": "Iň soňky eýäniň rugsadyny ýapyp ýa-da rolyny üýtgedip bolmaýar, ýogsam ulgamy dolandyrjak adam galmaz.",
         "self": "Öz rolyňyzy ýa-da hasabyňyzy özüňiz üýtgedip bilmeýärsiňiz.",
-        "protected": "Bu ýazgy serweriň sazlamasyndan gelýär — ony .env faýlyndan aýyrmaly."
+        "protected": "Bu ýazgy serweriň sazlamasyndan gelýär. Ony .env faýlyndan aýyrmaly."
       }
     },
     "sales": {

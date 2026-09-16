@@ -56,7 +56,7 @@ geçirildi — [`Logo.tsx`](src/components/shared/Logo.tsx):
 | Instagram CDN salgylarynyň möhleti gutarýar (`oe=` parametri) |
 | Asyl surat 150×150 piksel — Retina ekranda bulaşyk çykýar |
 | SVG islendik ölçegde arassa, göwrümi ~0,6 KB |
-| Reňkleri tema boýunça sazlap bolýar |
+| Reňkleri tokenler arkaly sazlap bolýar |
 
 **Ölçenen geometriýa** (40×45 piksel): iki sany 180° simmetrik şekil —
 ýokarky-çep benewşe, aşaky-sag gök, aralarynda 3 piksellik ak jaý.
@@ -73,15 +73,20 @@ aýratyn faýl ([`public/logo.svg`](public/logo.svg)).
 
 - **Logonyň özünde gradient ÝOK** — ol iki düz reňkli şekilden ybarat.
 - Gradient şol reňk geçişiniň dowamy hökmünde **diňe üç ýerde**
-  ulanylýar: esasy CTA, sözbaşydaky nyşan söz we karta gyralary.
-- **Esasy tema — ÝAGTY**. Garaňky tema (Instagram postlaryňyzyň indigo
-  äheňinde) doly işleýän ikinji görnüş.
-- **Gök reňk ýazgy üçin ulanylmaýar** — ak fonda 2,7:1 kontrast berýär.
-  Diňe doldurgy we gradient hökmünde.
-- «Öň/soň» deňeşdirmesinde nyşan reňki **ulanylmaýar**: bitarap çal
-  (`--c-slate`) durýar. Bir reňk — bir many.
-- **Hero-nyň wizualy** stok surat däl: ol talybyň almak isleýän zadynyň özi —
-  sahypa açylanda hat ýazylýar we üstüne möhür basylýar.
+  ulanylýar: sözbaşydaky nyşan söz, teklip panelindäki we uniwersitet
+  penjiresindäki ýokarky zolak. **Düwmeler düz benewşe** — gradient däl.
+- **DIŇE ÝAGTY TEMA.** Garaňky tema ýok: `prefers-color-scheme`
+  diňlenmeýär, `data-theme` atributy ýok, tema düwmesi ýok. Sebäbi
+  mazmunyň özi (banner suraty, ak fonly logotipler, kabul hatlarynyň
+  skanlary) ýagty materialda ýasalan.
+- **Gök reňk ak fonda ýazgy üçin ulanylmaýar** — 2,7:1 kontrast berýär.
+  Diňe doldurgy we gradient hökmünde; ýazgy üçin garaldylan görnüşi
+  (`azure-ink`, 4,6:1).
+- **Goýy zolak sahypada takyk iki gezek**: ortada (kynçylyk/çözgüt) we
+  ahyrda (aşaky bölüm). Ol garaňky tema däl — bir bölümiň öz reňki.
+- **Hero-nyň arka fony — talyplaryň banneri.** Surat `public/banner/`
+  papkasyna taşlanan badyna awtomat ulanylýar; papka boş bolsa çyzylan
+  şekil (Stambulyň kenary) onuň ýerini tutýar.
 
 Jikme-jik: [`docs/01-dizayn-ulgamy.md`](docs/01-dizayn-ulgamy.md)
 
@@ -98,6 +103,16 @@ Jikme-jik: [`docs/01-dizayn-ulgamy.md`](docs/01-dizayn-ulgamy.md)
 | Giňeldilen hyzmat sanawy (wiza, denklik, terjime) | Gerimden daşarda — `scopeNote` arkaly açyk aýdylýar |
 | Saýtda galan `lorem ipsum` ýazgylary | — (olaryň açyk gowşaklygy) |
 
+### Wizual stil hem şol ugurda
+
+2026-njy ýylyň sentýabrynda saýtyň wizual dili **şol bäsdeşiň stiline
+görä** täzeden guruldy: ak fon, ýumşak çal zolaklar, arassa ak kartalar,
+doly tegelek (pill) düwmeler we hero-da suratly banner.
+
+⚠️ Emma **reňkler alynmady**. Alibaba-nyň paleti goýy gök + narynç; biziň
+palitramyz markanyň öz logosyndan gelýär (benewşe + gök) we şeýle bolup
+galýar. Alynan zat — **gurluş we ritm**, marka däl.
+
 **Biziň artykmaçlygymyz:** aç-açanlyk. Olarda barlanmaýan sanlar we
 doldurylmadyk bölümler bar; bizde her tassyklama ýa barlanýar, ýa-da
 «görkezme maglumat» diýlip bellenýär.
@@ -109,7 +124,7 @@ doldurylmadyk bölümler bar; bizde her tassyklama ýa barlanýar, ýa-da
 | Tehnologiýa | Näme üçin şu saýlandy |
 |---|---|
 | **Next.js 15 (App Router)** | Serwer komponentleri sahypany çalt ýükleýär; SEO üç dilde-de işleýär. |
-| **Tailwind CSS** | Dizaýn tokenleri CSS üýtgeýjilerde — tema çalyşmak bir gatlakda. |
+| **Tailwind CSS** | Dizaýn tokenleri CSS üýtgeýjilerde — palitra bir gatlakda dolandyrylýar. |
 | **next-intl** | Dil URL-de görünýär (`/tm`, `/ru`, `/tr`) — SEO we paýlaşmak üçin möhüm. |
 | **Framer Motion** | Mikro-animasiýalar we `prefers-reduced-motion` goldawy. |
 | **@dnd-kit** | Kanban tagtasy; klawiatura bilen hem işleýär. |
@@ -124,9 +139,9 @@ harplary hem rus kirillisi bir stilde çykýar.
 
 | Wezipesi | Şrift |
 |---|---|
-| Sözbaşylar | **Wix Madefor Display** 600–800 |
-| Esasy ýazgy | **Golos Text** 400–600 |
-| Sanlar we bellikler | **JetBrains Mono** 400/600 |
+| Sözbaşylar | **Geologica** 600–800 |
+| Esasy ýazgy | **Onest** 400–700 |
+| Sanlar we kod (diňe admin) | **JetBrains Mono** 400/600 |
 
 ---
 
@@ -142,17 +157,23 @@ Next_step/
 ├── public/
 │   └── logo.svg                 # Logo — paýlaşmak we daşarky ulanyş üçin
 │
+├── public/
+│   ├── banner/                  # Hero-nyň arka fon suraty (README bar)
+│   ├── hatlar/                  # Kabul hatlarynyň skanlary
+│   └── universities/            # Uniwersitetleriň logotipleri
+│
 ├── preview/
-│   └── dizayn-ulgamy.html       # Interaktiw dizaýn görkezmesi
+│   └── dizayn-ulgamy.html       # ⚠️ ÖŇKI dizaýn ulgamynyň görkezmesi —
+│                                #    häzirki kod bilen gabat gelmeýär
 │
 ├── src/
 │   ├── middleware.ts            # Dil kesgitlemesi + admin goragy
 │   │
 │   ├── app/
 │   │   ├── icon.svg             # Brauzeriň nyşany (logo)
-│   │   ├── globals.css          # Tema gatlagy: Ýagty / Garaňky tokenler
+│   │   ├── globals.css          # Dizaýn tokenleri (diňe ýagty) + .card/.eyebrow
 │   │   ├── [locale]/
-│   │   │   ├── layout.tsx       # Şriftler, metadata, tema skripti
+│   │   │   ├── layout.tsx       # Şriftler we metadata
 │   │   │   ├── page.tsx         # Landing — bölümleriň tertibi
 │   │   │   └── admin/
 │   │   │       ├── giris/       # Giriş: e-poçta + bir gezeklik kod
@@ -166,13 +187,14 @@ Next_step/
 │   │           └── topar/       # Dolandyryjylary goşmak / aýyrmak
 │   │
 │   ├── components/
-│   │   ├── landing/             # Hero, QuickActions, ProblemSolution,
-│   │   │                        # HowItWorks, Universities, SocialProof,
-│   │   │                        # FinalCta, Faq, LeadForm
+│   │   ├── landing/             # Hero + HeroBackdrop, QuickActions,
+│   │   │                        # SocialProof, Universities (+Marquee,
+│   │   │                        # Logo, Dialog), ProblemSolution,
+│   │   │                        # HowItWorks, FinalCta, Faq, LeadForm
 │   │   ├── admin/               # AdminShell, KanbanBoard, TelegramWidget,
 │   │   │                        # AnalyticsCharts, ContentManager, LiveVisitors,
 │   │   │                        # auth/LoginFlow + CodeInput, team/TeamManager
-│   │   ├── ui/                  # MagneticButton, Reveal, PaperGlow, ScrollProgress
+│   │   ├── ui/                  # Button, Reveal, AuroraField, BrandIcons
 │   │   └── shared/              # Logo, Header, Footer
 │   │
 │   └── lib/

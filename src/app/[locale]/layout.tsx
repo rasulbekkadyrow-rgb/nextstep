@@ -1,31 +1,23 @@
 import type { Metadata } from 'next';
-import { Golos_Text, Unbounded, JetBrains_Mono } from 'next/font/google';
+import { Geologica, Onest, JetBrains_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, localeMeta, isLocale, type Locale } from '@/lib/i18n';
-import { LiquidRefractionFilter } from '@/components/ui/AuroraField';
-import { ThemeSync } from '@/components/ui/ThemeSync';
-import { THEME_BOOT_SCRIPT } from '@/lib/theme';
 import '../globals.css';
 
-/**
- * ŞRIFTLER — üçüsi hem `cyrillic` we `latin-ext` toplumlaryny doly
- * goldaýar (fonts.googleapis.com boýunça barlanyldy). Bu üç dilli
- * taslamada hökmany şert: türkmen diliniň ä ň ö ş ü ý ž harplary
- * (ň → U+0148, ş → U+015F, ž → U+017E — `latin-ext`) hem-de rus
- * kirillisi bir şriftde, bir stilde çykmalydyr.
- *
- *   Unbounded      — sözbaşylar: giň, geometrik, örän häsiýetli.
- *                    900 agramda ulanylýar — «creative + ýogyn».
- *   Golos Text     — esasy ýazgy 450–600 agramda: uzyn abzaslarda
- *                    okalýan, ýöne inçe däl.
- *   JetBrains Mono — sanlar, bellikler we açar atlary
- */
-const displayFont = Unbounded({
+// latin-ext: ň, ş, ž üçin hökmany
+const displayFont = Geologica({
   subsets: ['latin', 'latin-ext', 'cyrillic'],
-  weight: ['700', '800', '900'],
+  weight: ['600', '700', '800'],
   variable: '--font-display',
+  display: 'swap',
+});
+
+const bodyFont = Onest({
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
   display: 'swap',
 });
 
@@ -33,15 +25,6 @@ const monoFont = JetBrains_Mono({
   subsets: ['latin', 'latin-ext', 'cyrillic'],
   weight: ['400', '600'],
   variable: '--font-mono',
-  display: 'swap',
-});
-
-const golos = Golos_Text({
-  subsets: ['latin', 'latin-ext', 'cyrillic'],
-  /* 500 we 600 goşuldy — esasy ýazgy hem ýogynrak bolmaly, ýogsam
-     Unbounded 900 sözbaşynyň gapdalynda ol «inçe» görünýär. */
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-sans',
   display: 'swap',
 });
 
@@ -64,7 +47,6 @@ export async function generateMetadata({
     metadataBase: new URL('https://nextstep.tm'),
     alternates: {
       canonical: `/${locale}`,
-      /* Gözleg ulgamlaryna dil görnüşlerini görkezmek */
       languages: {
         tk: '/tm',
         ru: '/ru',
@@ -101,25 +83,9 @@ export default async function LocaleLayout({
     <html
       lang={localeMeta[locale as Locale].htmlLang}
       dir="ltr"
-      suppressHydrationWarning
-      className={`${displayFont.variable} ${golos.variable} ${monoFont.variable}`}
+      className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable}`}
     >
-      <head>
-        {/* Tema skripti — sahypa çyzylmazdan öň işleýär, şeýlelikde
-            garaňky temada ak «ýalpyldama» (flash) bolmaýar.
-            Mantygy `lib/theme.ts`-de — ähli ýerde şol bir düzgün. */}
-        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
-      </head>
       <body className="min-h-screen antialiased">
-        {/* Döwülme süzgüji sahypada bir gezek — ähli aýna elementleri
-            şondan peýdalanýar (`.lg-refract`). */}
-        <LiquidRefractionFilter />
-
-        {/* Dil çalşanda React `<html>`-i gaýtadan çyzýar we özüniň
-            goýmadyk `data-theme` atributyny aýyrýar — şonda saýlanan
-            tema ýitýärdi. Bu komponent ony her geçişde dikeldýär. */}
-        <ThemeSync />
-
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>

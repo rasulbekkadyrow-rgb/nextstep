@@ -14,55 +14,23 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion';
-import { Menu, X, Moon, Sun, Globe, Check, ChevronDown } from 'lucide-react';
+import { Menu, X, Globe, Check, ChevronDown } from 'lucide-react';
 import { locales, localeMeta, type Locale } from '@/lib/i18n';
-import { applyTheme, resolveTheme, type Theme } from '@/lib/theme';
-import { MagneticButton } from '@/components/ui/MagneticButton';
+import { Button } from '@/components/ui/Button';
 import { LogoMark } from '@/components/shared/Logo';
 import { cn } from '@/lib/utils';
 
 /**
- * ÝOKARKY PANEL (Header) — SKROLLA BAGLY «DYNAMIC ISLAND»
- * ==================================================================
- * ESASY PIKIR: panelde IKI ÝAGDAÝ ÝOK — BIR ÝAGDAÝ BAR, ol skrollyň
- * ýagdaýyna görä 0-dan 1-e çenli üznüksiz üýtgeýär.
- *
- *   ilerleýiş 0.0  →  uzyn aýna zolak (logo, bölümler, dil, CTA)
- *   ilerleýiş 1.0  →  «Next Step Consulting» ýazgyly kiçijik gerş
- *
- * Aralykdaky her bir ölçeg — giňlik, beýiklik, jaý, burçlaryň radiusy,
- * nyşanyň ölçegi, ýazgylaryň aýdyňlygy — şol BIR sandan hasaplanýar.
- * Şonuň üçin haýal skroll edeniňde panel hem haýal, skrolluň her
- * pikselinde kiçelýär. Bosaga ýok, bökme ýok.
- *
- * NÄME ÜÇIN `layout` DÄL?
- * Framer-iň `layout`-y iki ÝAGDAÝYŇ arasynda köpri gurýar: ol diňe
- * ýagdaý çalşanda işleýär, ýagny hemişe «bir gezekde» geçýär. Bize
- * bolsa skrolluň özi bilen baglanan hereket gerek — şonuň üçin ähli
- * ölçegler `MotionValue` görnüşinde göni skrolldan alynýar.
- *
- * SUWUKLYK NIREDEN GELÝÄR?
- * Çig ilerleýiş `useSpring`-den geçirilýär. Skroll togtansoň hem
- * material ýene bir dem ýerine gelýär — hakyky suwuk ýaly yza galýar.
- *
- * NÄME ÜÇIN ÖLÇEGLER PIKSELDE?
- * `width: 100% → auto` animasiýa edilmeýär. Şonuň üçin açyk ýagdaýyň
- * giňligi mazmunyň gabyndan (`trackRef`), ýygnanan ýagdaýyň giňligi
- * bolsa görünmeýän ölçeýji ýazgydan (`ghostRef`) ölçenilýär —
- * ikisiniň arasy indi adaty san, islendik nokadynda hasaplanýar.
- * Dil çalşanda ýazgynyň uzynlygy üýtgese, ölçeg özi täzelenýär.
- * ================================================================== */
+ * Skroll bilen ýygrylýan panel. Ähli ölçegler bir progress bahasyndan
+ * (0 açyk, 1 ýygnanan) hasaplanýar, şonuň üçin geçiş üznüksiz.
+ */
 
-/** Panel şu aralykda doly ýygrylýar (piksel). Uzyn aralyk = haýal geçiş. */
 const COLLAPSE_DISTANCE = 260;
 
-/** Açyk we ýygnanan ýagdaýyň ölçegleri (piksel). */
 const HEIGHT = { open: 66, shut: 40 };
 const PAD_X = { open: 20, shut: 14 };
 const LOGO = { open: 28, shut: 20 };
-/** Nyşan bilen ýazgynyň arasyndaky hemişelik jaý. */
 const GAP = 10;
-/** Ýazgy bilen bölümleriň arasyndaky dem. */
 const LEAD = 18;
 
 export function Header() {
@@ -76,11 +44,9 @@ export function Header() {
   const [tapped, setTapped] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [theme, setTheme] = useState<Theme>('light');
 
-  /* Skrolldan gelýän «şu wagtky ýagdaý» — diňe okamak üçin. */
-  const [shut, setShut] = useState(false);       /* ýygnanana ýakyn */
-  const [fullyOpen, setFullyOpen] = useState(true); /* doly açyk */
+  const [shut, setShut] = useState(false);
+  const [fullyOpen, setFullyOpen] = useState(true);
 
   const navRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -88,7 +54,6 @@ export function Header() {
   const stackRef = useRef<HTMLSpanElement>(null);
   const langRef = useRef<HTMLDivElement>(null);
 
-  /* --- ÖLÇEGLER ------------------------------------------------- */
   const [openW, setOpenW] = useState(0);
   const [shutW, setShutW] = useState(0);
   const [stackW, setStackW] = useState(96);
@@ -101,7 +66,6 @@ export function Header() {
 
     const measure = () => {
       setOpenW(track.offsetWidth);
-      /* Ýygnanan gerş: jaý + nyşan + aralyk + ýazgy + jaý */
       setShutW(PAD_X.shut * 2 + LOGO.shut + GAP + Math.ceil(ghost.offsetWidth));
       setStackW(Math.ceil(stack.offsetWidth));
     };
@@ -111,16 +75,14 @@ export function Header() {
     ro.observe(track);
     ro.observe(ghost);
     ro.observe(stack);
-    /* Şrift giç ýüklense ýazgynyň ini üýtgeýär — gaýtadan ölçeýäris. */
+    // şrift giç ýüklense ini üýtgeýär
     document.fonts?.ready.then(measure).catch(() => {});
     return () => ro.disconnect();
   }, [locale]);
 
-  /* --- ILERLEÝIŞ (0 → 1) ---------------------------------------- */
   const { scrollY } = useScroll();
   const raw = useTransform(scrollY, [0, COLLAPSE_DISTANCE], [0, 1], { clamp: true });
 
-  /* `target` — nirä barmaly; `p` — şol ýere suwuk gelýän hakyky baha. */
   const target = useMotionValue(0);
   const p = useSpring(
     target,
@@ -129,12 +91,10 @@ export function Header() {
       : { stiffness: 190, damping: 32, mass: 0.55 },
   );
 
-  /* Ulanyjy panele ýüzlenen bolsa (kursor, basma, menýu) — mejbury açyk. */
   const peek = hovered || tapped || menuOpen || langOpen;
 
   useMotionValueEvent(raw, 'change', (v) => {
     if (!peek) target.set(v);
-    /* Basyp açylan gerş skroll başlanda ýene ýygnanýar. */
     if (tapped) setTapped(false);
   });
 
@@ -142,62 +102,33 @@ export function Header() {
     target.set(peek ? 0 : raw.get());
   }, [peek, target, raw]);
 
-  /* React tarapa gerekli iki bosaga. Deň baha gaýtarylanda React
-     gaýtadan çyzmaýar — şonuň üçin bu her kadrda däl, diňe serhet
-     kesilende işleýär. */
+  // diňe bosaga kesilende rerender
   useMotionValueEvent(p, 'change', (v) => {
     setShut((s) => (v > 0.6 === s ? s : v > 0.6));
     setFullyOpen((o) => (v < 0.04 === o ? o : v < 0.04));
   });
 
-  /* --- ILERLEÝIŞDEN GELIP ÇYKÝAN ÄHLI ÖLÇEGLER ------------------ */
   const width = useTransform(p, [0, 1], [openW, shutW]);
   const height = useTransform(p, [0, 1], [HEIGHT.open, HEIGHT.shut]);
   const radius = useTransform(p, [0, 1], [HEIGHT.open / 2, HEIGHT.shut / 2]);
   const padX = useTransform(p, [0, 1], [PAD_X.open, PAD_X.shut]);
   const logoW = useTransform(p, [0, 1], [LOGO.open, LOGO.shut]);
-  /* Ýazgylar nyşanyň sag gyrasyndan başlaýar — nyşan kiçelende olar hem süýşýär. */
   const labelX = useTransform(logoW, (w) => w + GAP);
 
-  /* ÝAZGYLARYŇ ÇALŞYGY — wagtlama şu ýerde kesgitlenýär.
-     Ilkinji görnüşde iki gulp giň aralyk bilen çalyşýardy: aralykda
-     panel uzyn, ýöne BOŞ galýardy — geçiş bölünen ýaly duýulýardy.
-     Indi olar ir we gysga aralykda çalyşýar: aýna daralýan bütin
-     ýoluň dowamynda içinde hemişe ýazgy bar. */
   const stackO = useTransform(p, [0, 0.16], [1, 0]);
   const compactO = useTransform(p, [0.2, 0.46], [0, 1]);
   const chevronO = useTransform(p, [0.55, 0.85], [0, 1]);
 
-  /* Bölümler we gurallar: ýitýär, bulaşýar we ýeňiljek saga süýşýär —
-     aýnanyň gyrasynyň aşagyna girýän ýaly. */
   const fullO = useTransform(p, [0, 0.2], [1, 0]);
   const fullBlur = useTransform(p, [0, 0.2], ['blur(0px)', 'blur(7px)']);
   const fullX = useTransform(p, [0, 0.2], [0, 20]);
-  /* `hidden` bolanda element klawiatura fokusyna hem düşmeýär. */
+  // hidden: fokusdan hem çykýar
   const fullVis = useTransform(p, (v) => (v > 0.3 ? 'hidden' : 'visible'));
 
-  /* Açyk ýagdaýyň mazmuny gymyldamaz ýaly, onuň gaby HEMIŞE şol bir
-     ölçegde galýar — daralýan aýna ony diňe kesip gizleýär. */
+  // mazmun hemişe açyk ölçegde, panel ony diňe kesýär
   const contentLeft = PAD_X.open + LOGO.open + GAP + stackW + LEAD;
   const contentW = Math.max(0, openW - contentLeft - PAD_X.open);
 
-  /* --- TEMA -----------------------------------------------------
-     Düwmedäki nyşan hakyky temany görkezmeli. Ol `<html>`-däki
-     atributdan däl-de `resolveTheme()`-den okalýar: dil çalşanda
-     atribut bir pursat ýitip biler, saklanan saýlaw bolsa ýitmeýär.
-     Salgy üýtgände hem täzeden okalýar — `ThemeSync` bilen bir
-     çeşmeden iýmitlenýändikleri üçin ikisi hiç haçan tapawutlanmaýar. */
-  useEffect(() => {
-    setTheme(resolveTheme());
-  }, [pathname]);
-
-  const toggleTheme = () => {
-    const next: Theme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(next);
-    applyTheme(next);
-  };
-
-  /* Gerşiň daşyna basylanda ol ýapylýar (telefon üçin). */
   useEffect(() => {
     if (!tapped) return;
     const onDown = (e: PointerEvent) => {
@@ -207,11 +138,6 @@ export function Header() {
     return () => document.removeEventListener('pointerdown', onDown);
   }, [tapped]);
 
-  /* Dil sanawy: daşyna basylanda ýa-da Esc basylanda ýapylýar.
-     ⚠️ Öň bu iş `fixed inset-0` örtük bilen edilýärdi, emma panelde
-     `backdrop-filter` bar — şeýle element `fixed` çagalary üçin täze
-     gapdal çäk döredýär, şonuň üçin örtük ekrany däl-de diňe paneliň
-     özüni tutýardy we daşyna basmak asla işlemeýärdi. */
   useEffect(() => {
     if (!langOpen) return;
     const onDown = (e: PointerEvent) => {
@@ -228,16 +154,12 @@ export function Header() {
     };
   }, [langOpen]);
 
-  /** Häzirki sahypany saklap, diňe dili çalyşmak: /tm/... → /ru/... */
   const pathWithLocale = (next: Locale) => {
     const segments = pathname.split('/');
     segments[1] = next;
     return segments.join('/') || `/${next}`;
   };
 
-  /* «Netijeler» bölümi hakyky kabul hatlary bolmasa görkezilmeýär
-     (`SocialProof`). Şonuň üçin salgy hem şoňa görä goşulýar —
-     ýogsam menýu boş ýere eltýän ölen salga öwrülýärdi. */
   const hasProof = (proof.raw('letters') as unknown[]).length > 0;
 
   const links = [
@@ -248,7 +170,6 @@ export function Header() {
     { href: '#soraglar', label: t('links.faq') },
   ];
 
-  /** Ýygnanan ýazgy — hakyky we ölçeýji nusgada birmeňzeş bolmaly. */
   const compactLabel = (
     <>
       {t('brand')} <span className="font-semibold text-faint">{t('brandSuffix')}</span>
@@ -260,7 +181,6 @@ export function Header() {
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 pt-3 md:pt-4">
       <div className="container relative">
-        {/* Açyk ýagdaýyň giňligini ölçeýän görünmeýän trek */}
         <div ref={trackRef} aria-hidden className="h-0 w-full" />
 
         <div className="flex justify-center">
@@ -276,19 +196,11 @@ export function Header() {
               paddingRight: padX,
             }}
             className={cn(
-              /* ⚠️ `lg-refract` bu ýerde ÝOK. Ol SVG tolkun süzgüjini
-                 arka fona ulanýar — iň gymmat effektleriň biri. Panel
-                 bolsa skrollda her kadrda inini üýtgedýär: ikisi
-                 birleşende brauzer her kadrda tolkuny gaýtadan
-                 hasaplaýardy. Aýna gyrasy we kölegesi onsuz hem
-                 ýeterlik. */
               'lg lg-thin pointer-events-auto relative flex items-center',
-              /* Daralýan aýna mazmuny kesýär. Diňe doly açykka kesmeýär —
-                 ýogsam dil sanawy panelden çykyp bilmezdi. */
+              // doly açykka overflow-visible: dil sanawy üçin
               fullyOpen ? 'overflow-visible' : 'overflow-hidden',
             )}
           >
-            {/* --- Marka --- */}
             <Link
               href={`/${locale}`}
               aria-label={`${t('brand')} ${t('brandSuffix')}`}
@@ -299,14 +211,6 @@ export function Header() {
                 <LogoMark className="w-full" />
               </motion.span>
 
-              {/* Iki setirli gulp — açyk ýagdaýda.
-                  ⚠️ `sm`-den kiçi ekranda GÖRKEZILMEÝÄR. 375px giňlikde
-                  zolagyň içinde 116px-lik ýazgy, dil, tema we menýu
-                  düwmeleri bir hatarda sygmaýar — gurallar aýnanyň
-                  gyrasyndan çykýardy. Nyşanyň özi markany aňladýar,
-                  doly at bolsa ýygnanan gerşde onsuz hem görünýär.
-                  Ölçeg şu elementden alynýar: gizlenende ini 0 bolýar
-                  we galan hasaplar özünden düzelýär. */}
               <motion.span
                 ref={stackRef}
                 aria-hidden
@@ -319,7 +223,6 @@ export function Header() {
                 </span>
               </motion.span>
 
-              {/* Bir setirli ýazgy — ýygnanan ýagdaýda */}
               <motion.span
                 aria-hidden
                 style={{ left: labelX, opacity: compactO }}
@@ -332,7 +235,6 @@ export function Header() {
               </motion.span>
             </Link>
 
-            {/* --- Bölümler we gurallar --- */}
             <motion.div
               style={{
                 left: contentLeft,
@@ -352,7 +254,6 @@ export function Header() {
                       className="group relative block rounded-full px-3.5 py-2 text-body-sm text-muted transition-colors duration-200 hover:text-ink"
                     >
                       {link.label}
-                      {/* Aşakdaky çyzyk hover-de merkezden ýaýraýar */}
                       <span
                         aria-hidden
                         className="absolute inset-x-3.5 bottom-1 h-px origin-center scale-x-0 bg-brand transition-transform duration-300 ease-out-expo group-hover:scale-x-100"
@@ -363,7 +264,6 @@ export function Header() {
               </ul>
 
               <div className="ml-auto flex shrink-0 items-center gap-2">
-                {/* Dil çalşyryjy */}
                 <div ref={langRef} className="relative">
                   <button
                     onClick={() => setLangOpen((v) => !v)}
@@ -407,32 +307,12 @@ export function Header() {
                   </AnimatePresence>
                 </div>
 
-                {/* Tema çalşyryjy */}
-                <button
-                  onClick={toggleTheme}
-                  aria-label={theme === 'dark' ? t('themeLight') : t('themeDark')}
-                  className="grid h-9 w-9 place-items-center rounded-full border border-line/12 text-muted transition-colors hover:border-brand/40 hover:text-brand"
-                >
-                  <AnimatePresence mode="wait" initial={false}>
-                    <motion.span
-                      key={theme}
-                      initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
-                      animate={{ rotate: 0, opacity: 1, scale: 1 }}
-                      exit={{ rotate: 90, opacity: 0, scale: 0.6 }}
-                      transition={{ duration: 0.25 }}
-                    >
-                      {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                    </motion.span>
-                  </AnimatePresence>
-                </button>
-
                 <div className="hidden md:block">
-                  <MagneticButton href="#arza" variant="primary" className="px-5 py-2.5">
+                  <Button href="#arza" className="px-5 py-2.5">
                     {t('cta')}
-                  </MagneticButton>
+                  </Button>
                 </div>
 
-                {/* Mobil menýu düwmesi */}
                 <button
                   onClick={() => setMenuOpen((v) => !v)}
                   aria-label={menuOpen ? t('menuClose') : t('menuOpen')}
@@ -444,8 +324,7 @@ export function Header() {
               </div>
             </motion.div>
 
-            {/* Ýygnanan gerşiň ähli ýüzi — bir düwme. Aşakdaky logo salgysyny
-                örtýär, şonuň üçin basmak diňe açýar, sahypa geçirmeýär. */}
+            {/* ýygnanan ýagdaýda panele basmak ony açýar */}
             {shut && (
               <button
                 type="button"
@@ -457,7 +336,6 @@ export function Header() {
           </motion.nav>
         </div>
 
-        {/* --- Mobil menýu --- */}
         <AnimatePresence>
           {menuOpen && (
             <motion.div
@@ -497,8 +375,7 @@ export function Header() {
         </AnimatePresence>
       </div>
 
-      {/* ÖLÇEÝJI NUSGA — görünmeýär, diňe ýygnanan ýazgynyň inini berýär.
-          Hakyky ýazgy bilen synplary birmeňzeş, ýogsam ölçeg ýalňyş bolar. */}
+      {/* ýygnanan ýazgynyň inini ölçemek üçin görünmeýän nusga */}
       <span
         ref={ghostRef}
         aria-hidden

@@ -58,7 +58,7 @@ export default async function AdminLoginPage({
     <main className="grain relative flex min-h-dvh items-center justify-center overflow-hidden px-5 py-16">
       <AuroraField intensity="soft" className="absolute inset-0" />
 
-      <div className="lg lg-solid relative w-full max-w-[27rem] rounded-4xl p-8 shadow-lift sm:p-10">
+      <div className="lg relative w-full max-w-[27rem] rounded-4xl p-8 shadow-lift sm:p-10">
         <Logo size="lg" />
 
         <div className="mt-8">

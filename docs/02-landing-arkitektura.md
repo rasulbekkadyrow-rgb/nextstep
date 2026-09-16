@@ -18,12 +18,33 @@ Kepillik — ene-ata üçin.
 
 ```
 1. HERO ............. «Bu näme? Maňa gerekmi?»
-2. AGYRY/ÇÖZGÜT ..... «Olar meniň ýagdaýymy bilýärmi?»
-3. IŞ TERTIBI ....... «Bu nähili işleýär? Näçe wagt gerek?»
+2. ÇALT HEREKET ..... «Maňa haýsysy gerek?»
+3. NETIJELER ........ «Bu hakykatdan hem işleýärmi?»
 4. UNIWERSITETLER ... «Haýsy uniwersitetler barada gürrüň gidýär?»
-5. NETIJELER ........ «Bu hakykatdan hem işleýärmi?»
-6. TEKLIP + FAQ ..... «Ýitirjek zadym barmy?»
+5. KYNÇYLYK/ÇÖZGÜT .. «Olar meniň ýagdaýymy bilýärmi?»
+6. IŞ TERTIBI ....... «Bu nähili işleýär? Näçe wagt gerek?»
+7. TEKLIP + FAQ ..... «Ýitirjek zadym barmy?»
 ```
+
+⚠️ **NETIJELER bölümi ýokary göterildi.** Öň ol iň soňdan üçünji durýardy.
+Emma bu işde adamyň ilki görmek isleýän zady WADA däl, **NETIJE**:
+hakykatdan-da kabul edilen talyplaryň hatlary. Şonuň üçin olar hero-dan
+soň bada-bat gelýär, yzyndan bolsa şol hatlaryň gelen uniwersitetleri.
+
+⚠️ **ÇALT HEREKET paneli hero-dan soň gelmeli — başga ýerde däl.** Onuň ak
+paneli hero-nyň aşaky gyrasyna **münýär** (`-mt-24`), ýagny ikisi bir
+kompozisiýa. Aralaryna başga bölüm goýulsa, panel boş ýere münüp, kesişen
+iki gatlak bolup galýar.
+
+### Reňk ritmi
+
+```
+ak → ak → çal → ak → GOÝY → çal → ak → GOÝY
+```
+
+Goýy zolak sahypada takyk iki gezek: ortada (kynçylyk/çözgüt) we ahyrda
+(aşaky bölüm). Ol gözi saklaýar we sahypany üç bölege bölýär — ýogsam
+7 bölüm biri-birine ýelmeşip, uzyn lenta bolýar.
 
 ---
 
@@ -31,27 +52,42 @@ Kepillik — ene-ata üçin.
 
 **Maksady:** ilkinji 3 sekuntda «men dogry ýere geldim» duýgusyny bermek.
 
-### Esasy dizaýn pikiri — hatyň möhürlenmegi
+### Esasy dizaýn pikiri — talyplaryň banneri
 
-Sagdaky wizual stok surat däl (gülüp duran talyplar, kitaphana, uniwersitetiň
-binasy). Ol **talybyň almak isleýän zadynyň özi** — resmi kabul haty.
+Bütin bölümiň arkasynda **talyplaryň suraty** ýatýar, ýazgy bolsa onuň çep
+ýarymynda durýar. Bu bilim saýtlarynyň iň synalan kompozisiýasy: surat
+duýgy berýär, ýazgy şerti aýdýar.
 
-Sahypa açylanda:
+Surat `public/banner/` papkasyndan awtomat okalýar (şol papkadaky
+README-de doly düzgünler). Papka boş bolsa `HeroBackdrop` komponentindäki
+çyzylan şekil — Stambulyň kenary — onuň ýerini tutýar, ýagny saýt surat
+goşulmanka-da gutarylan görünýär.
 
-1. Hat peýda bolýar (0.28 sek).
-2. Setirler birin-birin «ýazylýar» (0.35 sek-dan başlap, 0.1 sek aralyk).
-3. Üstüne **«KABUL EDILDI» möhüri basylýar** (0.78 sek-da).
+#### ⚠️ PERDE (scrim) — iki ölçeg üçin iki görnüş
 
-Möhüriň egrisi `cubic-bezier(0.34, 1.56, 0.64, 1)` — ol biraz «aşa geçip»
-yzyna gelýär, ýagny hakyky möhür basylyşyny ýada salýar.
+Suratyň üstündäki ýazgynyň okalmagy üçin ak perde goýulýar. Bir gradient
+iki ýagdaýy hem edip bilmeýär, şonuň üçin iki gatlak bar:
 
-**Näme üçin şeýle?** Sebäbi maksadyň şekilini görkezmek, hyzmaty
-suratlandyrmakdan güýçli. Ulanyjy 1,5 sekuntda öz gelejegini görýär.
+| Ekran | Perdäniň ugry | Sebäbi |
+|---|---|---|
+| Telefon | ÝOKARDAN AŞAK, güýçli | Ýazgy suratyň ÜSTÜNDE dur, gapdalda ýer ýok |
+| Uly ekran | ÇEPDEN SAGA, sagda dury | Ýazgy çepde, surat sagda görünmeli |
 
-> **Tehniki bellik:** setirler we möhür deslapky ýagdaýda **görnüp dur**.
-> Animasiýa diňe `.anim` synpy goşulanda işleýär, ony bolsa JavaScript
-> goşýar. Şeýlelikde skript işlemese-de mazmun okalýar. `opacity: 0`
-> bilen «garaşyp duran» element — elýeterlilik taýdan ýalňyşlyk.
+Şol sebäpden **banner suratynda talyplaryň ýüzleri SAG ÝARYMDA bolmaly** —
+çepde durýan adam ak perdäniň aşagynda ýitýär.
+
+#### ⚠️ Öňki görnüşden näme aýryldy
+
+| Näme bardy | Näme üçin aýryldy |
+|---|---|
+| Aýna «marka paneli» (3D öwrülýän, açylýan kapsula) | Sahypanyň ýarysyny eýeleýärdi we sözbaşy bilen bäsleşýärdi. Marka ýokarky panelde onsuz hem bar |
+| Paralaks süýşme | Ilkinji ekranda düwmäniň ýerini durnuksyz edýärdi |
+| Harplaryň blur bilen gelmegi | Sözbaşy — sahypanyň iň möhüm ýazgysy. Ol garaşdyrman okalmaly |
+| Aurora fon animasiýasy | Suratyň özi onuň wezipesini ýerine ýetirýär |
+
+Netijede bölüm **serwer komponenti** boldy: `framer-motion` ýok,
+`'use client'` ýok, ölçeg hasaplamasy ýok. Ilkinji ekran brauzere doly
+taýýar gelýär.
 
 ### Sözbaşynyň ýazylyş düzgüni
 
@@ -76,11 +112,18 @@ Kör-körän wada berilmeýär:
 Üç dilde-de many bir; nyşan sözi (gyzyl, asty çyzykly) her dilde iň güýçli
 bölege düşýär.
 
-### Sanlar barada
+### ⚠️ Sanlar barada — sahypanyň üýtgewsiz düzgüni
 
-Hero-daky üç san **barlanýan** zatlar: 5 uniwersitet, 4 ädim, 3 dil.
-«98% kabul», «500+ talyp» ýaly barlanmaýan görkezijiler bilkastlaýyn
-ýazylmady — şeýle san diňe hakyky hasabata esaslanyp goşulmalydyr.
+Hero-da **hiç hili san ýok**. «%99,8 kabul», «10 000+ talyp», «%75-e
+çenli ýeňillik» ýaly görkezijiler bäsdeşleriň saýtlarynda köp, emma biz
+olary gaýtalamaýarys.
+
+Sebäbi: **barlanmaýan san — bir gezeklik ynam.** Müşderi ony barlap
+bilýär, barlap bilmese-de beýleki wadalary şoňa görä bahalandyrýar.
+Şeýle san diňe hakyky hasabata esaslanyp goşulmalydyr.
+
+Onuň deregine sahypada **barlanýan delil** görkezilýär: kabul hatlarynyň
+skanlary we uniwersitetleriň anyk atlary.
 
 ---
 
@@ -100,22 +143,37 @@ Hero-daky üç san **barlanýan** zatlar: 5 uniwersitet, 4 ädim, 3 dil.
 Dördünji nokat — **iň möhümi**. Bu ugurda müşderiniň esasy gorkusy hyzmatyň
 hili däl-de, aldanmak gorkusy. Şonuň üçin ol aýratyn bellendi.
 
+### Bölüm goýy zolakda
+
+Bu — sahypanyň ortasyndaky ýeke-täk garaňky bölüm. Ak sahypada goýy zolak
+iň güýçli şekil kontrasty berýär: göz şol ýerde saklanýar. Şonuň üçin
+markanyň iň esasy wadasy hut şu ýerde aýdylýar.
+
+### ⚠️ TERTIP: ÖŇKI ÇÖZGÜT, SOŇKY AGYRY
+
+Her kartada ilki **çözgüt** durýar (ýogyn sözbaşy), kynçylyk bolsa aşakda,
+inçe setirde bellik hökmünde galýar.
+
+Sebäbi ulanyjy kynçylygyny onsuz hem bilýär — oňa ony ýene bir gezek
+okatmak gerek däl. Oňa gerek zat: «bu nähili çözülýär?»
+
+### ⚠️ «Öň / soň» çeňňegi näme üçin aýryldy
+
+Öň bu bölümde çeňňek (switch) bardy: kartalar basylanda 3D öwrülýärdi,
+gyrasyndan reňkli şöhle aýlanýardy.
+
+Ol interaktiwdi, ýöne **MAZMUNY GIZLEÝÄRDI**: sahypa açylanda ulanyjy diňe
+KYNÇYLYKLARY görýärdi — çözgütleri görmek üçin basmalydy. Basmaýan adam
+(köpçüligi) sahypadan **diňe erbet habar** alyp gidýärdi.
+
+Indi iki tarap hem birbada görünýär.
+
 ### Reňk barada möhüm karar
 
-«Öň» ýagdaýy **gyzyl bilen bellenmeýär** — bitarap çal (`--c-slate`)
-ulanylýar.
-
-Sebäbi nyşan reňkimiz gyzyl. Eger «erbet ýagdaý» hem gyzyl bolsa, ulanyjynyň
-aňynda gyzyl reňk «howp» manysyny alýar we CTA düwmesine bolan ynam peselýär.
-Bir reňk bir many bilen baglanmalydyr.
-
-### Çalyşmagyň iki derejesi
-
-- **Umumy çeňňek** — ähli kartalary birbada çalyşýar.
-- **Her kartanyň özi** — üstüne basylanda diňe şol karta çalyşýar.
-
-Sebäbi ulanyjylar iki topara bölünýär: käbiri umumy göz aýlaýar, käbiri her
-nokady aýratyn öwrenýär.
+Kynçylyk setiri **gyzyl bilen bellenmeýär** — bitarap `deep-muted`
+ulanylýar, çözgüt bolsa ýaşyl (`ok`) bellik alýar. Sebäbi reňk many
+göterýär: nyşan reňki (benewşe) diňe HEREKETE çagyrýar, gyzyl (`danger`)
+diňe forma ýalňyşlaryna degişli. **Bir reňk — bir many.**
 
 ---
 
@@ -123,14 +181,22 @@ nokady aýratyn öwrenýär.
 
 **Maksady:** nämälimligi aýyrmak.
 
-### Skroll bilen dolýan timeline
+### Statik timeline
 
-```
-useScroll    → bölümiň içindäki ilerlemäni 0–1 aralygynda berýär
-useSpring    → hereketi ýumşadýar
-useTransform → 0–1 sany çyzygyň beýikligine öwürýär
-useInView    → her ädimi aýratyn yzarlaýar
-```
+Dört ädim dik çyzyk boýunça nomerlenen nokatlar bilen baglanýar. Çyzyk
+**statik**: ol diňe ädimleriň baglydygyny görkezýär.
+
+### ⚠️ Skroll bilen dolýan çyzyk näme üçin aýryldy
+
+Öň çyzyk skroll bilen dolýardy (`useScroll` + `useSpring`), her ädim
+bolsa ekrana girende saga süýşüp gelýärdi. Üç mesele döredýärdi:
+
+1. Skroll her kadrda hasap talap edýärdi — telefonda duýulýardy.
+2. Çalt skroll edeniňde ädimler ýarym görünen ýagdaýda galýardy.
+3. **Iň esasysy: hereket MAZMUNY gowulandyrmaýardy.** Ulanyja gerek zat —
+   näçe wagt gerekdigi we näme aljakdygy, çyzygyň nähili dolýandygy däl.
+
+Bölüm indi serwer komponenti — JavaScript asla gerek däl.
 
 ### Her ädimiň gurluşy
 
@@ -167,18 +233,29 @@ düşünişmezligiň öňüni alýar. Gizlenen çäk — ýitirilen ynam.
 
 **Maksady:** hyzmatyň barlanýan bölegini görkezmek.
 
-Bu bölümiň ýeri bilkastlaýyn Iş tertibinden **soň**, Netijelerden **öň**:
-tanalýan uniwersitetiň ady prosese ynamy berkidýär we indiki bölümdäki
-kabul hatlaryny has manyly edýär.
+Bu bölümiň ýeri bilkastlaýyn **Netijelerden soň**: ulanyjy kabul hatlaryny
+görüp, «bular haýsy uniwersitetler?» diýip soraýar — jogap bada-bat
+gapdalynda dur.
 
-### Logotip ulanylmaýar
+### Logotipler — bar bolsa
 
-Uniwersitetleriň logotipleri hukuk taýdan goralan nyşanlardyr; olary
-rugsatsyz ýerleşdirmek töwekgelçilikdir. Onuň deregine her uniwersitet öz
-gysgaltmasy (BAU, IGU, ISU, IAU, MED) bilen, bir bitewi stilde görkezilýär.
+Hakyky logo `public/universities/<slug>.png` faýly bar bolsa görkezilýär,
+ýok bolsa onuň ýerine bitewi stildäki monogram (BAU, IGU…) galýar. Şol bir
+`UniversityLogo` komponenti ikisini hem çözýär.
 
-Bu karar hem hukuk taýdan arassa, hem wizual taýdan tertipli: dürli hilli
-we dürli reňkli logotipler sahypanyň sazlaşygyny bozýar.
+> ⚠️ **Logotipler hukuk taýdan goralan nyşanlardyr** — olary goýmazdan öň
+> uniwersitetden rugsat alynmalydyr. Rugsat ýok bolsa faýly goşmaly däl:
+> monogram doly işleýän ätiýaçlyk çözgütdir.
+
+**Ak tegelek tagta.** Uniwersitetleriň logotipleri dürli: gara-gök, goýy
+gyzyl, ýaşyl, käbiri aç-açan fonly, käbiri ak gutuly. Ak tegelek olaryň
+hemmesine bir hili, tertipli gap berýär — hakyky nyşan tagtalarynda
+edilişi ýaly. Şonsuz her logo öz ölçeginde we öz fonunda görnüp, sanaw
+dargaýardy.
+
+**Hyzmatdaş uniwersitetler** lentada çep gyrasyndaky benewşe zolak bilen
+bellenýär, lentanyň aşagynda bolsa şol belliginiň manysy ýazgy bilen
+düşündirilýär — maglumat diňe reňk bilen berilmeýär.
 
 ---
 

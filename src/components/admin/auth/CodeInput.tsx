@@ -126,7 +126,7 @@ export function CodeInput({
             disabled={disabled}
             inputMode="numeric"
             autoComplete={index === 0 ? 'one-time-code' : 'off'}
-            aria-label={`${label} — ${index + 1}`}
+            aria-label={`${label} ${index + 1}`}
             maxLength={length}
             className={cn(
               'h-14 w-full min-w-0 rounded-2xl border bg-surface/70 text-center font-mono text-[1.35rem] font-bold tabular-nums text-ink',

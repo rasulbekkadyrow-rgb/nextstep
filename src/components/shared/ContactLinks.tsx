@@ -7,31 +7,7 @@ import { WhatsAppMark } from '@/components/ui/BrandIcons';
 import { CONTACTS } from '@/lib/contacts';
 import { cn } from '@/lib/utils';
 
-/**
- * HABARLAŞMAK NYŞANLARY
- * ==================================================================
- * Instagram, iki WhatsApp belgisi we e-poçta — diňe tegelek nyşanlar.
- *
- * NÄME ÜÇIN BELGILER GÖRÜNMEÝÄR, ÝÖNE ÝITENOK?
- * Dört sany doly belgi bir hatarda köp ýer tutýardy we sözbaşy bilen
- * bäsleşýärdi. Indi her nyşan tegelek gerşde dur, kursor golaýlanda
- * bolsa gerş SAGA AÇYLYP belgini görkezýär. Ýagny maglumat ýitmeýär —
- * ol diňe soralýança gizlenip durýar.
- *
- * AÇYLYŞ NÄHILI EDILDI?
- * `width: auto` animasiýa edilmeýär. Onuň deregine CSS grid ulanylýar:
- * sütüniň ini `0fr`-dan `1fr`-a geçýär, içindäki ýazgy bolsa
- * `overflow: hidden` bilen kesilýär. Bu brauzeriň özi hasaplaýan,
- * ýumşak we ölçeg bilmegi talap etmeýän ýeke-täk arassa usul.
- *
- * ELÝETERLILIK
- *  · `aria-label` hemişe kanalyň adyny we belgini doly okaýar —
- *    ýazgy görünmese-de ekran okaýjy ony bilýär.
- *  · Klawiatura bilen fokusa düşende hem gerş açylýar
- *    (`focus-visible:` — hoveriň deňi).
- *  · Hereketi azaltmak islegi saýlanan bolsa geçişler globals.css-däki
- *    umumy düzgün arkaly öçýär.
- */
+/** Belgi hover/focus-da açylýar (grid 0fr → 1fr). */
 export function ContactLinks({ className }: { className?: string }) {
   const t = useTranslations('footer.contactLabels');
 
@@ -50,7 +26,6 @@ export function ContactLinks({ className }: { className?: string }) {
       value: w.display,
       href: w.href,
       external: true,
-      /* Doldurgyly nyşan — çyzykly goňşularyndan bir basgançak kiçi */
       icon: <WhatsAppMark className="h-4 w-4" />,
     })),
     {
@@ -73,7 +48,7 @@ export function ContactLinks({ className }: { className?: string }) {
           transition={{
             duration: 0.5,
             delay: 0.08 * i,
-            ease: [0.34, 1.56, 0.64, 1], // ýaýly: biraz aşa geçip ýerine gelýär
+            ease: [0.34, 1.56, 0.64, 1],
           }}
         >
           <a
@@ -87,12 +62,10 @@ export function ContactLinks({ className }: { className?: string }) {
               'focus-visible:-translate-y-0.5 focus-visible:pr-4 focus-visible:text-brand',
             )}
           >
-            {/* Nyşan: hemişe görünýär, üstüne gelende ýeňiljek ulalýar */}
             <span className="grid h-5 w-5 shrink-0 place-items-center text-brand transition-transform duration-500 ease-out-expo group-hover:scale-110">
               {item.icon}
             </span>
 
-            {/* Belgi: `0fr → 1fr` bilen açylýan sütün */}
             <span
               aria-hidden
               className={cn(
